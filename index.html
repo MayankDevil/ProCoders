@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!--
+-   website "PROCODER"
+-   Designed | Developed by Mayank
+-   Copyright by Mayank
+-   HTML : ./index.html
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank</title>
+    <!--
+        ---------
+        | style |
+        ---------
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="data/code.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!--
+        --------------------
+        { mother container } ----------------------------------------------
+        --------------------
+        -   it is base container that contain inside all webpage section
+        -   and subsection.
+    -->
+    <div class="" id="mother_container">
+        <!--
+            ==================
+            [ header section ]--------------------------------------------
+            ==================
+        -->
+        <div class="position-fixed w-100 bg-dark" id="header">
+            <!--
+                ( navbar ) ----------
+            -->
+            <div class="container" id="nav">
+                <div class="navbar navbar-expand-lg navbar-dark">
+                    
+                    <!-- brabd -->
+                    <div class="navbar-brand"> ProCoder </div>
+                    
+                    <!-- toggle -->
+                    <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </div>
+                    
+                    <!-- nav -->
+                    <div class="collapse navbar-collapse " id="navbarNav">
+                        <ul class="navbar-nav w-0 mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#"> <span class="bi bi-house"></span> Home </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about"> <span class="bi bi-person"></span> About </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#learn"> <span class="bi bi-collection"></span> Learn </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#host"> <span class="bi bi-folder"></span> Host Project </a>
+                            </li>
+                        </ul>
+
+                        <!-- ( login button ) -->
+                        <a href="login.html" class="btn btn-outline-danger"> <span class="bi bi-person-fill text-light"></span> Login </a>
+
+                    </div>	
+            
+                </div>
+
+            </div>
+
+        </div>
+        <!--
+            =====================
+            [ container section ] -----------------------------------------
+            =====================
+        -->
+        <div class="" id="container">
+            <!--
+                ( home page ) ----------
+            -->
+            <div class="pt-5" id="home">
+                <div class="container mt-md-5 mt-0 rounded">
+                    <div class="row justify-content-center">
+                        <!-- heading -->
+                        <div class="col-12 text-center py-5">
+                            <div class="display-2 text-primary pt-5"> ProCoder </div>
+                        </div>
+                        <!-- subheading -->
+                        <div class="col-12 text-center py-2">
+                            <div class="h1 font-weight-normal"> Welcome Coders </div>
+                        </div>
+                        <!-- lead -->
+                        <div class="col-md-10 col-12 text-center px-5">
+                            <div class="h4 font-weight-normal py-4"> Time to Update Your Knowlegde or Skill for learn new or better way that improve you and make a new version of self. </div>
+                        </div>
+                        <!-- button -->
+                        <div class="col-12 py-5 text-center">
+
+                            <a href="Login.html" class="btn btn-dark btn-lg px-5 my-2"> Login </a>
+
+                            <a href="#" class="btn btn-outline-primary btn-lg px-5"> Sign In </a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--
+                ( fact page ) ----------
+            -->
+            <div class="d-none" id="fact">
+                <div class="container">
+
+                    <div class="row border-bottom">
+                        <!--  -->
+                        <div class="col-sm-4 count-box text-center p-3">
+                            <div class="h1 purecounter"> 2000 </div>
+                            <div class="p-2 font-italic font-weight-bold icon3">
+                                <span class="bi bi-people"></span> Students
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="col-sm-4 count-box text-center p-3">
+                            <div class="h1 purecounter"> 15 </div>
+                            <div class="p-2 font-italic font-weight-bold icon3">
+                                <span class="bi bi-book"></span> Course 
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="col-sm-4 count-box text-center p-3">
+                            <div class="h1 purecounter"> 500 </div>
+                            <div class="p-2 font-italic font-weight-bold icon3">
+                                <span class="bi bi-bookmarks"></span> Solution
+                            </div>
+                        </div>
+                        <!--
+                            <div class="col count-box text-center p-3 border">
+                                <div class="h1 purecounter"> 1 </div>
+                                <div class="p-2 font-italic font-weight-bold icon3">
+                                    <span class="fa solid fa-user"></span> Students
+                                </div>
+                            </div>
+                        -->
+
+                    </div>
+
+                </div>
+            </div>
+            <!--
+                ( learn page ) ----------
+            -->
+            <div class="py-5" id="learn">
+                <div class="container">
+                    <!-- title -->
+                    <div class="">
+                        <div class="h3 py-md-5 py-3 text-center"> Learn Or Explore Knowlegde </div>
+                    </div>
+                    <!-- course -->
+                    <div class="row justify-content-center">
+                        <!-- 1 -->
+                        <a href="#" class="col-md-3 col-sm-5 col-10 m-md-1 m-3 text-center shadow border rounded p-3">
+                            <span class="bi bi-filetype-html py-3"></span>
+                            <!-- <div class="h4 text-dark py-2"> HTML5 </div> -->
+                            <div class="p-2 text-secondary"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa tempora eum fugit sequi veniam omnis. </div>
+                        </a>
+                        <!-- 2 -->
+                        <a href="#" class="col-md-3 col-sm-5 col-10 m-md-1 m-3 text-center shadow border rounded p-3">
+                            <span class="bi bi-filetype-css py-3"></span>
+                            <!-- <div class="h4 text-dark py-2"> CSS3 </div> -->
+                            <div class="p-2 text-secondary"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa tempora eum fugit sequi veniam omnis. </div>
+                        </a>
+                        <!-- 3 -->
+                        <a href="#" class="col-md-3 col-sm-5 col-10 m-md-1 m-3 text-center shadow border rounded p-3">
+                            <span class="bi bi-filetype-js py-3"></span>
+                            <!-- <div class="h4 text-dark py-2"> JavaScript </div> -->
+                            <div class="p-2 text-secondary"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa tempora eum fugit sequi veniam omnis. </div>
+                        </a>
+                        <!-- 4 -->
+                        <a href="#" class="col-md-3 col-sm-5 col-10 m-md-1 m-3 text-center shadow border rounded p-3">
+                            <span class="bi bi-filetype-php py-3"></span>
+                            <!-- <div class="h4 text-dark py-2"> PHP </div> -->
+                            <div class="p-2 text-secondary"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa tempora eum fugit sequi veniam omnis. </div>
+                        </a>
+                        <!-- 5 -->
+                        <a href="#" class="col-md-3 col-sm-5 col-10 m-md-1 m-3 text-center shadow border rounded p-3">
+                            <span class="bi bi-filetype-java py-3"></span>
+                            <!-- <div class="h4 text-dark py-2"> Java </div> -->
+                            <div class="p-2 text-secondary"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa tempora eum fugit sequi veniam omnis. </div>
+                        </a>
+                        <!-- 6 -->
+                        <a href="https://mayankdevil.github.io/Project-2/" class="col-md-3 col-sm-5 col-10 m-md-1 m-3 text-center shadow border rounded p-3">
+                            <span class="bi bi-filetype-sql py-3"></span>
+                            <!-- <div class="h4 text-dark py-2"> SQL </div> -->
+                            <div class="p-2 text-secondary"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa tempora eum fugit sequi veniam omnis. </div>
+                        </a>
+                        <!-- 7 
+                            <a href="#" class="col-md-3 col-sm-5 col-10 m-md-1 m-3 text-center shadow border rounded p-3">
+                                <span class="bi bi-filetype-jsx py-3"></span>
+                                <div class="h4 text-dark py-2"> ReactJS </div>
+                                <div class="p-2 text-secondary"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa tempora eum fugit sequi veniam omnis. </div>
+                            </a>
+                        -->
+                            
+                    </div>
+                </div>
+            </div>
+            <!--
+                ( host page ) ----------
+            -->
+            <div class="pt-5" id="host">
+                <!-- heading label -->
+                <div class="container-fluid bg-dark">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-8 py-5">
+                                <div class="display-4 font-weight-normal p-3 text-white"> HOSTING </div>
+                                <div class="lead font-weight-normal p-3 text-white"> How to Free host your Simple { HTML | CSS | JS } Website </div>
+                            </div>
+
+                            <div class="col-4 text-secondary text-center py-5" id="github_icon">
+                                <div class="bi bi-github"></div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 BOXES -->
+                <div class="container">
+                    <div class="row">
+                        <!-- 1 -->
+                        <div class="col-md-4 col-sm-6 col-12 py-5 border-bottom">
+                            <div class="d-block px-2">
+                                <!-- icon -->
+                                <div class="icon2 d-inline">
+                                    <span class="bi bi-file"></span>
+                                </div>
+                                <!-- title -->
+                                <div class="h3 d-inline pl-2"> Webpage </div>
+                            </div>
+                            <!-- detail -->
+                            <div class="p-3"> First Learn How to make simple webpage with the help of " HTML | CSS | JS " Web Developement TecStack. </div>
+                            <a href="#" class="btn btn-outline-dark m-3"> Explore More </a>
+                        </div>
+                        <!-- 2 -->
+                        <div class="col-md-4 col-sm-6 col-12 py-5 border-bottom">
+                            <div class="d-block px-2">
+                                <!-- icon -->
+                                <div class="icon2 d-inline">
+                                    <span class="bi bi-database-fill"></span>
+                                </div>
+                                <!-- title -->
+                                <div class="h3 d-inline pl-2"> Database </div>
+                            </div>
+                            <!-- detail -->
+                            <div class="p-3"> How to upload your project else webpage in GitHub that provide online free storage after singin Your github Id. </div>
+                            <a href="#" class="btn btn-outline-dark m-3"> Explore More </a>
+                        </div>
+                        <!-- 3 -->
+                        <div class="col-md-4 col-sm-12 py-5 border-bottom">
+                            <div class="d-block px-2">
+                                <!-- icon -->
+                                <div class="icon2 d-inline">
+                                    <span class="bi bi-hdd-stack-fill"></span>
+                                </div>
+                                <!-- title -->
+                                <div class="h3 d-inline pl-2"> Server </div>
+                            </div>
+                            <!-- detail -->
+                            <div class="p-3"> Understand How to Live your website in github. In very easy or simple way even you choose which version be live at Time. </div>
+                            <a href="#" class="btn btn-outline-dark m-3"> Explore More </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+                ( about page ) ----------
+            -->
+            <div class="py-5 mt-md-5 mt-0" id="about">
+                <div class="container">
+                    <div class="row py-1">
+
+                        <!-- slef -->
+                        <div class="col-md-6 col-12">
+                            
+                            <div class="h1 p-3 w-0 mx-auto pt-5 text-secondary"> About Me </div>
+                            
+                            <div class="lead p-3 text-dark"> Hello! Friends. I am Mayank. <br> My passfession is Developement Website & Programm. It ProCoder Website is my Project Developed for Learn or Understand new Things. </div>
+
+                            <a href="https://mastermayank.w3spaces.com" target="_blank" class="btn btn-outline-success m-3"> More About Me </a>
+
+                        </div>
+                        <!-- image -->
+                        <div class="col-md-6 col-12 p-md-3 p-5 px-5">
+                            <img src="data/feature/3.svg" alt="" class="w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+                ( language page ) ----------
+            -->
+            <div class="pt-5" id="language">
+                <div class="container rounded my-sm-5 my-0">
+                    <div class="row justify-content-center pt-sm-5 p-sm-5 p-0">
+                        <!-- python detail -->
+                        <div class="col-md-7 col-10">
+                            <div class="h2 text-light py-3"> Git_for( GitHub ) </div>
+                            <div class="h3 text-warning"> { </div>
+                            <div class="h4 text-wieght-normal text-success py-3"> Git is requirement of every Tech Company Because Git it help to version control and make easly work in Group at single project. </div>
+                            <div class="h3 text-warning"> } </div>
+                            <a href="#" class="btn btn-outline-info btn-lg px-5 my-sm-3 my-5"> Learn Git </a>
+                        </div>
+                        <!-- python logo -->
+                        <div class="col-md-5 col-10 text-center order-md-last order-sm-first order-first">
+                            <div class="python py-sm-1 py-1">
+                                <span class="bi bi-git text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+                ( contact page ) ----------
+            -->
+            <div class="pt-5 d-none" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <!-- contact -->
+                        <div class="col-md-6 col-12 py-5">
+                            <div class="p-3">
+                                <img src="data/feature/1.svg" alt="" class="w-100">
+                            </div>
+                            <div class="p-md-5 py-sm-2">
+                                <a class="d-block py-3">
+                                    <span class="bi bi-phone"></span> 9211420420
+                                </a>
+                                <a class="d-block py-3">
+                                    <span class="bi bi-envelope"></span> fake@gmail.com
+                                </a>
+                                <a class="d-block py-3">
+                                    <span class="bi bi-geo-alt-fill"></span> #420 Vikas Nagar in Chandigarh 160102 at India
+                                </a>
+                            </div>
+                        </div>
+                        <!-- form -->
+                        <div class="col-md-6 col-12 py-md-5 py-3 order-md-last order-first">
+                            <form action="#" class="p-3">
+                                <div class="form-group">
+                                    <div class="h3 px-2"> Contact Us </div>
+                                </div>
+                                <div class="py-3">
+                                    <input type="text" name="name" id="" class="form-control" placeholder="Enter Your Name">
+                                </div>
+                                <div class="py-3">
+                                    <input type="email" name="email" id="" class="form-control" placeholder="Enter Your Email">
+                                </div>
+                                <div class="py-3">
+                                    <input type="text" name="subject" id="" class="form-control" placeholder="Subject">
+                                </div>
+                                <div class="py-3">
+                                    <textarea name="" id="" rows="5" class="form-control" placeholder="We're here to listen you"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Send Comment" class="btn btn-block btn-primary">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <!--
+            ==================
+            [ footer section ]--------------------------------------------
+            ==================
+        -->
+        <div id="footer"></div>
+
+    </div>
+    <!--
+        ----------
+        | script |
+        ----------
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!-- (offline) -->
+    <script src="min/js/jQuery.slim.min.js"></script>
+    <script src="min/js/bootstrap.bundle.min.js"></script>
+    <script src="js/footerLayout.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
+<!-- the end -->

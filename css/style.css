@@ -1,0 +1,164 @@
+/*
+*   website 16 "PROCODER"
+*   MAYANK all right Reserved
+*   Desgined by Mayank
+*   CSS : css/style
+*/
+
+@import "./bootstrap.min.css";
+@import "./bootstrap-icons.min.css";
+/*
+    -----------------
+    | bootstrap url |
+    -----------------
+*/
+
+:root
+{
+--blue: #007bff;
+--indigo: #6610f2;
+--purple: #6f42c1;
+--pink: #e83e8c;
+--red: #dc3545;
+--orange: #fd7e14;
+--yellow: #ffc107;
+--green: #28a745;
+--teal: #20c997;
+--cyan: #17a2b8;
+--white: #fff;
+--gray: #6c757d;
+--gray-dark: #343a40;
+--primary: #007bff;
+--secondary: #6c757d;
+--success: #28a745;
+--info: #17a2b8;
+--warning: #ffc107;
+--danger: #dc3545;
+--light: #f8f9fa;
+--dark: #343a40;
+--bluewhite: #f1f6fe;
+}
+/*
+    ----------------------
+    | BootStrap Icon CSS |
+    ----------------------
+*/
+.bi
+{
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color:var(--secondary);
+}
+/*
+    SELF CSS -----------------------------
+*/
+#mother_container
+{
+    min-height: 100vh;
+}
+/*
+    HEADER CSS ---------------------------
+*/
+#header
+{
+    z-index: 10;
+}
+.nav-link > .bi
+{
+    color:var(--light);
+}
+.nav-item:hover > .nav-link
+{
+    color:var(--blue);
+}
+/*
+    CONTAINER CSS ------------------------
+*/
+#home > .container
+{
+    /* background: rgba(10,10,10, 0.8) url(../data/bg.jpg) no-repeat; */
+    background: rgba(255, 255, 255, 0.9) url(../data/bg.jpg) no-repeat;
+    /* backdrop-filter: sepia(90%); */
+    backdrop-filter: invert(80%);
+    background-size: cover;
+    background-blend-mode:saturation;
+}
+#home .h1, #home .h4
+{
+    /* color:var(--light); */
+}
+#learn .row .bi
+{
+    font-size: 5rem;
+}
+#learn .row a:hover .bi
+{
+    color: var(--primary);
+}
+#github_icon > .bi
+{
+    font-size: 5rem;
+}
+#language .container
+{
+    background: rgb(5, 34, 48) url(../data/banner.jpg) no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    background-blend-mode: overlay;
+}
+#learn .row a:hover
+{
+    border-color: var(--primary) !important;
+}
+.python .bi
+{
+    font-size: 15rem;
+}
+.icon2 .bi
+{
+    font-size: 2rem;
+}
+/*
+    CONTACT CSS
+*/
+/*
+    FOOTER CSS ---------------------------
+*/
+/*
+    NewsLetter CSS
+*/
+#newsletter
+{
+    background:var(--bluewhite);
+}
+a
+{
+    text-decoration: none !important;
+}
+#baselink a:hover
+{
+    color:var(--primary) !important;
+}
+.media .bi
+{
+    font-size: 1.5rem;
+    color:var(--primary);
+    border: 1px solid var(--primary);
+    border-radius:0.2rem;
+}
+.media:hover .bi
+{
+    color: var(--white);
+    background: var(--primary);
+}
+/*
+    CopyRight CSS
+*/
+#copy_right
+{
+    background: var(--bluewhite);
+}
+/*
+    [ THE END ] ==========================
+*/
