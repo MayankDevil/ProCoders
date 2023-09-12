@@ -14,7 +14,7 @@
 
 - TecStack : { HTML | CSS | JavaScript | Bootstrap }
 
-- Thanks : { VSCode | GitHub | Whatsapp | Bootstrap-Icons }
+- Thanks : { VSCode | GitHub | Whatsapp | Bootstrap-ICONS }
 
 - Work : Self
 
@@ -36,10 +36,12 @@
 
 ![LoginPage](./data/procoder.png "HomePage")
 
-## NOTE
-
-__
-
 ## Responsive
 
-__
+_this website is very responsive webpages, thanks by bootstrap framewrok_
+
+**SCREEN** { 1200PX | 992PX | 785PX | 556PX }
+
+## INFOMATION
+
+_this is self learning website that my first aproch to learn bootstrap not gibe tutorial website._
