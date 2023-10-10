@@ -89,11 +89,11 @@ try
                         <!-- social media -->
                         <div class="row" id="social">
                             <!-- linkedin -->
-                            <a href="#" class="media col-2">
+                            <a href="https://www.linkedin.com/in/MasterMayank" class="media col-2">
                                 <span class="bi bi-linkedin"></span>
                             </a>
                             <!-- github -->
-                            <a href="#" class="media col-2">
+                            <a href="https://github.com/MayankDevil" class="media col-2">
                                 <span class="bi bi-github"></span>
                             </a>
                             <!-- youtube -->

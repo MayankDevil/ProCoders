@@ -2,19 +2,19 @@
 
 - Name : "ProCoder"
 
-- Description : "Learn Bootstrap to make good website layout by minmum components us"
+- Description : "Learn Bootstrap to make good or simple website layout with minmum components us"
 
-- Version : 1.2
+- Version : 1.3
 
-- Update : 10-09-2023
+- Update : 10-10-2023
 
-- Status : ACTIVE
+- Status : REST
 
 - Responsive : True
 
 - TecStack : { HTML | CSS | JavaScript | Bootstrap }
 
-- Thanks : { VSCode | GitHub | Whatsapp | Bootstrap-ICONS }
+- Thanks : { VSCode | GitHub | Bootstrap-Icons | Freepik }
 
 - Work : Self
 
@@ -44,4 +44,5 @@ _this website is very responsive webpages, thanks by bootstrap framewrok_
 
 ## INFOMATION
 
-_this is self learning website that my first aproch to learn bootstrap not gibe tutorial website._
+_this is self learning website that my first aproch to learn bootstrap not make tutorial website. it not claim to any course._
+

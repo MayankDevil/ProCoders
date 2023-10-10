@@ -77,7 +77,7 @@
 */
 #home > .container
 {
-    /* background: rgba(10,10,10, 0.8) url(../data/bg.jpg) no-repeat; */
+    /* background:  url(../data/bg1.jpg) no-repeat; */
     background: rgba(255, 255, 255, 0.9) url(../data/bg.jpg) no-repeat;
     /* backdrop-filter: sepia(90%); */
     backdrop-filter: invert(80%);
@@ -102,7 +102,7 @@
 }
 #language .container
 {
-    background: rgb(5, 34, 48) url(../data/banner.jpg) no-repeat;
+    background: #34495e url(../data/bg2.jpg) no-repeat;
     background-size: cover;
     backdrop-filter: blur(10px);
     background-blend-mode: overlay;
@@ -122,6 +122,15 @@
 /*
     CONTACT CSS
 */
+.white_bg
+{
+    width:100%;
+    min-height:100vh;
+    background: url(../data/bg1.jpg) no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    background-blend-mode: overlay;
+}
 /*
     FOOTER CSS ---------------------------
 */
