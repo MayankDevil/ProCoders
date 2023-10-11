@@ -92,9 +92,53 @@
 {
     font-size: 5rem;
 }
-#learn .row a:hover .bi
+#learn .row a:hover:nth-child(1) .bi
 {
-    color: var(--primary);
+    color: var(--orange);
+}
+#learn .row a:hover:nth-child(2) .bi
+{
+    color: var(--blue);
+}
+#learn .row a:hover:nth-child(3) .bi
+{
+    color: var(--yellow);
+}
+#learn .row a:hover:nth-child(4) .bi
+{
+    color: var(--purple);
+}
+#learn .row a:hover:nth-child(5) .bi
+{
+    color: var(--red);
+}
+#learn .row a:hover:nth-child(6) .bi
+{
+    color: var(--dark);
+}
+#learn .row a:hover:nth-child(1)
+{
+    border-color: var(--orange) !important;
+}
+#learn .row a:hover:nth-child(2)
+{
+    border-color: var(--blue) !important;
+}
+#learn .row a:hover:nth-child(3)
+{
+    border-color: var(--yellow) !important;
+}
+#learn .row a:hover:nth-child(4)
+{
+    border-color: var(--purple) !important;
+}
+#learn .row a:hover:nth-child(5)
+{
+    border-color: var(--red) !important;
+}
+#learn .row a:hover:nth-child(6)
+{
+    border-color: var(--dark) !important;
 }
 #github_icon > .bi
 {
@@ -107,10 +151,7 @@
     backdrop-filter: blur(10px);
     background-blend-mode: overlay;
 }
-#learn .row a:hover
-{
-    border-color: var(--primary) !important;
-}
+
 .python .bi
 {
     font-size: 15rem;
