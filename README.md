@@ -1,6 +1,9 @@
 # ProCOder
 ---
+
 ### Your Path to Mastering Web Development and Programming
+
+![LoginPage](./data/procoder.png "HomePage")
 
 ## 🔗 Links
 
@@ -10,21 +13,9 @@
 
 - Download : https://github.com/MayankDevil/website-16/archive/refs/heads/main.zip
 
-## Feedback
+## Description
 
 ProCoder is a comprehensive online education plathform dedicated to helping you become a proficient to helping you become a proficient web developer and programmer. Our course cover a wide range of technologies, including __HTML__,__CSS__,__JavaScript__,__PHP__,__Java__, and __SQL__ equipping you with the knowledge and skills to excel in the world of coding.
-
-<!--
-
-# website-16
-
-- Name : "ProCoder"
-
-- Description : "Learn Bootstrap to make good or simple website layout with minmum components us"
-
-- Version : 1.3
-
-- Update : 10-10-2023
 
 - Status : REST
 
@@ -34,24 +25,17 @@ ProCoder is a comprehensive online education plathform dedicated to helping you 
 
 - Thanks : { VSCode | GitHub | Bootstrap-Icons | Freepik }
 
-- Work : Self
+- Collaborate : Self
 
-- Design : { Mayank }
-
-- Developer : { Mayank }
+- Design | Developer : { Mayank }
 
 - CopyRight : { ProCoder }
 
-
 ---
-
-### Home Page
-
-![LoginPage](./data/procoder.png "HomePage")
 
 ## Responsive
 
-_this website is very responsive webpages, thanks by bootstrap framewrok_
+_Learn to create responsive and mobile-friendly websites using HTML and CSS Understand the power of Bootstrap to streamline your design process_
 
 **SCREEN** { 1200PX | 992PX | 785PX | 556PX }
 
