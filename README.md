@@ -1,5 +1,14 @@
 # ProCOder
+---
 ### Your Path to Mastering Web Development and Programming
+
+## 🔗 Links
+
+- URL : https://mayankdevil.github.io/website-16/
+
+- Clone : https://github.com/MayankDevil/website-16.git
+
+- Download : https://github.com/MayankDevil/website-16/archive/refs/heads/main.zip
 
 ## Feedback
 
@@ -33,11 +42,6 @@ ProCoder is a comprehensive online education plathform dedicated to helping you 
 
 - CopyRight : { ProCoder }
 
-- URL : https://mayankdevil.github.io/website-16/
-
-- Clone : https://github.com/MayankDevil/website-16.git
-
-- Download : https://github.com/MayankDevil/website-16/archive/refs/heads/main.zip
 
 ---
 
