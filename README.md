@@ -4,15 +4,16 @@
 
 ### Your Path to Mastering Web Development and Programming
 
-![LoginPage](./data/procoder.png "HomePage")
-
 ## 🔗 Links
 
-- URL : https://mayankdevil.github.io/website-16/
+- URL : <https://mayankdevil.github.io/ProCoders/>
 
-- Clone : https://github.com/MayankDevil/website-16.git
+- Clone : <https://github.com/MayankDevil/ProCoders.git>
 
-- Download : https://github.com/MayankDevil/website-16/archive/refs/heads/main.zip
+- Download : <https://github.com/MayankDevil/ProCoders/archive/refs/heads/main.zip>
+
+
+![LoginPage](./data/procoder.png "HomePage")
 
 ## Description
 
