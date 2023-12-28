@@ -40,7 +40,10 @@ _Learn to create responsive and mobile-friendly websites using HTML and CSS Unde
 
 **SCREEN** { 1200PX | 992PX | 785PX | 556PX }
 
-## INFOMATION
+## Information
 
-_this is self learning website that my first aproch to learn bootstrap not make tutorial website. it not claim to any course._
+
+__" This website is meticulously crafted for educational purpose, aiming to facilitate learning and skill enchcement. It is crucial to underastand that while every effort has been mode to ensure accuracy and quality, we cannot guarantee the absence of errors or omissions. We do not provide certification services, nor do we impose any fees for access "__
+
+
 
