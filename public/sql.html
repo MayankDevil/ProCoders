@@ -1,0 +1,2159 @@
+<!DOCTYPE html>
+<!--
+- Description: Simple layout for documentation
+- File: simpleUI.html
+-->
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="simpleUI">
+    <meta name="author" content="MayankDevil">
+    <meta name="description" content="simple website User Interface">
+
+    <title>Mayank</title>
+
+    <link rel="stylesheet" href="../css/app.css">
+
+    <script src="../js/app.js"></script>
+
+</head>
+
+<body>
+
+	<div class="wrapper" id="root">
+		<div id="firstColumn">
+
+			<!-- header -->
+			<header class="" id="header">
+
+				<h3 name="Git" class="brandname"> ProCoder : MySQL </h3>
+
+				<div class="flex">
+					<a class="btn" id="themeBtn"> Theme </a>
+					<button class="btn" id="toggleBtn"> &#9776; </button>
+				</div>
+
+			</header>
+			
+			<!-- main -->
+			<main class="container" id="main">
+			
+                <section class id="">
+                    
+					<h1 title="What is the DBMS?"> What is the DBMS? </h1>
+
+					<p> DBMS stand for <b>DataBase Manuplation System</b>. It is simply mean DBMS is a collection of package to help mange or maintain or store database. DBMS is system which is used to manage the database. </p>
+
+					<article class="hr alert">
+						<h4> Example </h4>
+						<p> <i>simple daily life example school Database that inside student, teacher, mark etc data. We are mantain marks data for processed to get result information of student.</i></p>
+					</article>
+
+					<h2 title="Scheme of DBMS"> Scheme of DBMS </h2>
+					
+					<p> DBMS a collection of programs that enables users to create, maintain and use a database. It enables creation of a repository of data that is defined once and then accessed by different users as per their requirements. Thus there is a single repository of data which is accessed by all the application programs. </p>
+
+					<div class="hr"></div>
+
+					<div class="alert flex" id="databaseSchemeDigram">
+						<div class="alert success"> Application </div>
+						<code class="col mb-3 ent"> &RightArrowLeftArrow; </code>
+						<div class="alert success"> DBMS </div>
+						<code class="col mb-3 ent"> &RightArrowLeftArrow; </code>
+						<div class="alert success"> DataBase </div>
+					</div>
+
+					<div class="hr"></div>
+					
+					<h2 title="Use Of DBMS"> Use Of DBMS </h2>
+
+					<ul>
+						<li> <b>End User</b> They simply use the DBMS to get their task done.</li>
+						<li> <b>Application Programmers</b> Application programmes write application programs to interact with the database. </li>
+						<li> <b>Database Administrator (DBA)</b> The DBA is responsible for authoring access, monitoring its use, providing technical support, acquiring software and hardware resources.</li>
+						<li> <b>System Analyst</b> A system analyst plays a major role in the database design and all the technical, economic and feasibility aspects. </li>
+					</ul>
+
+                </section>
+
+				<section class="" id="">
+
+					<h1 title="Relational DBMS Rules"> Relational DBMS Rules </h1>
+
+					<p>Since 1970 <b>Dr.Edgar F.Codd</b> had present Relational Model of Database which contain 12 rule that we know today 12 Codd Rules.</p>
+
+					<ol>
+						<li><h6> Information Rule </h6>
+							<article>
+								<p> The data stored in a database, may it be user data or metadata, must be a value of some table cell. Everything in a database must be stored in a table format.</p>
+							</article>
+						</li>
+						<li><h6> Guaranted Access Rule </h6>
+							<article>
+								<p>Every single data element(<b>value</b>) is guaranteed to be accessible logically with a combination of table_name, primary_key (<b>row value</b>), and attribute_name (<b>column value</b>). No other means, such a pointers, can be used to access data.</p>
+							</article>
+						</li>
+						<li><h6>Systematic Treatment of Null Values</h6>
+							<article>
+								<p>The <b>NULLL</b> vlaues in database must be given a systematic and uniform treatment. This is a very important rule because a NULL can be inerpreted as one the following - data is missing, data is not know, or data is not applicable.</p>
+							</article>
+						</li>
+						<li><h6>Active Online Catalog</h6>
+							<article>
+								<p>The structure desciption of the entire database must be stored in an online catalog, known as <b> data dictionary </b>, which can be accessed by authorized users. Users can use the same query language to access the catalog which they use to access the database itselef.</p>
+							</article>
+						</li>
+						<li><h6>Comprehensive Data Sub-Language Rule</h6>
+							<article>
+								<p>A database can only be accessed using a language having linear systax that supports data definition, data manipulation, and transtion management operations. This language can be used directly or by means of some application. If the database allows access to data without any help of this lanaguage.</p>
+							</article>
+						</li>
+						<li><h6>View Updating Rule</h6>
+							<article>
+								<p>All the views of a database, which can theoretically be updated, must also be updatable by the system.</p>
+							</article>
+						</li>
+						<li><h6>Hight-Level Insert,Update, and Delete Rule</h6>
+							<article>
+								<p>A database must support high-level insertion, updation, and deletion. This must not be limited to a single row, that is, it must also support union, intersection and minus operations to yield sets of data records.</p>
+							</article>
+						</li>
+						<li><h6>Physical Data Independence</h6>
+							<article>
+								<p>The data sored in a database must be independent of the appplications that access the database. Any change in the physical structure of a database must not have any impact on how the data is being accessed by external applications.</p>
+							</article>
+						</li>
+						<li><h6>Logical Data Independence</h6>
+							<article>
+								<p>The logical data in a database must be indepedent of its user's view (application). Any change in logical data must not affect the application using it. For example, if two tables are merged or one is split into two different tables, there should be no impact or change on the user application. This is one of the most difficult rule to apply.</p>
+							</article>
+						</li>
+						<li><h6>Integrity Independence</h6>
+							<article>
+								<p>A database must be independent of the application that user it. All its integrity constrainsts can be independently modified without the need of any change in the application. This rule makes a database independent of the front-end application and its interface.</p>
+							</article>
+						</li>
+						<li><h6>Distribution Independence</h6>
+							<article>
+								<p>The end-user must not be able to see tha the data is distributed over various locaions. Uers should always get the impression that the data is located at one site only. This rule has been regarded as he foundation of distributed database systems.</p>
+							</article>
+						</li>
+						<li><b>Non-Subversion Rule</b>
+							<article>
+								<p>If a system has an interface that provides access to low-level records. then the interface must not be able to subvert the system and bypass security and integrity constraints.</p>
+							</article>
+						</li>
+					</ol>
+
+				</section>
+
+				<section>
+					
+					<h1 title="What is SQL?"> What is SQL? </h1>
+
+					<p> SQL is <b>Structure Query Language</b> that is Application of DBMS. It is Collection of Database. </p>
+
+					<p> Data is a collection of raw facts which have not been processed to reveal useful information. Information is produced by processing a data. </p>
+					
+					<div class="hr"></div>
+
+					<div class="alert flex" id="databaseUseDigram">
+						<div class="alert success">Data</div>
+						<code>&#8407;</code>
+						<div class="alert success">Process</div>
+						<code>&#8407;</code>
+						<div class="alert success">Information</div>
+					</div>
+
+					<div class="hr"></div>
+
+					<h2> SQL (Structure Query Language) </h2>
+
+					<ol class="">
+						<li class=""> DDL ( Data Definition Language ) 
+							<ul class="">
+								<li class=""> <a href="#">Create</a> </li>
+								<li class=""> <a href="#">Alter</a> </li>
+								<li class=""> <a href="#">Drop</a> </li>
+								<li class=""> <a href="#">Truncate</a> </li>
+								<li class=""> <a href="#">Rename</a> </li>
+							</ul>
+						</li>
+						<li class=""> DML ( Data Manipulation Language ) 
+							<ul class="">
+								<li class=""> <a href="#">Insert</a> </li>
+								<li class=""> <a href="#">Update</a> </li>
+								<li class=""> <a href="#">Delete</a> </li>
+								<li class=""> <a href="#">Merge</a> </li>
+							</ul>
+						</li>
+						<li class=""> DQL ( Data Query Language ) 
+							<ul class="">
+								<li class=""> <a href="#">Select</a> </li>
+							</ul>
+						</li>						
+						<li class=""> TCL ( Transaction Control Language ) 
+							<ul class="">
+								<li class=""> <a href="#">Commit</a> </li>
+								<li class=""> <a href="#">Rollback</a> </li>
+								<li class=""> <a href="#">Save Point</a> </li>
+							</ul>
+						</li>
+						<li class=""> DCL ( Data Control Language ) 
+							<ul class="">
+								<li class=""> <a href="#">Grant</a> </li>
+								<li class=""> <a href="#">Revoke</a> </li>
+							</ul>
+						</li>
+					</ol>
+
+					<h2> How To Execute SQL? </h2>
+
+					<div class="hr"></div>
+					<mark class=""> mysql -u username -p password </mark>
+					<div class="hr"></div>
+
+					<div class="console">
+<pre class="console">
+Mayank@Server/:#~ mysql -u root -p
+
+Enter password: ***************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.1.30-community MySQL Community Server (GPL)
+
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+
+mysql> /*
+mysql> 		mysql multiple line comment
+mysql> */
+mysql> -- mysql single line comment
+mysql>
+</pre>
+					</div>
+
+				</section>
+
+				<section class="" id="">
+
+					<h3 title="How to Select Database?">  Use Command </h2>
+					<p> Use is very simple and imprtant command for working in database at manual time. It used to <b> select database </b> in sql. </p>
+					
+					<div class="hr"></div>
+					<mark class=""> USE database_name; </mark>
+					<div class="hr"></div>
+
+					<div class="console">
+<pre class="console">
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| company            |
+| mysql              |
+| school             |
+| test               |
++--------------------+
+
+mysql> use school
+Database changed
+mysql> use test;
+Database changed
+mysql>
+</pre>
+					</div>
+
+					<div class="br"></div>
+
+					<h3 title="Show All Database Or Table">  Show Command </h2>
+
+					<p> Use is very simple and important command for working in database at manual time. It used to <b> select database </b> in sql. </p>
+
+					<div class="hr"></div>
+					<mark class=""> SHOW database_object; </mark>
+					<div class="hr"></div>
+
+					<div class="console">
+<pre class="console">
+mysql> SHOW Databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| company            |
+| mysql              |
+| school             |
+| test               |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql>
+
+mysql> SHOW CREATE Database new_database;
++--------------+-------------------------------------------------------------------------+
+| Database     | Create Database                                                         |
++--------------+-------------------------------------------------------------------------+
+| new_database | CREATE DATABASE `new_database` /*!40100 DEFAULT CHARACTER SET latin1 */ |
++--------------+-------------------------------------------------------------------------+
+1 row in set (0.02 sec)
+
+mysql> SHOW Tables;
++------------------+
+| Tables_in_school |
++------------------+
+| mark             |
+| student          |
++------------------+
+2 rows in set (0.07 sec)
+
+mysql>
+
+mysql> use new_database;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+</pre>
+					</div>
+
+					<div class="br"></div>
+
+					<h3 title="Exaplain Structure">  Describe Command </h2>
+
+					<p> Use is very simple and imprtant command for working in database at manual time. It used to <b> select database </b> in sql. </p>
+
+					<div class="hr"></div>
+					<mark class=""> Describe table_name; </mark>
+					<div class="hr"></div>
+
+					<div class="console">
+<pre class="console">
+mysql> DESC mark; -- use only desc
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| id    | int(11) | YES  |     | NULL    |       |
++-------+---------+------+-----+---------+-------+
+1 row in set (0.05 sec)
+
+mysql>
+
+mysql> DESCRIBE student;
++--------+----------+------+-----+---------+-------+
+| Field  | Type     | Null | Key | Default | Extra |
++--------+----------+------+-----+---------+-------+
+| id     | int(11)  | NO   | PRI | 0       |       |
+| fname  | char(15) | YES  |     | NULL    |       |
+| lname  | char(15) | YES  |     | NULL    |       |
+| gender | char(1)  | YES  |     | T       |       |
++--------+----------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql>
+</pre>
+					</div>
+
+				</section>
+				
+				<section class="" id="">
+
+					<h2 title="Constraint"> What is Constraint? </h2>
+		
+					<p> Constraint is the set of ristriction upon table column like not be null data set and not be duplicate contion to checks etc. </p>
+
+					<div class="br"></div>
+
+					<h3 title="Primary Key">  Primary Constraint </h2>
+
+					<p> Primary key is master key that make table to <b>MASTER TABLE</b>. If any field have primary so it mean that value not be set <b>NULL</b> and <b>DUPLICATE</b>. </p>
+
+					<div class="hr"></div>
+					<mark> alter_add_query Constraint key_name Primary key(primary_column); </mark>
+					<div class="hr"></div>
+		
+<pre class="console">
+mysql> CREATE Table t1(
+	-> id int primary key
+	-> );
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> CREATE Table t2(
+	-> id int,
+	-> Constraint pk Primary Key(id)
+	-> );
+Query OK, 0 rows affected (0.13 sec)
+
+mysql> ALTER Table t3 ADD Constraint pk Primary key(primary_column);
+Query OK, 0 rows affected (0.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql>
+</pre>
+
+					<h3 title="Foreign Key">  Foreign Constraint </h2>
+
+					<p> Foreign key is set table as Secondary Table it exmple like mark table of student. It is check column data always insert that present in that primary field. </p>
+
+					<div class="hr"></div>
+					<mark> alter_add_query Constraint Foreign Key(foriegn_column) REFERENCES table_name(primary_column); </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> CREATE TABLE t4(
+	-> id int references t1(id)
+	-> );
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> CREATE TABLE t5(
+	-> id int,
+	-> Constraint fk Foreign key(id) references t2(id)
+	-> );
+Query OK, 0 rows affected (0.07 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+
+					<h3 title="Unique">  Unique Constraint </h2>
+
+					<p> The unique constraint is set column have not be store duplicate data. if you can select unique data from table you can use <a href="select.html#distinct">distinct</a>. </p>
+
+					<div class="hr"></div>
+					<mark> alter_add_query Column column_name datatype UNIQUE; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> CREATE Table rollno(
+	-> rollno int unique
+	-> );
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> ALTER Table bill ADD Column bill_id int UNIQUE;
+Query OK, 0 rows affected (0.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql>
+</pre>
+
+
+					<h3 title="Not Null">  NOt NULL Constraint </h2>
+
+					<p> The NOT NULL Constraint is set column data have be not null if you can entity new row. With deal to not null you can use <a href="select.html#is">is</a> Operator. </p>
+
+					<div class="hr"></div>
+					<mark> alter_add_query Column column_name datatype NOT NULL; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> CREATE Table personal(
+-> fname char(30) NOT NULL
+-> );
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> ALTER Table personal ADD Column lname char(30) NOT NULL;
+Query OK, 0 rows affected (0.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					
+					<h3 title="NULL">  NULL Constraint </h2>
+
+					<p> The <b>NULL</b> Constraint is set you can insert it data is null (void). With deal to null you can use <a href="select.html#is">is</a> Operator. </p>
+
+					<div class="hr"></div>
+					<mark> alter_add_query Column column_name datatype NULL; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> CREATE Table personal(
+-> fname char(30) NULL
+-> );
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> ALTER Table personal ADD Column lname char(30) NULL;
+Query OK, 0 rows affected (0.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					
+					<h3 title="Check">  CHECK Constraint </h2>
+
+					<p> The <b>Check</b> Constraint is used for set condition inside the column. </p>
+
+					<div class="hr"></div>
+					<mark> alter_add_query Column column_name datatype CHECK(condition); </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> CREATE Table sex(
+-> gender char(1) CHECK(in('T','M','F'))
+-> );
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> ALTER Table personal ADD Column m1 int CHECK(m1 > 100);
+Query OK, 0 rows affected (0.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					
+					<h3 id="Default">  Default Constraint </h2>
+
+					<p> The <b>default</b> Constraint is use to set default value of the  column like if user not enter last_name it set default NULL. </p>
+					
+					<div class="hr"></div>
+					<mark> alter_add_query Column column_name datatype DEFAULT value; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> CREATE Table departement(
+-> student_Class char('40') DEFAULT 'BCA'
+-> );
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> ALTER Table personal ADD Column status char(30) default 'bachlor';
+Query OK, 0 rows affected (0.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql>
+</pre>
+				</section>
+
+
+				<section class="" id="create">
+
+					<h2 title="Create"> Create Command </h2>
+
+					<p> Create is <a href="home.html#sql"> DDL </a> command that is used to create the database, table, view etc in SQL.  </p>
+
+					<mark> CREATE database_object database_object_name; </mark>
+
+					<div class="br"></div>
+
+					<h3 id="createdatabase">  Create Database </h3>
+
+					<p> Create database is very simple command that simply work to create new database in system that you can see by used <a href="use.html#show"> SHOW </a> command. If the database already exists, Error 1007 is returned. </p>
+
+					<div class="hr"></div>
+					<mark> CREATE Database database_name; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> CREATE Database new_database;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SHOW Databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| new_database       |
+| test               |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql>
+</pre>
+					<div class="br"></div>
+					<h3>  Create Table </h3>
+
+					<p> The keyword CREATE TABLE is followed by the name of the table that you want to create. Then within parenthesis, you write the column definition that consists of column name followed by its <a href="datatype.html"> datatypes </a> and optional  <a href="constraint.html">constraints</a>. There can be as many columns as you require. Each column definition is separated with a comma (,). All SQL statements should end with a semicolon (;). </p>
+
+					<div class="hr"></div>
+					<mark> CREATE Table table_name(column_name datatype constraint, ...); </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> CREATE Table staff(
+    -> id tinyint unique,
+    -> name char(30) not null,
+    -> dob date,
+    -> gender char(1) default 'T'
+    -> );
+Query OK, 0 rows affected (0.10 sec)
+
+mysql>
+</pre>
+					<div class="br"></div>
+					<h3 id="view">  Create View </h3>
+
+					<p> The <b> VIEW </b> is concept to present the data with selected data. It is as structure of user that data is select by other table. Is is a representation of table with struture change. It Create to use compand CREATE VIEW and it delete to use <a href="drop.html#dropview"> Drop view </a> command. If you display the data of view you may be <a href="select.html#selectview"> select view </a> with select command. </p>
+
+					<div class="hr"></div>
+					<mark> CREATE View view_name AS select_query; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql>  CREATE View new_view AS 
+    ->  SELECT id, name, contact FROM table_name;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> SELECT * FROM new_view;
++------+--------+------------+
+|  ID  |  Name  |  Contact   |
++------+--------+------------+
+|   1  |   Ram  | 9211420420 |
++------+--------+------------+
+1 row in set (0.02 sec)
+
+mysql>
+</pre>
+					<div class="br"></div>
+					<h3 id="createuser">  Create User </h3>
+
+					<p> The above creates a user John123, able to connect with any hostname due to the % wildcard. The Password for the user is set to 'OpenSesame' which is hashed. </p>
+
+					<div class="hr"></div>
+					<mark> CREATE User user_name @ host_name IDENTIFIED BY password; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> CREATE USER 'sqluser'@'%' IDENTIFIED BY 'password123';
+Query OK, 0 rows affected (0.22 sec)
+
+mysql>
+</pre>
+
+				</section>
+
+				<section class="" id="alter">
+
+					<h2 title="Alter"> Alter Command </h2>
+
+					<p> Alter is the DDL command of SQL. It is use to update structure on "database object". To modify ,add , drop ,change ,rename etc and use after before clause. </p>
+
+					<div class="br"></div>
+					<h3> ADD Command </h3>
+
+					<p> Alter command ADD is use to add column in table with datatype or constraint. </p>
+
+					<div class="hr"></div>
+					<mark> ALERT Table table_name ADD Column column_name datatype constraint; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| id    | int(11) | YES  |     | NULL    |       |
++-------+---------+------+-----+---------+-------+
+1 row in set (0.02 sec)
+
+mysql> ALTER Table personal ADD Column fname char(30) DEFAULT NULL;
+Query OK, 1 row affected (0.17 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> EXPLAIN personal;
++-------+----------+------+-----+---------+-------+
+| Field | Type     | Null | Key | Default | Extra |
++-------+----------+------+-----+---------+-------+
+| id    | int(11)  | YES  |     | NULL    |       |
+| fname | char(30) | YES  |     | NULL    |       |
++-------+----------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql>
+</pre>
+					<div class="br"></div>
+					<h3>  DROP Command </h3>
+
+					<p> Alter command DROP is use to remove column in table with datatype or constraint. </p>
+
+					<div class="hr"></div>
+					<mark> ALERT Table table_name DROP Column column_name; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> ALTER Table personal DROP Column fname;
+Query OK, 1 row affected (0.11 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> EXPLAIN personal;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| id    | int(11) | YES  |     | NULL    |       |
++-------+---------+------+-----+---------+-------+
+1 row in set (0.02 sec)
+
+mysql>
+</pre>
+					<div class="br"></div>
+					<h3>  CHANGE Command </h3>
+
+					<p> Alter command CHANGE is use to change column in table with datatype or constraint. </p>
+
+					<div class="hr"></div>
+					<mark> ALERT Table table_name DROP Change old column_name new_column datatype constraint; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> ALTER Table personal CHANGE Column lname sir_name char(30);
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> EXPLAIN personal;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| id       | int(11)  | YES  |     | NULL    |       |
+| fname    | char(30) | YES  |     | NULL    |       |
+| sir_name | char(30) | YES  |     | NULL    |       |
++----------+----------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3> MODIFY Command </h3>
+
+					<p> Alter command MODIFY is use to upgrade column in table with datatype or constraint. </p>
+
+					<div class="hr"></div>
+					<mark> ALERT Table table_name DROP Change old column_name new_column datatype constraint; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> ALTER Table personal MODIFY sir_name int;
+Query OK, 1 row affected (0.09 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> EXPLAIN personal;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| id       | int(11)  | YES  |     | NULL    |       |
+| fname    | char(30) | YES  |     | NULL    |       |
+| sir_name | int(11)  | YES  |     | NULL    |       |
++----------+----------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql>
+</pre>
+					<div class="br"></div>
+					<h3 id="after"> AFTER Command </h3>
+
+					<p> AFTER is help to add, column after the first column that we choice. </p>
+
+					<div class="hr"></div>
+					<mark> ALERT Table table_name ADD column_name datatype AFTER column_name; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> ALTER Table personal ADD lname char(30) AFTER fname;
+Query OK, 1 row affected (0.14 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE personal;
++-------+----------+------+-----+---------+-------+
+| Field | Type     | Null | Key | Default | Extra |
++-------+----------+------+-----+---------+-------+
+| id    | int(11)  | YES  |     | NULL    |       |
+| fname | char(30) | YES  |     | NULL    |       |
+| lname | char(30) | YES  |     | NULL    |       |
++-------+----------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql>
+</pre>
+					<div class="br"></div>
+					<h3 id="rename">  RENAME Command </h3>
+
+					<p> Rename command use to change the name of table and user. It also use with alter command. </p>
+
+					<div class="hr"></div>
+					<mark> RENAME Table old_name TO new_name; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> RENAME Table personal TO mytable;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> DESCRIBE mytable;
++-------+----------+------+-----+---------+-------+
+| Field | Type     | Null | Key | Default | Extra |
++-------+----------+------+-----+---------+-------+
+| id    | int(11)  | YES  |     | NULL    |       |
+| fname | char(30) | YES  |     | NULL    |       |
++-------+----------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql> DESCRIBE personal;
+ERROR 1146 (42S02): Table 'test.personal' doesn't exist
+mysql>
+</pre>
+
+				<div class="hr"></div>	
+				<mark> ALTER Table old_name RENAME TO new_name; </mark>
+				<div class="hr"></div>
+
+<pre class="console">
+mysql> ALTER Table mytable RENAME TO personal;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> DESCRIBE personal;
++-------+----------+------+-----+---------+-------+
+| Field | Type     | Null | Key | Default | Extra |
++-------+----------+------+-----+---------+-------+
+| id    | int(11)  | YES  |     | NULL    |       |
+| fname | char(30) | YES  |     | NULL    |       |
++-------+----------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql>
+</pre>
+				</section>
+
+				<section class="" id="drop">
+					
+					<h2 title="Drop"> Drop Command </h2>
+
+					<p> Create is <a href="home.html#sql"> DDL </a> command that is used to create the database, table, view etc in SQL.  </p>
+
+					<mark> DROP database_object database_object_name; </mark>
+					
+					<div class="br"></div>
+
+					<h3 id="createdatabase">  Drop Database </h3>
+
+					<p> Drop database is used to delete the exist database else not exist it return ERROR 1008 (HY000): Can't drop database 'new_database'; database doesn't exist </p>
+
+					<div class="hr"></div>
+					<mark> DROP Database database_name; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> DROP Database new_database;
+Query OK, 1 row affected (0.09 sec)
+
+mysql> DROP Database new_database;
+ERROR 1008 (HY000): Can't drop database 'new_database'; database doesn't exist
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3>  Create Table </h3>
+
+					<p> Drop table is used to delete the exist table in database else table not exist it return ERROR 1051 (42S02): Unknown table 'staff'. </p>
+
+					<div class="hr"></div>
+					<mark> DROP Table table_name; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> DROP Table staff;
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> DROP Table staff;
+ERROR 1051 (42S02): Unknown table 'staff'
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3 id="dropview">  Drop View </h3>
+
+					<p> Drop view is used to delete the exist view in database else view not exist it return ERROR 1051 (42S02): Unknown table 'new_view'. </p>
+
+					<div class="hr"></div>
+					<mark> Drop View View_name; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> DROP View new_view;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> DROP View new_view;
+ERROR 1051 (42S02): Unknown table 'new_view'
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3>  Drop User </h3>
+
+					<p> Drop user is used to delete the exist user in database else user not exist it return ERROR 1396 (HY000): Operation DROP USER failed for 'Master'@'%'. </p>
+
+					<div class="hr"></div>
+					<mark> Drop User user_name; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> drop user 'sqluser';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> drop user 'sqluser';
+ERROR 1396 (HY000): Operation DROP USER failed for 'sqluser'@'%'
+mysql>
+</pre>
+				</section>
+
+				<section class="" id="delete">
+					
+					<h2 title="Delete"> How to Delete Data? </h2>
+
+					<h3>  Delete Command </h3>
+
+					<p> Use is very simple and imprtant command for working in database at manual time. It used to <b> select database </b> in sql. </p>
+					
+					<div class="hr"></div>
+					<mark> DELETE FROM table_name; </mark>
+			        <div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT * FROM personal;
++------+--------+
+| id   | fname  |
++------+--------+
+|    1 | Ram    |
+|    2 | Sham   |
+|    3 | Kajal  |
+|    4 | Pooja  |
+|    5 | Shruti |
++------+--------+
+5 rows in set (0.00 sec)
+
+mysql> DELETE FROM personal;
+Query OK, 5 rows affected (0.02 sec)
+
+mysql> SELECT * FROM personal;
+Empty set (0.00 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3>  Delete Specifice Row Data </h3>
+
+					<p>  If you want to delete specifice row data you need to use <b> WHERE clause </b> that help to conition with <a href="#"> Operator </a> with delete data. WHERE is optional part. </p>
+
+					<div class="hr"></div>
+					<mark> DELETE FROM personal WHERE conditon; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT * FROM personal;
++------+--------+
+| id   | fname  |
++------+--------+
+|    1 | Ram    |
+|    2 | Sham   |
+|    3 | Kajal  |
+|    4 | Pooja  |
+|    5 | Shruti |
++------+--------+
+5 rows in set (0.00 sec)
+
+mysql> DELETE FROM personal WHERE id = 5;
+Query OK, 1 rows affected (0.02 sec)
+
+mysql> SELECT * FROM personal;
++------+--------+
+| id   | fname  |
++------+--------+
+|    1 | Ram    |
+|    2 | Sham   |
+|    3 | Kajal  |
+|    4 | Pooja  |
++------+--------+
+4 rows in set (0.00 sec)
+
+mysql>
+</pre>
+
+
+					<div class="br"></div>
+					<h3 id="truncate">  Truncate data </h3>
+
+					<p> Truncate is DDL command. When you truncate a table SQL server doesn't delete the data, it drops the table and recreates it, there by deallocating the pages so there is a chance to recover the truncated data before the pages where overwritten. </p>
+
+					<div class="hr"></div>
+					<mark> TRUNCATE table_name; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT * FROM personal;
++------+--------+
+| id   | fname  |
++------+--------+
+|    1 | Ram    |
+|    2 | Sham   |
+|    3 | Kajal  |
+|    4 | Pooja  |
+|    5 | Shruti |
++------+--------+
+5 rows in set (0.00 sec)
+
+mysql> TRUNCATE personal;
+Query OK, 5 rows affected (0.02 sec)
+
+mysql> SELECT * FROM personal;
+Empty set (0.00 sec)
+
+mysql>
+</pre>
+
+
+					<div class="br"></div>
+					<h3 id="undo"> How to Undo Query? </h2>
+
+					<h3 id="truncate"> COMMIT </h3>
+
+					<p> If AUTOCOMMIT set to false and the transaction not committed, the changes will be visible only for the current connection. After COMMIT statement commits the changes to the table, the result will be visible for all connections. </p>
+
+					<div class="hr"></div>
+					<mark> COMMIT; </mark>
+					<div class="hr"></div>
+
+					<h3 id="truncate"> ROLLBACK </h3>
+
+					<p> If anything went wrong in your query execution, ROLLBACK in used to revert the changes. </p>
+
+					<div class="hr"></div>
+					<mark> ROLLBACK; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> COMMIT;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> TRUNCATE mytable;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> ROLLBACK;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SELECT * FROM mytable;
++------+
+| id   |
++------+
+|    2 |
+|    3 |
++------+
+2 rows in set (0.00 sec)
+
+mysql>
+</pre>
+				</section>
+
+				<section class="" id="insert">
+					
+					<h2 title="Insert"> How to Insert Data? </h2>
+
+					<p> his command is used to insert a tuple in a relation. We must specify the name of the relation in which tuple is to be inserted and the values. The values must be in the same order as specified during the Create Table command. </p>
+
+					<h3> Insert all column & single row </h3>
+
+					<div class="hr"></div>
+					<mark> INSERT INTO table_name VALUES(data1,data2,...); </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> INSERT INTO employee values (1023,'Kalid',null);
+Query OK, 1 row affected (0.05 sec)
+</pre>
+
+					<div class="br"></div>
+					<h3> insert all column & multiple row </h3>
+
+					<div class="hr"></div>
+					<mark> INSERT INTO table_name VALUES(data1,...), (data2,...), ... ; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> INSERT INTO college values
+-> (1024,'Kajal',null),
+-> (1025,'Komal',null),
+-> (1026,'Rohit','M');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3> Insert specified column & single row </h3>
+
+					<div class="hr"></div>
+					<mark> INSERT INTO table_name(field1,field2,...) VALUES(data1,data2,...); </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> INSERT INTO employee(fname,id,gender) values
+-> ('Nisha',1027,'F');
+Query OK, 1 row affected (0.01 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3 id="mrow"> insert specified column & multiple row </h3>
+
+					<div class="hr"></div>
+					<mark> INSERT INTO table_name(field1,field2,...) VALUES(data1,...), (data2,...), ... ; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> INSERT INTO college values(fname,id,gender)
+-> ('Mala',1028,null),
+-> ('Pooja',1029,'F');
+-> ('Rohan',1030,'M');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql>
+</pre>
+				</section>
+
+				<section class="" id="update">
+					
+					<h2 title="Update"> How to Update Data? </h2>
+
+					<h3>  UPDATE SET Command </h3>
+
+					<p> Update is DML command. IT is most useful and important command that help to update data mean reset the data in database table. </p>
+
+					<div class="hr"></div>
+					<mark> UPDATE table_name SET column_name = data; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT * FROM mark;
++------+------+------+------+-------+
+| id   | m1   | m2   | m3   | total |
++------+------+------+------+-------+
+|    1 |   25 |   23 |   22 |  NULL |
+|    2 |   99 |   33 |   42 |  NULL |
+|    3 |   77 |   64 |   52 |  NULL |
+|    4 |   97 |   24 |   12 |  NULL |
+|    5 |   37 |   24 |   10 |  NULL |
+|    6 |   87 |   74 |   80 |  NULL |
++------+------+------+------+-------+
+6 rows in set (0.00 sec)
+
+mysql> UPDATE mark SET total = m1 + m2 + m3;
+Query OK, 5 rows affected (0.05 sec)
+Rows matched: 6  Changed: 5  Warnings: 0
+
+mysql> SELECT * FROM mark;
++------+------+------+------+-------+
+| id   | m1   | m2   | m3   | total |
++------+------+------+------+-------+
+|    1 |   25 |   23 |   22 |    70 |
+|    2 |   99 |   33 |   42 |   174 |
+|    3 |   77 |   64 |   52 |   193 |
+|    4 |   97 |   24 |   12 |   133 |
+|    5 |   37 |   24 |   10 |    71 |
+|    6 |   87 |   74 |   80 |   241 |
++------+------+------+------+-------+
+6 rows in set (0.00 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3 id="and"> AND Operator </h3>
+
+					<p> The <b>and</b> operator is used with <a href="select.html#where"> where clause </a>. It is execute then <i> both side condition is true </i> else never work. </p>
+
+					<div class="hr"></div>
+					<mark> update_query WHERE condition1 AND condition2; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
++------+------+------+------+--------+
+| id   | m1   | m2   | m3   | total  |
++------+------+------+------+--------+
+|    1 |   99 |   93 |   91 | 283.00 |
+|    2 |   69 |   89 |   70 | 228.00 |
+|    3 |   10 |   39 |   50 |  99.00 |
+|    4 |   40 |   59 |   30 | 129.00 |
+|    5 |   60 |   39 |   70 | 169.00 |
+|    6 |   60 |    9 |   99 | 168.00 |
+|    7 |   60 |   45 |   59 | 164.00 |
++------+------+------+------+--------+
+7 rows in set (0.00 sec)
+
+mysql> UPDATE mark SET m2 = m2 + 30 WHERE  m1 = 60 AND m2 = 9;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM mark;
++------+------+------+------+--------+
+| id   | m1   | m2   | m3   | total  |
++------+------+------+------+--------+
+|    1 |   99 |   93 |   91 | 283.00 |
+|    2 |   69 |   89 |   70 | 228.00 |
+|    3 |   10 |   39 |   50 |  99.00 |
+|    4 |   40 |   59 |   30 | 129.00 |
+|    5 |   60 |   39 |   70 | 169.00 |
+|    6 |   60 |   39 |   99 | 168.00 |
+|    7 |   60 |   45 |   59 | 164.00 |
++------+------+------+------+--------+
+7 rows in set (0.00 sec)
+
+mysql> UPDATE mark SET m2 = m2 + 30 WHERE  m1 = 60 AND m2 = 9;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3 id="or"> OR Operator </h3>
+
+					<p> The <b>or</b> operator is used with <a href="select.html#where"> where clause </a>. It is execute then <i> if any one side condition is true </i> else never work. </p>
+
+					<div class="hr"></div>
+					<mark> update_query WHERE condition1 OR condition2; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> UPDATE mark SET m2 = m2 + 30 WHERE  m1 = 60 OR m2 = 9;
+Query OK, 3 rows affected (0.03 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> SELECT * FROM mark;
++------+------+------+------+--------+
+| id   | m1   | m2   | m3   | total  |
++------+------+------+------+--------+
+|    1 |   99 |   93 |   91 | 283.00 |
+|    2 |   69 |   89 |   70 | 228.00 |
+|    3 |   10 |   39 |   50 |  99.00 |
+|    4 |   40 |   59 |   30 | 129.00 |
+|    5 |   60 |   69 |   70 | 169.00 |
+|    6 |   60 |   69 |   99 | 168.00 |
+|    7 |   60 |   75 |   59 | 164.00 |
++------+------+------+------+--------+
+7 rows in set (0.00 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3 id="between"> BETWEEN Operator </h3>
+
+					<p> The <b>between</b> operator is used with <a href="#and"> and operator </a>. it is use to find bweteen value. </p>
+
+					<div class="hr"></div>
+
+					<mark> update_query WHERE BEWTEEN condition1 AND condition2; </mark>
+
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT * FROM student;
++----+----------+------------+
+| id | fname    | lname      |
++----+----------+------------+
+|  1 | aman     | kumna      |
+|  2 | geeta    | sharma     |
+|  3 | sheena   | ryder      |
+|  4 | scarlit  | scandal    |
+|  5 | richelle | ryan       |
+|  6 | monika   | gastamride |
++----+----------+------------+
+6 rows in set (0.00 sec)
+
+mysql> UPDATE student SET lname = NULL WHERE id BETWEEN 3 AND 6
+	-> ;
+Query OK, 4 rows affected (0.04 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+mysql> SELECT * FROM student;
++----+----------+--------+
+| id | fname    | lname  |
++----+----------+--------+
+|  1 | aman     | kumna  |
+|  2 | geeta    | sharma |
+|  3 | sheena   | NULL   |
+|  4 | scarlit  | NULL   |
+|  5 | richelle | NULL   |
+|  6 | monika   | NULL   |
++----+----------+--------+
+6 rows in set (0.00 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3 id="addition"> Addition Operator </h3>
+
+
+					<div class="hr"></div>
+					<mark> UPDATE table_name SET column_name = data WHERE data1 <b>+</b> data1; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> UPDATE mark SET m3 = 70 WHERE id = 1;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE mark SET total = m1 + m2 + m
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 6  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM mark;
++------+------+------+------+-------+
+| id   | m1   | m2   | m3   | total |
++------+------+------+------+-------+
+|    1 |   25 |   23 |   70 |   118 |
+|    2 |   99 |   33 |   42 |   174 |
+|    3 |   77 |   64 |   52 |   193 |
+|    4 |   97 |   24 |   12 |   133 |
+|    5 |   37 |   24 |   10 |    71 |
+|    6 |   87 |   74 |   80 |   241 |
++------+------+------+------+-------+
+6 rows in set (0.00 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+
+					<h3 id=""> GREATER THEN Operator </h3>
+
+					<p> NOT is use to conver result in negetive mean if true so false and false so true. </p>
+
+					<div class="hr"></div>
+					<mark> update_query [ WHERE column > value ]; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> UPDATE mark SET result = 'PASS' WHERE not percentage > 40;
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> SELECT * FROM mark;
++------+------+------+------+-------+------------+--------+
+| id   | m1   | m2   | m3   | total | percentage | result |
++------+------+------+------+-------+------------+--------+
+|    1 |   25 |   23 |   70 |   118 |      39.33 | PASS   |
+|    2 |   99 |   33 |   42 |   174 |      58.00 | PASS   |
+|    3 |   77 |   64 |   52 |   193 |      64.33 | PASS   |
+|    4 |   97 |   24 |   12 |   133 |      44.33 | PASS   |
+|    5 |   37 |   24 |   10 |    71 |      23.67 | PASS   |
+|    6 |   87 |   74 |   80 |   241 |      80.33 | PASS   |
++------+------+------+------+-------+------------+--------+
+6 rows in set (0.00 sec)
+
+mysql>
+</pre>
+				</section>
+
+				<section class="" id="select">
+					
+					<h2 title="Select"> Select Command </h2>
+
+					<h3>  Select all column </h3>
+
+					<p> select is the <a href="home.html#sql"> DDL </a> command. The SELECT Command is used to retrieve information from a database. There are various ways in which the SELECT command can be used. Syntax of SELECT Command is as follows: </p>
+
+					<div class="hr"></div>
+					<mark> SELECT * FROM table_name; </mark>
+					<div class="hr"></div>
+		
+<pre class="console">
+mysql> SELECT * FROM student;
++----+---------+--------+--------+
+| id | fname   | lname  | gender |
++----+---------+--------+--------+
+|  1 | Ram     | Singh  | NULL   |
+|  2 | Krishan | Kumar  | NULL   |
+|  3 | Mohit   | Kumar  | NULL   |
+|  4 | Savita  | Sharma | F      |
++----+---------+--------+--------+
+4 rows in set (0.01 sec)
+
+mysql>
+</pre>
+					<div class="br"></div>
+					<h3>  Select specific column </h3>
+
+					<p> The basic structure of a SELECT command comprises of the keyword SELECT followed by the attribute list (separated by comma (,)) you want to select, followed by FROM clause followed by the table name and lastly an optional WHERE clause which is followed by a condition that can be a Boolean expression or another SELECT command that identifies the tuples to be selected. </p>
+
+					<div class="hr"></div>
+					<mark> SELECT field_name,field_name, ... FROM table_name; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT fname,lname FROM student;
++---------+--------+
+| fname   | lname  |
++---------+--------+
+| Ram     | Singh  |
+| Krishan | Kumar  |
+| Mohit   | Kumar  |
+| Savita  | Sharma |
++---------+--------+
+4 rows in set (0.00 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3 title="alias"> ALIAS </h3>
+
+					<p> alias is <b>as</b> key work that is used for set other name of the column feild and table also. Alias also used in <a href="create.html#createalias"> view </a> </p>
+
+					<div class="hr"></div>
+					<mark> SELECT column AS set_column_name FROM table_name; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT price AS rate FROM car;
++----------+
+| rate     |
++----------+
+| 20000.00 |
+| 15000.00 |
+| 40000.00 |
+| 40000.00 |
+| 40000.00 |
++----------+
+5 rows in set (0.00 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3 id="where">  WHERE Clause </h3>
+
+					<p> where is a clause that is option part of query. It is used for set condition in query. </p>
+					
+					<div class="hr"></div>
+					<mark> select_query [ WHERE condition ]; </mark>
+					<div class="hr"></div>
+		
+<pre class="console">
+mysql> SELECT fname FROM student WHERE id > 2;
++--------+
+| fname  |
++--------+
+| Mohit  |
+| Savita |
++--------+
+2 rows in set (0.03 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+
+					<h3 id="order"> ORDER Clause </h3>
+
+					<p> ORDER clause is help to set data in format with the respect selected column. You can also set <a href="#limit">limit</a> or data that you can select. Even you can set <a href="#asc"> asc </a>and<a href="#desc">desc</a> order. </p>
+
+					<div class="hr"></div>
+					<mark> select_query [ ORDER BY column_name ]; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT * FROM mytable ORDER BY id;
++------+---------+--------+
+| id   | fname   | lname  |
++------+---------+--------+
+|    1 | gutam   | budha  |
+|    2 | octavia | NULL   |
+|    5 | hattori | kanjo  |
+|    7 | peter   | parker |
++------+---------+--------+
+4 rows in set (0.01 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+
+					<h3 id="limit"> Set LIMIT </h3>
+
+					<p> with the used to <b>limit</b> you can set quantity of data. Simple you can set number of data select in query if they present. As well as you can set how many number that you can select limit that called <b>offset</b> </p>
+
+					<div class="hr"></div>
+					<mark> select_query [ ORDER BY column_name LIMIT number ]; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT * FROM mytable LIMIT 1;
++------+-------+-------+
+| id   | fname | lname |
++------+-------+-------+
+|    1 | gutam | budha |
++------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> /* offset use before limit */
+mysql> SELECT * FROM mytable ORDER BY FNAME LIMIT 2,2;
++------+---------+--------+
+| id   | fname   | lname  |
++------+---------+--------+
+|    2 | octavia | NULL   |
+|    7 | peter   | parker |
++------+---------+--------+
+2 rows in set (0.00 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3 id="asc"> ASC ORDER </h3>
+
+					<p class="p-3"> <b>asc</b> used to format data in asccending order it is default. </p>
+
+					<div class="hr"></div>
+					<mark> select_query [ ORDER BY column_name ASC ]; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT * FROM mytable ASC;
+ERROR 1064 (42000): You have an error in your SQL syntax; 
+check the manual that corresponds to your MySQL server 
+version for the right syntax to use near 'ASC' at line 1
+mysql> SELECT * FROM mytable ORDER BY id ASC;
++------+---------+--------+
+| id   | fname   | lname  |
++------+---------+--------+
+|    1 | gutam   | budha  |
+|    2 | octavia | NULL   |
+|    5 | hattori | kanjo  |
+|    7 | peter   | parker |
++------+---------+--------+
+4 rows in set (0.00 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					<h3 id="desc"> DESC ORDER </h3>
+
+					<p class="p-3"> <b>desc</b> used to format data in desccending order it you can set. </p>
+
+					<div class="hr"></div>
+					<mark> select_query [ ORDER BY column_name DESC ]; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT * FROM mytable DESC;
+ERROR 1064 (42000): You have an error in your SQL syntax; 
+check the manual that corresponds to your MySQL server 
+version for the right syntax to use near 'DESC' at line 1
+mysql> SELECT * FROM mytable ORDER BY id DESC;
++------+---------+--------+
+| id   | fname   | lname  |
++------+---------+--------+
+|    7 | peter   | parker |
+|    5 | hattori | kanjo  |
+|    2 | octavia | NULL   |
+|    1 | gutam   | budha  |
++------+---------+--------+
+4 rows in set (0.00 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+
+					<h3 id="group"> GROUP Clause </h3>
+
+					<p> The <b>group</b> clause is used to get concatenated values of expressions with more than one result per column. Meaning, there are many rows to be selected back for one column such as Name(1):Score(*). You can also use inside <a href="#">function</a> </p>
+
+					<div class="hr"></div>
+					<mark> select_query [ GROUP BY column_name ]; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT * FROM address ORDER BY id;
++------+------------+
+| id   | city       |
++------+------------+
+|    1 | chandigarh |
+|    2 | agra       |
+|    3 | delhi      |
+|    4 | delhi      |
+|    5 | agra       |
+|    6 | agra       |
+|    7 | delhi      |
+|    9 | delhi      |
+|   10 | agra       |
+|   11 | chanigarh  |
+|   12 | delhi      |
++------+------------+
+11 rows in set (0.00 sec)
+
+mysql> SELECT city FROM address GROUP BY city;
++------------+
+| CITY       |
++------------+
+| agra       |
+| chandigarh |
+| chanigarh  |
+| delhi      |
++------------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT city,count(id) as 'Number_Of_employee' FROM address GROUP BY city;
++------------+--------------------+
+| city       | Number_Of_employee |
++------------+--------------------+
+| agra       |                  4 |
+| chandigarh |                  1 |
+| chanigarh  |                  1 |
+| delhi      |                  5 |
++------------+--------------------+
+4 rows in set (0.00 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+
+					<h3 id="having"> HAVING Clause </h3>
+
+					<p> where is a clause that is option part of query. It is used for set condition in query. </p>
+
+					<div class="hr"></div>
+					<mark> SELECT fields FROM table_name [ GROUP BY column_name HAVING condition ]; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+</pre>
+
+					<div class="br"></div>
+
+					<h3 id="distinct">  DISTINCT Select unique column </h3>
+
+					<p> The <b>distinct</b> is used to <i>select unique data</i> between mutliple data. It is help to remove duplicate data from you selection query. </p>
+
+					<div class="hr"></div>
+					<mark> SELECT DISTINCT FROM table_name; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT DISTINCT price FROM CAR;
++----------+
+| price    |
++----------+
+| 20000.00 |
+| 15000.00 |
+| 40000.00 |
++----------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT price FROM CAR;
++----------+
+| price    |
++----------+
+| 20000.00 |
+| 15000.00 |
+| 40000.00 |
+| 40000.00 |
+| 40000.00 |
++----------+
+5 rows in set (0.00 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+					
+					<h3 id="in"> IN </h3>
+
+					<p> <b>in</b> function is use to compare mutliple values of columns it is very use full function then we need to compare multiple value by same field. </p>
+
+					<div class="hr"></div>
+					<mark> select_query [ WHERE column_name in( data1,data2,... ) ]; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT fname FROM mytable WHERE id = 1 or id = 2 or id = 9 or id = 5;
++---------+
+| fname   |
++---------+
+| gutam   |
+| hattori |
+| octavia |
+| jan     |
++---------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT fname FROM mytable WHERE id in(1,2,9,5);
++---------+
+| fname   |
++---------+
+| gutam   |
+| hattori |
+| octavia |
+| jan     |
++---------+
+4 rows in set (0.00 sec)
+</pre>
+
+					<div class="br"></div>
+
+					<h3 id="is"> IS </h3>
+
+					<p> May be select or deal with null value?. <a href="constraint.html#null">NULL</a> <b>is</b> are made to work each other, Mean you can deal with null values use <b>is</b>.  </p>
+
+					<div class="hr"></div>
+					<mark> select_query [ WHERE column_name IS NULL ]; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT fname FROM mytable WHERE lname = NULL;
+Empty set (0.00 sec)
+
+mysql> SELECT fname FROM mytable WHERE lname IS NULL;
++---------+
+| fname   |
++---------+
+| octavia |
+| pooja   |
+| aman    |
++---------+
+3 rows in set (0.00 sec)
+</pre>
+
+					<div class="br"></div>
+
+					<h3 id="not"> NOT </h3>
+
+					<p> NOT is use to conver result in negetive mean if true so false and false so true. </p>
+
+					<div class="hr"></div>
+					<mark> select_query [ WHERE NOT contition ]; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> SELECT fname FROM mytable WHERE lname IS NOT NULL;
++---------+
+| fname   |
++---------+
+| gutam   |
+| hattori |
+| peter   |
+| NULL    |
+| monika  |
+| jan     |
++---------+
+6 rows in set (0.00 sec)
+
+mysql>
+</pre>
+
+					<div class="br"></div>
+
+					<h3 id="like"> LIKE </h3>
+
+					<p> The <b>like</b> operator is used for deal with string it is very good for selecting to target string in query. </p>
+
+					<ul>
+						<li> <b> like 'aman' </b> is require to search full string </li>
+						<li> <b> like '%man' </b> if you don't know before charaters </li>
+						<li> <b> like '_man' </b> is you don't know before single character </li>
+						<li> <b> like '%man' </b> if you don't know after charaters </li>
+						<li> <b> like '_man' </b> is you don't know after single character </li>
+						<li> <b> like 'w%n' </b> if you forget between characters </li>
+						<li> <b> like 'wo_an' </b> if you forget between single character </li>
+					</ul>
+
+					<div class="hr"></div>
+					<mark> select_query [ WHERE column LIKE 'value' ]; </mark>
+					<div class="hr"></div>
+
+<pre class="console">
+mysql> select * from mytable;
++------+---------+-------------+
+| id   | fname   | lname       |
++------+---------+-------------+
+|    1 | gutam   | budha       |
+|    5 | hattori | kanjo       |
+|    2 | octavia | NULL        |
+|    7 | peter   | parker      |
+|    3 | pooja   | NULL        |
+|    4 | aman    | NULL        |
+|    6 | NULL    | port        |
+|    8 | monika  | gustamridey |
+|    9 | jan     | mhod        |
++------+---------+-------------+
+9 rows in set (0.00 sec)
+
+mysql> SELECT id FROM mytable WHERE fname like 'aman';
++------+
+| id   |
++------+
+|    4 |
++------+
+1 row in set (0.00 sec)
+
+mysql> SELECT id FROM mytable WHERE fname like 'p%';
++------+
+| id   |
++------+
+|    7 |
+|    3 |
++------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT id FROM mytable WHERE fname like '%a';
++------+
+| id   |
++------+
+|    2 |
+|    3 |
+|    8 |
++------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT id FROM mytable WHERE fname like '_an' or  'm__d';
++------+
+| id   |
++------+
+|    9 |
++------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> SELECT fname FROM mytable WHERE fname like '_c%';
++---------+
+| fname   |
++---------+
+| octavia |
++---------+
+1 row in set (0.00 sec)
+
+mysql> SELECT fname FROM mytable WHERE fname like '%a%';
++---------+
+| fname   |
++---------+
+| gutam   |
+| hattori |
+| octavia |
+| pooja   |
+| aman    |
+| monika  |
+| jan     |
++---------+
+7 rows in set (0.00 sec)
+
+mysql>
+</pre>
+				</section>
+
+				<section class="hide" id="permission">
+					<h2> Permission in Database? </h2>
+
+		<p> GRANT and Revoke is the <i> Data Contorl Language </i> <b>DCL</b> command. It command is work upon permission Set. That basic privileges to the user for all tables of the specified database. </p>
+
+		<h3 id="grant">  Grant Command </h3>
+
+		<p> Grant common, basic privileges to the user for all tables of the specified database. It <a href="#">DCL</a> command add permission for tables of the specified database. Grant set you can require a <a href="create.html#createuser"> create user </a> and created table and <a href="create.html#database"> database </a>. </p>
+
+        <div class="hr"></div>
+
+        <mark> GRANT command,... ON database_name.table_name TO user@host; </mark>
+
+        <div class="hr"></div>
+
+<pre class="console">
+mysql> CREATE Database mydatabase;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> USE mydatabase;
+Database changed
+mysql> CREATE Table mytable(
+    -> id int
+    -> );
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> CREATE USER 'myuser'@'%' IDENTIFIED BY 'mypassword';
+Query OK, 0 rows affected (0.19 sec)
+
+mysql> GRANT SELECT, INSERT, UPDATE ON mydatabase.mytable TO 'myuser'@'%';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>
+</pre>
+
+		<h3 id="revoke">  Revoke Command </h3>
+
+		<p> Revoke common, basic privileges to the user for all tables of the specified database. It <a href="#">DCL</a> command remove permission for tables of the specified database. Revoke set you can require a <a href="create.html#createuser"> create user </a> and created table and <a href="create.html#database"> database </a>. </p>
+
+		<div class="hr"></div>
+
+		<mark> REVOKE command,... ON database_name.table_name FROM user@host; </mark>
+
+		<div class="hr"></div>
+
+<pre class="console">
+mysql> REVOKE SELECT,INSERT,UPDATE ON mydatabase.mytable FROM 'myuser'@'%';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> DROP User 'myuser';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>
+</pre>
+				</section>
+
+				<section class="" id="">
+
+					<h2 title="SubQuery"> What is SubQuery? </h2>
+
+        			<p> The SubQuery is the method that help to execute multiple query in single query. It is <b>inner Query</b> between <b>outer Query</b> with the help of <b>"() round brakets"</b> those return value to outer Query. </p>
+
+					<ol>
+						<li> <h6> Single Row Single Column SubQuery </h6>
+							<article>
+								<p>It inner_query return single column and single row to outer query column. It deal to use <b>"="</b> operator.</p>
+								<div class="hr"></div>
+								<mark> outer_query WHERE column = (inner_query); </mark>
+								<div class="hr"></div>
+							</article>
+							<div class="console">
+<pre class="console">
+mysql> SELECT max(total) FROM mark;
++------------+
+| max(total) |
++------------+
+|     283.00 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT id FROM mark WHERE total = 283.00;
++------+
+| id   |
++------+
+|    1 |
++------+
+1 row in set (0.00 sec)
+
+mysql> SELECT id FROM mark WHERE total = 
+> (SELECT max(total) FROM mark);
++------+
+| id   |
++------+
+|    1 |
++------+
+1 row in set (0.00 sec)
+
+mysql> SELECT fname FROM student WHERE id = 1;
++-------+
+| fname |
++-------+
+| aman  |
++-------+
+1 row in set (0.00 sec)
+
+mysql> SELECT fname FROM student WHERE id = 
+> (SELECT id FROM mark WHERE total = 
+>(SELECT max(total) FROM mark));
++-------+
+| fname |
++-------+
+| aman  |
++-------+
+1 row in set (0.00 sec)
+
+mysql>
+</pre>
+							</div>
+						</li>
+
+						<li> <h6 id="mrsc"> Multiple Row Single Column SubQuery </h6>
+							<article>
+								<p> It inner_query return single column and multiple row to outer query column. It deal to use <b>" in() "</b> function. </p>
+								<div class="hr"></div>
+								<mark> outer_query WHERE column IN (inner_query); </mark>
+								<div class="hr"></div>
+							</article>
+							<div class="console">
+<pre class="console">
+mysql> SELECT fname FROM student WHERE id = (SELECT id FROM mark WHERE total > 200);
+ERROR 1242 (21000): Subquery returns more than 1 row
+mysql> SELECT fname FROM student WHERE id IN (SELECT id FROM mark WHERE total > 200);
++-------+
+| fname |
++-------+
+| aman  |
+| geeta |
++-------+
+2 rows in set (0.00 sec)
+
+mysql>
+</pre>
+							</div>
+						</li>
+						<li><h6 id="srmc"> Single Row Multiple Column SubQuery </h6>
+							<article>
+								<p> It inner_query return multiple column and single row to outer query column. It deal to use <b>" in() , any() ,all() "</b> function. </p>
+								<div class="hr"></div>
+								<mark> outer_query WHERE column [ IN | ANY | ALL ] (inner_query); </mark>
+								<div class="hr"></div>
+							</article>
+							<div class="console">
+<pre class="console">
+mysql> SELECT id FROM mark WHERE (m1,m2) IN (
+> SELECT m1,m2 FROM mark WHERE total = 
+> (SELECT max(total) FROM mark)
+> );
++------+
+| id   |
++------+
+|    1 |
++------+
+1 row in set (0.00 sec)
+
+mysql>
+</pre>
+							</div>
+						</li>
+						<li><h6 id="mrmc"> Multiple Row Multiple Column SubQuery </h6>
+							<article>
+								<p> It inner_query return multiple column and multiple row to outer query column. It deal to use <b>" in() , any() ,all() "</b> function. </p>
+								<div class="hr"></div>
+								<mark> outer_query WHERE column [ IN | ANY | ALL ] (inner_query); </mark>
+								<div class="hr"></div>
+							</article>
+							<div class="console">
+<pre class="console">
+mysql> SELECT id FROM mark WHERE (m1,m2) IN (
+> SELECT m1,m2 FROM mark WHERE total < 200
+> );
++------+
+| id   |
++------+
+|    3 |
+|    4 |
+|    5 |
+|    6 |
+|    7 |
++------+
+5 rows in set (0.00 sec)
+
+mysql>
+</pre>
+							</div>
+						</li>
+					</ol>
+
+				</section>
+
+				<section class="" id="">
+
+					<h2 title="What Is Join"> What is Join? </h2>
+
+					<p> Join is method to display more than one table data combaine with the help of commen relational field. Most of the coder think so it require to be set <a href="constraint.html#primarykey">Primary key</a> and <a href="foreignkey">foreign key</a> Constraint by it not truth. Join require relational field between tables if we can not define relational column query is execute by it one field interect with other tabale all field. </p>
+
+					<div class="console">
+<pre class="console">
+mysql> SELECT student.fname, mark.total FROM mark, student WHERE student.id = mark.id;
++----------+--------+
+| fname    | total  |
++----------+--------+
+| aman     | 283.00 |
+| geeta    | 228.00 |
+| sheena   |  99.00 |
+| scarlit  | 129.00 |
+| richelle | 169.00 |
+| monika   | 168.00 |
++----------+--------+
+6 rows in set (0.00 sec)
+
+mysql>
+</pre>
+					</div>
+
+					<div class="br"></div>
+
+					<h2>  INNER JOIN </h2>
+
+					<p> The <b>inner join</b> is set select the related column of the both table. </p>
+
+					<div class="hr"></div>
+					<mark> SELECT table_name.column_name FROM table_name INNER JOIN table_name ON relation_condition;  </mark>
+					<div class="hr"></div>
+
+					<div class="console">
+<pre class="console">
+mysql> SELECT s.fname,m.total FROM mark AS m INNER JOIN student AS s ON s.id = m.id;
++----------+--------+
+| fname    | total  |
++----------+--------+
+| aman     | 283.00 |
+| geeta    | 228.00 |
+| sheena   |  99.00 |
+| scarlit  | 129.00 |
+| richelle | 169.00 |
+| monika   | 168.00 |
++----------+--------+
+6 rows in set (0.00 sec)
+
+mysql>
+</pre>
+					</div>
+
+					<div class="br"></div>
+
+					<h2>  CROSS JOIN </h2>
+
+					<p> The <b>cross join</b> is set select the not related column of the both table. </p>
+
+					<div class="hr"></div>
+					<mark> SELECT table_name.column_name FROM table_name CROSS JOIN table_name ON relation_condition </mark>
+					<div class="hr"></div>
+
+					<div class="console">
+<pre class="console">
+mysql> SELECT s.fname,m.m1,m.m2,m.m3 FROM mark AS m CROSS JOIN student AS s ON s.id = m.id;
++----------+------+------+------+
+| fname    | m1   | m2   | m3   |
++----------+------+------+------+
+| aman     |   99 |   93 |   91 |
+| geeta    |   69 |   89 |   70 |
+| sheena   |   10 |   39 |   50 |
+| scarlit  |   40 |   59 |   30 |
+| richelle |   60 |   69 |   70 |
+| monika   |   60 |   69 |   99 |
++----------+------+------+------+
+6 rows in set (0.00 sec)
+
+mysql>
+</pre>
+					</div>
+
+				</section>
+
+			</main>
+			
+			<!-- footer -->
+			<footer class="" id="footer">
+				Website <span class="icon">&copy;</span> CopyRight & Developed by <a href="#"> Mayank </a> <span class="hide">| ( <a href="#">https://mayankdevil.github.io/MayankDevil/</a> ) </span>
+			</footer>
+		</div>
+		<!--  -->
+		<div id="lastColumn">
+			<!-- aside -->
+			<aside class="staticContainer" id="aside">
+				
+				<form action="" id="searchBox">
+					<input type="search" class="" id="searchBar" placeholder="Search ..." />
+				</form>
+				
+			</aside>
+		</div>
+	</div>
+
+</body>
+
+</html>
