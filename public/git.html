@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!--
+- Description: Simple layout for documentation
+- File: simpleUI.html
+-->
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="simpleUI">
+    <meta name="author" content="MayankDevil">
+    <meta name="description" content="simple website User Interface">
+
+    <title>Mayank</title>
+
+    <link rel="stylesheet" href="../css/app.css">
+
+    <script src=",,/js/app.js"></script>
+
+</head>
+
+<body>
+
+	<div class="wrapper" id="root">
+		<div id="firstColumn">
+
+			<!-- header -->
+			<header class="" id="header">
+
+				<h5 name="Git" class="brandname"> ProCoder : Git </h5>
+
+				<div class="flex">
+					<a class="btn" id="themeBtn"> Theme </a>
+					<button class="btn" id="toggleBtn"> &#9776; </button>
+				</div>
+
+			</header>
+			
+			<!-- main -->
+			<main class="container" id="main">
+
+				<section id="git">
+
+					<h1 title="What is Git?"> Git </h1>
+
+					<p> Git is a distributed version control system is a tool that records and manages changes in a project during software development. </p>
+
+					<ul>
+						<li> Keep a history of project changes. </li>
+						<li> Work on different features using branches. </li>
+						<li> Easy to Collaborate with other developers. </li>
+						<li> Restore previous versions if something goes wrong. </li>
+						<li> Manage code efficiently using repositories. </li>
+					</ul>
+
+					<h3 title="Version Controll Digram"> Local or Remote </h3>
+
+					<div class="alert error">
+<pre>
+		push branch
+        --------------------->---
+        |                       |
+---------------         ----------------
+| local       |         | remote       |
+---------------         ----------------
+| - main      |         | - main       |
+| - branch-1  |         | - version-1  |
+| - branch-2  |         | - version-2  |
+---------------         ----------------
+    |                       |
+    ---<---------------------
+				pull version
+</pre>
+					</div>
+
+					<h3 title="Use Terms in Git"> Git Terms </h3>
+					
+					<ul>
+						<li><b>Repository (repos)</b> : Your project folder tracked by Git</li>
+						<li><b>Local Repository</b> : Project stored on your computer</li>
+						<li><b>Remote Repository</b> : Project stored on a server like GitHub</li>
+						<li><b>origin</b> : Default name of the main remote repository</li>
+						<li><b>Branch</b> : A version/line of development inside a repository</li>
+					</ul>
+
+				</section>
+
+				<section id="setup">
+
+					<h1 title="How to Setup Git in System"> Git Setup </h1>
+
+					<ol>
+						<li> <b> Install Git In Local System </b>
+							<article>
+								<p> this command in only run in <i> Debian Basic Linux </i> System </p>
+								<div class="console"> sudo apt intall git-all </div>
+							</article>
+						</li>
+						<li> <b> Verify Installation </b>
+							<article>
+								<p> this command return git version that install in system </p>
+								<div class="console"> git --version </div>
+							</article>						
+						</li>
+						<li> <b> Configuration </b>
+							<article>
+								<p> Is confirmed that your git machine who are user of system by </p>
+								<div class="console"> git config user.name "your_name" </div>
+								<p> email id that use in github </p>
+								<div class="console"> git config user.email "your_email" </div>
+							</article>
+						</li>
+					</ol>
+
+				</section>
+
+				<section id="basic">
+					
+					<h1 title="Git Basic Work"> Git Basic </h1>
+
+					<article>
+
+						<ul>
+							<li> <b> Untracked </b> Git sees the file but is not tracking it yet </li>
+							<li> <b> Staged </b> File is ready for commit </li>
+							<li> <b> Committed </b> Changes are saved in local Git history </li>
+							<li> <b> Remote </b> Changes are uploaded to GitHub </li>
+						</ul>
+
+						<div class="alert success">
+<pre>
+New File -> Untracked --
+                        \
+                         --> Staged -> Commited -> New Version
+                        /
+Old File -> Modified ---
+</pre>
+						</div>
+
+					</article>
+
+					<div class="hr"></div>
+
+					<h2 title="Git Basic Commands"> Commands </h2>
+
+					<ol>
+						<li> <h6 title="Initalize Git Project"> Initalize (.git) </h6>
+							<article>
+								<p> which local repos you make (__.git__) </p>
+								<div class="console"> git init </div>
+							</article>
+						</li>
+						<li> <h6 title="Add to Stage"> Add File & Folder </h6>
+							<article>
+								<p> new or modify file add in stage </p>
+								<div class="console"> git add folder/file </div>
+								<p> every modification add in stage </p>
+								<div class="console"> git add . </div>
+							</article>
+						</li>
+						<li> <h6 title="Commited Stage"> Commit </h6>
+							<article>
+								<p> committed this modification is stay with message </p>
+								<div class="console"> git commit -m "message" </div>
+								<p> add in stage or committed this modification is stay with message </p>
+								<div class="console"> git commit -a "add or commit both" </div>
+							</article>
+						</li>
+						<li> <h6 title="Tracked Status"> Status </h6>
+							<article>
+								<p> present position of current repos </p>
+								<div class="console"> git status </div>
+							</article>
+						</li>
+						<li> <h6> Remove File </h6>
+							<article>
+								<p> remove files and modify stage </p>
+								<div class="console"> rm folder/file </div>
+								<ul>
+									<li> add all file to stage </li>
+									<li> commit to save </li>
+								</ul>
+							</article>
+						</li>
+						<li> <h6 title="Remove to UnStage"> Delete File & Folder </h6>
+							<article>
+								<p> delete file and stage automatically </p>
+								<div class="console"> git rm file </div>
+								<p> delete folder and stage automatically </p>
+								<div class="console"> git rm -r folder </div>
+								<ul>
+									<li> commit to save </li>
+								</ul>
+							</article>
+						</li>
+						<li> <h6 title="Remove Git Project"> Erase (.git) </h6>
+							<article>
+								<p> destory all git logs in local </p>
+								<div class="console"> rm -rf .git </div>
+							</article>
+						</li>
+					</ol>
+
+					<h2 title="Untracked Folder & File"> Clean </h2>
+
+					<p> Show untracked files </p>
+
+					<div class="console"> git clean -n </div>
+
+					<p> delete untracked files only </p>
+
+					<div class="console"> git clean -f </div>
+
+					<p> delete untracked files and folders </p>
+
+					<div class="console"> git clean -fd </div>
+
+				</section>
+
+				<section id="branch">
+					
+					<h1 title="Git Branch"> Git Branch </h1>
+
+					<h2> View </h2>
+
+					<p> show all branches of local </p>
+
+					<div class="console"> git brach -a </div>
+
+					<p> show all branches of remote </p>
+
+					<div class="console"> git brach -r </div>
+
+					<h2> Switch </h2>
+
+					<p> switch control to other branch </p>
+
+					<div class="console"> git switch branch_name </div>
+					
+					<p> simple way to checkout </p>
+
+					<div class="console"> git checkout branch_name </div>
+
+					<h2> Create </h2>
+
+					<p> create new branch and switch into it </p>
+
+					<div class="console"> git checkout -b new_branch_name </div>
+
+					<p> if brach exist then switch else before switch create branch </p>
+
+					<div class="console"> git switch -c new_branch_name </div>
+
+					<h2> Delete </h2>
+
+					<p> delete branch if merged </p>
+
+					<div class="console"> git branch -d new_branch_name </div>
+					
+					<p> delete branch by force </p>
+
+					<div class="console"> git branch -D new_branch_name </div>
+
+					<p> delete branch of remote origin </p>
+
+					<div class="console"> git push origin_name --delete branch_name </div>
+
+				</section>
+
+				<section id="undo">
+
+					<h1 title="Reset to Undo Stage"> Git Undo </h1>
+
+					<h3>Reset</h3>
+
+					<div class="console"> git reset HEAD~1 </div>
+
+					<ul>
+						<li> committed removed </li>
+						<li>Files remain in working folder</li>
+					</ul>
+
+					<h3>Soft Reset</h3>
+
+					<p> use when you committed by mistake </p>
+
+					<div class="console"> git reset --soft HEAD~1 </div>
+
+					<ul>
+						<li>commited removed</li>
+						<li>changes stay staged</li>
+					</ul>
+
+					<h3>Hard Reset</h3>
+
+					<p> use when you erase to last safe commit </p>
+
+					<div class="console"> git reset --hard HEAD~1 </div>
+
+					<p> also hard reset by specific id </p>
+
+					<div class="console"> git reset --hard commit_id </div>
+
+				</section>
+
+				<section id="remote">
+					
+					<h1 title="Git Remote and Local"> Remote & Local </h1>
+
+					<h3> is connect to remote </h3>
+
+					<p> view all connection to remote </p>
+
+					<div class="console"> git remote -v </div>
+
+					<h3> add Remote by origin_name </h3>
+
+					<p> add new remote and alias url as origin_name </p>
+
+					<div class="console"> git remote add origin https://github.com/user/repo.git </div>
+
+					<h3> upload branch data to remote </h3>
+
+					<p> upload local repos branch to remote origin </p>
+
+					<div class="console"> git push origin_name branch_name </div>
+
+					<h3> download remote data to local </h3>
+
+					<p> download remote origin by local repos branch </p>
+
+					<div class="console"> git pull origin_name brnach_name </div>
+
+					<ul>
+						<li> fetch remote data </li>
+						<li> merge with branch </li>
+					</ul>
+
+				</section>
+
+				<section id="merge">
+
+					<h1 title="Combine Version">Combine Version</h1>
+
+					<h3>Fetch</h3>
+
+					<p> downloads remote data but doesn't modify file </p>
+
+					<div class="console"> git fetch origin_name </div>
+
+					<h3>Merge</h3>
+
+					<p> switch into main branch </p>
+
+					<div class="console"> git switch main </div>
+
+					<p> combine feature branch into main </p>
+
+					<div class="console"> git merge feature_branch </div>
+
+					<h3> Merge Conflict </h3>
+
+					<p> happens when same file part changed in both branches </p>
+
+					<div class="alert error">
+<pre>
+<<<<<<< HEAD
+your code
+=======
+incoming code
+>>>>>>> branch_name
+</pre>
+					</div>
+
+					<p> fix manually than :- </p>
+
+					<ul>
+						<li> add all </li>
+						<li> commit with message </li>
+					</ul>
+		
+				</section>
+
+				<section id="clone">
+
+					<h1 title="Who if project alredy exist?"> Exist Project </h1>
+
+					<h3> Clone </h3>
+
+					<p> Clone creates a complete local copy of a remote repos. </p>
+
+					<div class="console"> git clone https://github.com/user/repo.git </div>
+
+					<ul>
+						<li> downlaod project files </li>
+						<li> download project log </li>
+						<li> download project connection </li>
+					</ul>
+
+					<h3> server repos re-write by local </h3>
+
+					<p> this push your local project branch to server by forcely and first clean server after upload your new work </p>
+
+					<div class="console"> git push --force origin_name brnach_name </div>
+
+					<h3> local repos overwrite by server </h3>
+
+					<p> fetch server repos to local system in branch but with conflict </p>
+
+					<div class="console"> git fetch origin_name </div> 
+
+					<p> reset local commit and match to exactly to remote  </p>
+
+					<div class="console"> git reset --hard origin_name/branch_name </div>
+
+					<ul>
+						<li> deleted local commits </li>
+						<li> matches remote exactly </li>
+					</ul> 
+
+				</section>
+
+				<section id="review">
+					
+					<h1 title="Git project History"> Git Log </h1>
+
+					<p> view full commit history </p>
+
+					<div class="console"> git log </div>
+
+					<ul>
+						<li> commit id </li>
+						<li> author name </li>
+						<li> commit date </li>
+						<li> commit message </li>
+					</ul>
+					
+					<p> compact history view in one line </p>
+
+					<div class="console"> git log --oneline </div>
+					
+					<p> view log by author </p>
+
+					<div class="console"> git log --author="username" </div>
+					
+					<p> view log by commit message </p>
+					
+					<div class="console"> git log --grep="keyword" </div>
+
+					<p> view log after specific date </p>
+
+					<div class="console"> git log --since="YYYY-MM-DD" </div>
+
+					<p> view log before specific date </p>
+
+					<div class="console"> git log --until="YYY-MM-DD" </div>
+
+					<h3> detail log history </h3>
+
+					<p> proper present commit log history and stop more show by (PRESS - Q) </p>
+
+					<div class="console"> git show commit_id </div>
+
+				</section>
+
+				<section id="gitignore">
+					
+					<h1 title="Ignore to Tracking">.gitignore</h1>
+
+					<p> the (<b>.gitignore</b>) is git file that ignore files from TRACKING use for secreats, cache, env build files </p>
+
+					<div class="alert success">
+	<pre>
+	# not require to push in remote
+	node_modules/
+	*.log
+	.env
+	</pre>
+					</div>
+
+				</section>
+
+			
+			</main>
+			
+			<!-- footer -->
+			<footer class="" id="footer">
+				Website <span class="icon">&copy;</span> CopyRight & Developed by <a href="#"> Mayank </a> <span class="hide">| ( <a href="#">https://mayankdevil.github.io/MayankDevil/</a> ) </span>
+			</footer>
+		</div>
+		<!--  -->
+		<div id="lastColumn">
+			<!-- aside -->
+			<aside class="staticContainer" id="aside">
+				
+				<form action="" id="searchBox">
+					<input type="search" class="" id="searchBar" placeholder="Search ..." />
+				</form>
+				
+			</aside>
+		</div>
+	</div>
+
+</body>
+
+</html>
