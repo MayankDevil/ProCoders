@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--
+- Description: Simple layout for documentation
+- File: simpleUI.html
+-->
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="simpleUI">
+    <meta name="author" content="MayankDevil">
+    <meta name="description" content="simple website User Interface">
+
+    <title>Mayank</title>
+
+    <link rel="stylesheet" href="../css/app.css">
+
+    <script src="../js/app.js"></script>
+
+</head>
+
+<body>
+
+	<div class="wrapper" id="root">
+		<div id="firstColumn">
+
+			<!-- header -->
+			<header class="" id="header">
+
+				<h5 name="Git" class="brandname"> ProCoder : PHP </h5>
+
+				<div class="flex">
+					<a class="btn" id="themeBtn"> Theme </a>
+					<button class="btn" id="toggleBtn"> &#9776; </button>
+				</div>
+
+			</header>
+			
+			<!-- main -->
+            <main class="container" id="main">
+
+                <section>
+
+                    <h1 title="What is PHP?"> What is PHP? </h1>
+
+                    <p>PHP (Hypertext Preprocessor) is a popular server-side scripting language for web development. It is widely used for creating dynamic web pages and web applications.</p>
+
+                    <h2> Features </h2>
+
+                    <ul>
+                        <li>Simple or easy to Learn.</li>
+                        <li>Open-source and free.</li>
+                        <li>Platform-independent.</li>
+                        <li>Supports various databases.</li>
+                        <li>Extensive community support.</li>
+                    </ul>
+
+                    <h2> Embedding PHP Code in Web Page </h2>
+
+                    <p>PHP code can be embedded directly into HTML files to create dynamic web pages. PHP scripts are enclosed within special tags, typically for the closing tag. Here's an example of embedding PHP code to display the current date and time:</p>
+
+                    <div class="hr"></div>
+                    <mark> &#60;&#63;php # write php code &#63;&#62; </mark>
+
+                    <h6>or</h6>
+
+                    <mark> &#60;&#63;= # value  =&#62; </mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;html&#62;
+&#60;head&#62;
+&#60;title&#62; how to embed php &#60;/title&#62;
+&#60;/head&#62;
+&#60;body&#62;
+        &#60;&#63;php
+            # add php in any where in .html either .php
+            $value = "PHP"            
+            echo " welcome in " . $value ;
+        &#63;&#62;
+        Language &#60;&#63;= $value =&#62;
+
+&#60;/body&#62;
+&#60;/html&#62;
+</pre>
+
+                    <div class="br"></div>
+
+                    <div class="console">welcome in PHP Language PHP </div>
+
+                </section>
+
+                <section>
+
+                    <h1 title="Statement in PHP?"> Statement in PHP </h1>
+
+                    <p> we have to method to print statement in phpt once <b>echo</b> other is <b> print </b> but main difference to each other <i> print return 1 </i> after write and echo return null secondary difference is echo faster than print. </p>
+
+                    <div class="hr"></div>
+                    <mark> echo "String" ; </mark>
+
+                    <h6>or</h6>
+
+                    <mark> print("string"); </mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+    echo "i am faster and void return &#60;br&#62;";
+    print "i am return 1 after print";
+&#63;&#62;
+</pre>
+
+                    <div class="br"></div>
+
+                    <div class="console"> i am faster and void return <br> i am return 1 after print </div>
+
+                </section>
+
+                <section>
+                    
+                    <h1 title="Varaible & Tokens"> Variable and Tokens </h1>
+
+                    <p> PHP code consists of various tokens, including keywords, identifiers, constants, strings, and operators. These tokens are the building blocks of PHP scripts. </p>
+
+                    <p> Variables in PHP are used to store data. They start with a dollar sign ($) followed by an identifier. PHP variables are case-sensitive. </p>
+
+                    <h4> PHP Scope </h4>
+
+                    <ul>
+                        <li> <b>Local scope:</b> Variables declared within a function. </li>
+                        <li> <b>Global scope:</b> Variables declared outside functions. </li>
+                        <li> <b>Static scope:</b> Variables within a function that retain their values between function calls. </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <mark> $variable_name = value; </mark>
+                    <h6> OR </h6>
+                    <mark> "{$varaible_name}" </mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+    $n1 = 1;
+    $n2 = 2;
+    echo "sum of ${$n1} and ${n2} is ${$n1+$n2}";
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">sum of 1 and 2 is 3</div>
+                
+                </section>
+
+                <section id="datatype">
+                
+                    <h1 title="DataType"> Datatype </h1>
+
+                    <p> In PHP, data types specify the type of data that can be stored in a variable. PHP supports several data types, each designed for handling specific types of information. Here are some of the most common data types in PHP: </p>
+
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+$number_data = 1;
+$float_data = 0.5;
+$boolean_data = true;
+$char_data = '@';
+$string_data = " write line in side ";
+$void_data = null;
+echo  "number {$number_data} 
+float {$float_data} 
+boolean {boolean_data} 
+charactor {$char_data} 
+string {$string_data} 
+null {$void_data} ";
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console"> number 1 float 0.5 boolean tyre charactor @ string write line in side null undefined </div>                         
+                    
+                </section>
+                
+                <section id="constant">
+                
+                    <h1 title="Constant"> Constant </h1>
+
+                    <p> In PHP, a constant is a alu that cannot be changed once it is defined during a script's execution. Constatnt are typically used to store values that remain the same throughout the script and have specific, predefined purpose. we have to two way to define constant </p>
+
+                    <ul>
+                        <li> <b> const </b> it is keyword that we are use write before variable </li>
+                        <li> <b> define </b> it is function that inside we are pass constant variable and value </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <mark>const VARIABLE = value;</mark>
+                    <h6>OR</h6>
+                    <mark>define('VARIABLE_NAME',value);</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+    define("PI",3.14159);
+    const $user = "MayankDevil";
+    echo "pi value is ".PI." name ".$user;
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">pi value is 3.12159 name Mayank </div>
+                
+                </section>
+
+                <section id="operation">
+                
+                    <h1> Operation </h1>
+
+                    <p>  </p>
+
+                    <h3> calculater program using <h5>arithemetic operator</h5> and <h5>switch statement</h5> </h3>
+
+<pre class="console">
+&#60;&#63;php
+    # calculator.php : enter default number and calculate
+    $n1 = 4;
+    $n2 = 2;
+    $n = 0;
+    $choice = 3;
+    switch ($choice)
+    {
+        case 1 : $n = $n1 + $n2; break;
+        case 2 : $n = $n1 - $n2; break;
+        case 3 : $n = $n1 * $n2; break;
+        case 4 : $n = $n1 / $n2; break;
+        case 5 : $n = $n1 % $n2; break;
+        default : $n = "enter choice between [1 to 5]";
+    }
+    echo (" output : ".$n);
+&#63;&#62;
+</pre>
+                    <div class="output"> output : 8 </div>
+
+                    <h3> find even else odd between 100 number using <h5> for loop </h5> and <h5> if else statement </h5> </h3>
+
+<pre class="console">
+&#60;&#63;php
+    # find odd or even number between 0 to 100 number
+    $n = 100;
+    for ($i = 1; $i < $n; $i++)
+    {
+        if ($i % 2 == 0)
+        {
+            echo ("&#60;div&#60; number ".$i." is even &#60;/div&#60;");
+        }
+        else
+        {
+            echo ("&#60;div&#60; number ".$i." is odd &#60;/div&#60;");
+        }
+    }
+&#63;&#62;
+</pre>
+                    <div class="output"> number 1 is odd <br> number 2 is even <br> number 3 is odd <br> ...<br> number 100 is even  </div>
+                     
+
+                    <h3> factorial find program using <h5> dowhile loop </h5> and <h5> assignment operator </h5> </h3>
+
+<pre class="console">
+&#60;&#63;php
+    # factorial.php :
+    $n = 3;
+    $f = 1;
+    $i = 1;
+    do
+    {
+        $f = $i * $f;
+        $i++
+    }
+    while($i <= $n); 
+    echo ("factorial of ".$n." is ".$f);
+&#63;&#62;
+</pre>
+                    <div class="output"> factorial of 3 is 6 </div>
+
+
+                    <h3> find number is prime or not using <h5> while loop </h5> and <h5> if statement </h5> </h3>
+
+<pre class="console">
+&#60;&#63;php
+    # primeNumber.php : fnd the number is prime or not
+    $n = 11;
+    $is_prime =  true;
+    $i = 2;
+    while ($i < $n)
+    {
+        if ($n % $i == 0) $is_prime = false;
+        $i++;
+    }
+    if ($is_prime) echo(" prime "); else echo(" not prime ");
+&#63;&#62;
+</pre>
+                    <div class="output"> prime </div>
+                
+                </section>
+
+                <section>
+
+                    <h1 title="Control Statement"> Control Statement </h1>
+
+                    <p> In Porgram Developer required to execute code then some specific condition done or other code then condition not fulfilled for this we use Control Statement to mantain control flow. </p>
+
+                    <h2> If else Statement </h2>
+
+                    <div class="hr"></div>
+                    <mark> if (expression) { #true } </mark>
+                    <h6>OR</h6>
+                    <mark> if (expression) { #true } else { #false } </mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    $isLogin = false;
+
+    if ($isLogin) {
+        echo "Welcome UserName";
+    } else {
+        echo "Welcome Guest";
+    }
+
+    $isLogin = true;
+
+    if ($isLogin) {
+        echo "add logout";
+    }
+&#63;&#62;
+</pre>
+
+                    <div class="br"></div>
+                    <div class="console">Welcome Guest <br>add logout</div>
+
+                    <h2> Nested If Statement </h2>
+
+                </section>
+
+            </main>
+			
+			<!-- footer -->
+			<footer class="" id="footer">
+				Website <span class="icon">&copy;</span> CopyRight & Developed by <a href="#"> Mayank </a> <span class="hide">| ( <a href="#">https://mayankdevil.github.io/MayankDevil/</a> ) </span>
+			</footer>
+		</div>
+		<!--  -->
+		<div id="lastColumn">
+			<!-- aside -->
+			<aside class="staticContainer" id="aside">
+				
+				<form action="" id="searchBox">
+					<input type="search" class="" id="searchBar" placeholder="Search ..." />
+				</form>
+				
+			</aside>
+		</div>
+	</div>
+
+</body>
+
+</html>

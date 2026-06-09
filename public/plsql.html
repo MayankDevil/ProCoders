@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="../css/app.css">
 
-    <script src=",,/js/app.js"></script>
+    <script src="../js/app.js"></script>
 
 </head>
 
@@ -30,7 +30,7 @@
 			<!-- header -->
 			<header class="" id="header">
 
-				<h5 name="Git" class="brandname"> ProCoder : Git </h5>
+				<h5 name="plsql" class="brandname"> ProCoder : plsql </h5>
 
 				<div class="flex">
 					<a class="btn" id="themeBtn"> Theme </a>
@@ -42,14 +42,15 @@
 			<!-- main -->
 			<main class="container" id="main">
 
-                <section>
-                    		<h3 class="py-3"> What is PL/SQL? </h3>
+				<section>
+					
+					<h1 title="Waht is PL/SQL?"> What is PL/SQL? </h1>
 
-		<p class="py-3"> It is Procedural Language that we can set package of procedure or function to executing multiple line of query or handle exeute time error to stope server to crash. It is simple use BEGIN /* query */ END; better for you practicle with this offical side of orcale <a href="https://livesql.orcale.com">https:livesql.orcale.com</a> </p>
+					<p> It is Procedural Language that we can set package of procedure or function to executing multiple line of query or handle exeute time error to stope server to crash. It is simple use BEGIN /* query */ END; better for you practicle with this offical side of orcale <a href="https://livesql.orcale.com">https:livesql.orcale.com</a> </p>
+
+					<div class="br"></div>
 		
-        <h6 class="py-3"> Example </h6>
-		
-<pre class="pl">
+<pre class="terminal">
 /*
 --	simple write query
 */
@@ -57,14 +58,17 @@ BEGIN
 	dbms_output.put_line(' Welcome to PL/SQL ');
 END;
 </pre>
-		
-        <h5 class="py-3" id="statement"> statement </h5>
-		
-		<p class="py-3"> You may be set variable or done any opertion in plsql and write operation like plus, minus, guda, bhag adi chige. Ap kar sakte hai.  </p>
+				</section>
 
-        <h6 class="py-3"> Example </h6>
+				<section>
 
-<pre class="pl">
+					<h3 title="Statement and Variable"> statement & variable </h5>
+					
+					<p> You may be set variable or done any opertion in plsql and write operation like plus, minus, guda, bhag adi chige. Ap kar sakte hai.  </p>
+
+					<div class="br"></div>
+
+<pre class="terminal">
 DECLARE
 	a number := 1;
 	b number := 2;
@@ -75,14 +79,17 @@ BEGIN
 	dbms_output.put_line(s||c);
 END;
 </pre>
+				</section>
 
-		<h5 class="py-3" id=""> execute query </h5>
+                <section>
 
-		<p class="py-3"> You can exevute inside mostly sql query inside the procedure but it some limitation to execute. Simpliy you can use mutliple <a href="insert.html#mrow"> Multiple row insert </a> query inside. </p>
+					<h3 title="Execute Query"> execute query </h5>
 
-        <h6 class="py-3"> Example </h6>
+					<p> You can exevute inside mostly sql query inside the procedure but it some limitation to execute. Simpliy you can use mutliple <a href="insert.html#mrow"> Multiple row insert </a> query inside. </p>
 
-<pre class="pl">
+					<div class="br"></div>
+
+<pre class="terminal">
 DECLARE
 	age number;
 BEGIN
@@ -102,13 +109,18 @@ BEGIN
 
 END;
 </pre>
-        <h5 class="py-3" id="exit"> exit when </h5>
 
-		<p class="py-3"> You use exit simple to terminate procedure and it more use full with when it help to set exit at contition. </p>
+				</section>
+				
+				<section>
 
-        <h6 class="py-3"> Example </h6>
+					<h3 title="Exit When Statement"> exit when </h5>
 
-<pre class="pl">
+					<p> You use exit simple to terminate procedure and it more use full with when it help to set exit at contition. </p>
+
+					<div class="br"></div>
+
+<pre class="terminal">
 DECLARE
 	i number := 0;
 BEGIN
@@ -120,14 +132,18 @@ BEGIN
 	dbms_output.put_line('third line execute');
 END;
 </pre>
+				</section>
 
-        <h5 class="py-3" id="goto"> goto </h5>
 
-		<p class="py-3"> The goto is jumping keyword that work to terimate control to targeting label it such a danger if you not set exit.</p>
+				<section>
 
-        <h6 class="py-3"> Example </h6>
+					<h3 title="Goto Jump Statement"> goto </h5>
 
-<pre class="pl">
+					<p> The goto is jumping keyword that work to terimate control to targeting label it such a danger if you not set exit.</p>
+
+					<div class="br"></div>
+
+<pre class="terminal">
 BEGIN
 	dbms_output.put_line('start');
 	GOTO label1;
@@ -136,14 +152,17 @@ BEGIN
 	dbms_output.put_line('end');
 END;
 </pre>
+				</section>
 
-        <h5 class="py-3" id="if"> if statement </h5>
+				<section>
 
-		<p class="py-3"> if structure is the set to control execution. simple if condiiton is true then execute queries until to if end. It is very useful with <a href="#cursor"> cursor </a> attribute otherwise you use operator or other function like <b>mod();</b> </p>
+					<h3 title="If Statement"> if statement </h5>
 
-        <h6 class="py-3"> Example </h6>
+					<p> if structure is the set to control execution. simple if condiiton is true then execute queries until to if end. It is very useful with <a href="#cursor"> cursor </a> attribute otherwise you use operator or other function like <b>mod();</b> </p>
 
-<pre class="pl">
+					<div class="br"></div>
+
+<pre class="terminal">
 DECLARE
     age number;
 BEGIN
@@ -156,14 +175,17 @@ BEGIN
     END IF;
 END;
 </pre>
+				</section>
+
+				<section>
 		
-        <h5 class="py-3" id="ifelse"> ifelse statement </h5>
+					<h3 title="If Else Statement"> ifelse statement </h5>
 
-		<p class="py-3"> if else is simplity like if but it also execute condition if false. simple if condition is ture then execute query esle excute next query. </p>
+					<p> if else is simplity like if but it also execute condition if false. simple if condition is ture then execute query esle excute next query. </p>
 
-        <h6 class="py-3"> Example </h6>
+					<div class="br"></div>
 
-<pre class="pl">
+<pre class="terminal">
 DECLARE
     age number;
 BEGIN
@@ -177,15 +199,18 @@ BEGIN
         dbms_output.put_line('child');
     END IF;
 END;
-</pre>
+</pre>			
+				</section>
 
-		<h5 class="py-3" id=""> nested if else statement </h5>
+				<section>
 
-		<p class="py-3"> The nested if else is the mutiple if else that set mutiple condition and check for execute. </p>
+					<h3 title="Nested If else Statement"> nested if else statement </h5>
 
-        <h6 class="py-3"> Example </h6>
+					<p> The nested if else is the mutiple if else that set mutiple condition and check for execute. </p>
 
-<pre class="pl">
+					<div class="br"></div>
+
+<pre class="terminal">
 DECLARE
     age number;
 BEGIN
@@ -202,14 +227,17 @@ BEGIN
 	END IF;
 END;
 </pre>
-	
-        <h5 class="py-3" id="simpleloop"> simple loop </h5>
+				</section>
 
-		<p class="py-3"> Simple loop is very simple that used to stare loop /*codea*/ end loop; in plsql. It iterative infinite until to set inside terimation condition. </p>
+				<section>
 
-        <h6 class="py-3"> Example </h6>
+					<h3 title="Simple Loop"> simple loop </h5>
 
-<pre class="pl">
+					<p> Simple loop is very simple that used to stare loop /*codea*/ end loop; in plsql. It iterative infinite until to set inside terimation condition. </p>
+
+					<div class="br"></div>
+
+<pre class="terminal">
 DECLARE
     i number := 0;
 BEGIN
@@ -224,14 +252,17 @@ BEGIN
 
 END;
 </pre>
-	
-        <h5 class="py-3" id="whileloop"> while loop </h5>
+				</section>
 
-		<p class="py-3"> While loop is loop that executeing contion set before it sytax is while condition loop /*code*/ end loop;. </p>
+				<section>
+				
+					<h3 title="While Loop"> while loop </h5>
 
-        <h6 class="py-3"> Example </h6>
+					<p> While loop is loop that executeing contion set before it sytax is while condition loop /*code*/ end loop;. </p>
 
-<pre class="pl">
+					<div class="br"></div>
+
+<pre class="terminal">
 DECLARE
 	fname varchar := null;
 	i number := 1;
@@ -248,14 +279,18 @@ BEGIN
 	dbms_output.put_line('stuent name is '||fname);
 END;
 </pre>
+				</section>
 
-		<h5 class="py-3" id="forloop"> for loop </h5>
+				<section>
 
-		<p class="py-3"> In plsql for loop is loop work most with cursor looping it not like other language. It is sytax for vaiable in start..end loop /*code*/ end loop;. It vaiable data type not require to define in declare section. </p>
 
-        <h6 class="py-3"> Example </h6>
+					<h3 title="For Loop"> for loop </h5>
 
-<pre class="pl">
+					<p> In plsql for loop is loop work most with cursor looping it not like other language. It is sytax for vaiable in start..end loop /*code*/ end loop;. It vaiable data type not require to define in declare section. </p>
+
+					<div class="br"></div>
+
+<pre class="terminal">
 BEGIN
 	-- for loop
 	FOR  n IN 1..10 LOOP
@@ -265,14 +300,17 @@ BEGIN
 	END LOOP;
 END;
 </pre>
+				</section>
+				
+				<section>
 
-        <h5 class="py-3" id="cursor"> implicit cursor </h5>
+					<h3 title="Implicit Cursor"> implicit cursor </h5>
 
-		<p class="py-3"> Implicit cursor is default cursor in server that contextarea then query output return by that database. The default cursor name is sql and that inside multiple attribute like rowcount, found, notfound, isopen . that help to set condition to fetch data. </p>
+					<p> Implicit cursor is default cursor in server that contextarea then query output return by that database. The default cursor name is sql and that inside multiple attribute like rowcount, found, notfound, isopen . that help to set condition to fetch data. </p>
 
-        <h6 class="py-3"> Example </h6>
+					<div class="br"></div>
 
-<pre class="pl">
+<pre class="terminal">
 /*
 	default cursor = sql 
 	attribute { %rowcount, %found, %nofound, %isopen }
@@ -292,14 +330,17 @@ BEGIN
 	END IF;
 END;	
 </pre>
+				</section>
 
-        <h5 class="py-3" id="cursor"> explicit cursor </h5>
+				<section>
 
-		<p class="py-3"> Expliciti cursor is that contextarea that declare by the programmer who create procedure. </p>
+					<h3 title="Explicit Cursor"> explicit cursor </h5>
 
-        <h6 class="py-3"> Example </h6>
+					<p> Expliciti cursor is that contextarea that declare by the programmer who create procedure. </p>
 
-<pre class="pl">
+					<div class="br"></div>
+
+<pre class="terminal">
 /*
 	explicet [ cursor ]
 
@@ -331,14 +372,17 @@ BEGIN
 
 END;
 </pre>
+				</section>
 
-		<h5 class="py-3" id=""> fetch multiple row </h5>
+				<section>
 
-		<p class="py-3"> In real life we can select mutiple data in cursor that we can use loops let do with practicale example. </p>
+					<h3 title="Fetch Multiple Row"> fetch multiple row </h5>
 
-        <h6 class="py-3"> Example </h6>
+					<p> In real life we can select mutiple data in cursor that we can use loops let do with practicale example. </p>
 
-<pre class="pl">
+					<div class="br"></div>
+
+<pre class="terminal">
 /*
 	select all data with cursor
 */
@@ -363,14 +407,17 @@ BEGIN
 
 END;
 </pre>
+				</section>
 
-        <h5 class="py-3" id="procedure"> procedure </h5>
+				<section>
 
-		<p class="py-3"> The procedure is the set instruction of query that execute with condition to fulfill the user requirement task. It is take arguments and return mutiple outputs and it return is optional. </p>
+					<h3 title="Procedure"> procedure </h5>
 
-        <h6 class="py-3"> Example </h6>
+					<p> The procedure is the set instruction of query that execute with condition to fulfill the user requirement task. It is take arguments and return mutiple outputs and it return is optional. </p>
 
-<pre class="pl">
+					<div class="br"></div>
+
+<pre class="terminal">
 /*
 	Stored Named Procedure
 	-	CREATE keyword required
@@ -411,14 +458,17 @@ BEGIN
 	dikha;
 END;
 </pre>
+				</section>
 
-        <h5 class="py-3" id="function"> function </h5>
+				<section>
 
-		<p class="py-3"> Function is the set instruction of query that execute with conditional follow and it reutnr not option and it return one data at time. </p>
+					<h3 title="Function"> function </h5>
 
-        <h6 class="py-3"> Example </h6>
+					<p> Function is the set instruction of query that execute with conditional follow and it reutnr not option and it return one data at time. </p>
 
-<pre class="pl">
+					<div class="br"></div>
+
+<pre class="terminal">
 /*
 	Stored Function
 */
@@ -433,14 +483,17 @@ BEGIN
 	dbms_output.put_line(plus(5,1));
 END;
 </pre>
+				</section>
 
-        <h5 class="py-3" id="package"> package </h5>
+				<section>
 
-		<p class="py-3"> The package is the collection of procedures and functions. All package have two pare one declare second is body. we can create, replace and drop it. </p>
+					<h3 title="Package"> package </h5>
 
-        <h6 class="py-3"> Example </h6>
+					<p> The package is the collection of procedures and functions. All package have two pare one declare second is body. we can create, replace and drop it. </p>
 
-<pre class="pl">
+					<div class="br"></div>
+
+<pre class="terminal">
 -- package declare
 CREATE Package Agni AS
 	Procedure likh(x varchar2);
@@ -464,14 +517,17 @@ BEGIN
 	dikha;
 END;
 </pre>
+				</section>
 
-        <h5 class="py-3" id="exception"> exception </h5>
+				<section>
 
-		<p class="py-3"> Exception is method to handle the mistake in database produce that helpful to avoid crash the site app or what you used. They are two type one named and other unnamed exception. </p>
+					<h3 title="Exception"> exception </h5>
 
-        <h6 class="py-3"> Example </h6>
+					<p> Exception is method to handle the mistake in database produce that helpful to avoid crash the site app or what you used. They are two type one named and other unnamed exception. </p>
 
-<pre class="pl">
+					<div class="br"></div>
+
+<pre class="terminal">
 DECLARE
 	id number;
 	-- handle code error
@@ -505,8 +561,8 @@ EXCEPTION
 		dbms_output.put_line(' kya dal diya be ');
 END;
 </pre>
-                </section>
-			
+				</section>
+		
 			</main>
 			
 			<!-- footer -->
