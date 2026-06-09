@@ -78,9 +78,9 @@
 #home > .container
 {
     /* background:  url(../data/bg1.jpg) no-repeat; */
-    background: rgba(255, 255, 255, 0.9) url(../data/bg.jpg) no-repeat;
+    background: rgba(255, 255, 255, 0.1) url(../data/bg1.jpg) no-repeat;
     /* backdrop-filter: sepia(90%); */
-    backdrop-filter: invert(80%);
+    backdrop-filter: invert(50%);
     background-size: cover;
     background-blend-mode:saturation;
 }
@@ -120,6 +120,10 @@
 {
     color: var(--blue);
 }
+#learn .row a:hover:nth-child(8) .bi
+{
+    color: var(--green);
+}
 #learn .row a:hover:nth-child(1)
 {
     border-color: var(--orange) !important;
@@ -148,13 +152,17 @@
 {
     border-color: var(--blue) !important;
 }
+#learn .row a:hover:nth-child(8)
+{
+    border-color: var(--green) !important;
+}
 #github_icon > .bi
 {
     font-size: 5rem;
 }
 #language .container
 {
-    background: #34495e url(../data/bg2.jpg) no-repeat;
+    background: rgb(52, 58, 64, 0.9) url(../data/bg2.jpg) no-repeat;
     background-size: cover;
     backdrop-filter: blur(10px);
     background-blend-mode: overlay;
@@ -162,7 +170,7 @@
 
 .python .bi
 {
-    font-size: 15rem;
+    font-size: 5em;
 }
 .icon2 .bi
 {

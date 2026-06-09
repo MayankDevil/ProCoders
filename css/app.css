@@ -145,11 +145,19 @@ h3::before {
     color: var(--bs-blue);
 }
 
+h4 {
+    font-weight: bolder;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
 h5 {
     display: inline-block;
-    color: var(--bs-black);
-    font-size: medium;
+    color: var(--bs-blue);
+    font-size: large;
     font-weight: bolder;
+    text-transform: capitalize;
+    letter-spacing: 1px;
 }
 
 h6 {
@@ -364,6 +372,10 @@ ol > li:before {
     box-shadow: 0 0  3px 2px var(--bs-blue);
 }
 
+.section {
+    counter-reset: num 0;
+}
+
 .icon {
     font-size: larger;
     font-weight: bolder;
@@ -412,6 +424,11 @@ ol > li:before {
 }
 
 .terminal {
+    display: block;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    width: 95%;
+    /* margin: 1rem; */
     padding: 10px 20px;
     font-family: var(--monospace);
     color: var(--bs-gray-800);
@@ -422,7 +439,7 @@ ol > li:before {
 
 .console {
     display: inline-block;
-    width: 90%;
+    width: 95%;
     padding: 10px 20px;
     font-family: var(--monospace);
     color: var(--bs-gray-500);
