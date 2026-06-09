@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<!--
+- Description: Simple layout for documentation
+- File: simpleUI.html
+-->
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="simpleUI">
+    <meta name="author" content="MayankDevil">
+    <meta name="description" content="simple website User Interface">
+
+    <title>Mayank</title>
+
+    <link rel="stylesheet" href="../css/app.css">
+
+    <script src="../js/app.js"></script>
+
+</head>
+
+<body>
+
+	<div class="wrapper" id="root">
+		<div id="firstColumn">
+
+			<!-- header -->
+			<header class="" id="header">
+
+				<h5 name="Git" class="brandname"> ProCoder : JAVA </h5>
+
+				<div class="flex">
+					<a class="btn" id="themeBtn"> Theme </a>
+					<button class="btn" id="toggleBtn"> &#9776; </button>
+				</div>
+
+			</header>
+			<!-- main -->
+            <main class="container" id="main">
+
+                <section>
+                    
+                    <h1 title="What is Java?"> Learn Core Java </h1>
+                    
+                    <p> JAVA is high level programming language create by Jame'e Gosling in "Sun MicroSystem" Since 1991 by name Oak that rename Java in 1995. Java is Pure Object Oriented Programming Language. Actually java is not like all programming language that execute in such system that they compiled | interpret.<p>
+                    
+                    <h3 title="Basic Structure"> basic structure </h3>
+        
+<pre class="terminal">
+/*
+-   basic staturcture
+-   java.lang default package
+*/
+
+package packagename;
+
+import java.lang.*;
+
+class ClassName
+{
+    public static void main(String args[])
+    {
+        System.out.println(" welcome in Java basic structure code ");        
+    }
+}
+</pre>
+                    <div class="br"></div>
+                    <div class="console"> welcome in Java basic structure code </div>
+
+                    <div class="hr"></div>
+
+                    <h2 title="How to Programming in Java?"> Download JDK by Oracle </h2>
+                    
+                    <p> you are diractly download JDK by **ORACLE** offical website that is <a href="https://www.oracle.com/in/java/technologies/downloads/">https://www.oracle.com/in/java/technologies/downloads/</a> </p>
+                    
+                    <h3> JDK(Java Developement Kit) </h3>
+                    
+                    <p>it is group of kit for developement the java program & testing.</p>
+                    
+                    <ul>
+                        <li> Compilers </li>
+                        <li> Interpreters </li>
+                        <li> Debuggers </li>
+                        <li> Disassembler </li>
+                        <li> Documentation Generator </li>
+                        <li> Header & Subtitle Generator </li>
+                        <li> Packages </li>
+                        <li> JRE & JVM </li>
+                    </ul>
+                    
+                    <h3> Execute Java Code </h3>
+
+                    <p> Primary compile the java <b>"source_code"</b> that return bytecode that bytecode same as inside classname mean number of class equal to return number of bytecode </p>
+
+                    <div class="console"> javac source_file_name.java </div>
+
+                    <p> Secondary interpret the java <b>"btye_Code"</b> that execute in <a href='#jre'>**JRE**</a> by <a href='#jvm'>**JVM**</a>. </p>
+
+                    <div class="console"> javac bytecode_name </div>
+
+                    <p> For <b>explore structure of bytecode</b> use java disassembler </p>
+
+                    <div class="console"> javap bytecode_name </div>
+                    
+                    <h3 name='jre'> JRE (Java Runtime Environment) </h3>
+
+                    <p> it is the environment that time java is execute the <b>bytecode</b> and give output. </p>
+
+                    <h3 name='jvm'> JVM (Java Virtual Machine) </h3>
+                    
+                    <ul>
+                        <li> it is software program that is perform as <b>virtual hardware device</b>.</li>
+                        <li> it execute byte code that run in every Operating System { <b>Linux</b> | <b>MacBook</b> | <b>Windows</b> } that need to execute JRE only.</li>
+                        <li> all language is execute in <i>bit(1 and 0)</i> but java is execute in <b>byte(8 bit)</b> at time.</li>        
+                    </ul>
+
+                </section>
+
+                <section>
+                    
+                    <h2 title="Java Feature"> Java Feature </h2>
+                    
+                    <ol>
+                        <li> <b> platform independence </b> jav is "write once, run anywhere". it's designed to be plathform-independent, thanks to the JVM (Java Virtual Machine). Code written in java can be executed on any device or operating system with a compatible JVM. </li>
+                        <li> <b> object-oriented </b> java is a purely object-oriented programming language, which promotes modularity, reusability and maintainability of code. </li>
+                        <li> <b> strongly typed </b> java enforces strong data typing, which helps catch type-related errors at compile time, reducing the likelihood of runtime errors. </li>
+                        <li> <b> automatic memory management </b> java managers memory automatically through its built-in garbage collection, which dealloates memory from objects that are no longer in use, helping prevent memory leaks. </li>
+                        <li> <b> security </b> java has built-in security features, including a secuirty manager and a robust set of APIs FOR encryption, authentication, and access control. </li>
+                        <li> <b> mutlithreading </b> java provides built-in in support for multithreading, making it easier to develop applications that can perform multiple tasks concurrently. </li>
+                        <li> <b> rich standard library </b> java incudes a vast standard library that provides classes and methods for a wide range of functions, simplifying developement and reducing the need for third-party libraries. </li>
+                        <li> <b> exception handling </b> java has a robust exception-handling mechanism, allowing developers to handle and recover from errors in a structred manner. </li>
+                        <li> <b> simple and familier syntax </b> java is syntax is similar to C & C++, making it easier for developers with a background in these languages to learn java. </li>
+                        <li> <b> hight performance </b> while java is often associated with being interpreted and slower than lower-level languages, it offers high performance throught jsut-in-time (JIT) compilation. </li>
+                        <li> <b> protability </b> as a consequenc of its plathform independence, java applications can be easily ported to different plathforms without major modifications. </li>
+                        <li> <b> dynamic loading </b> java supports dynamic class loading, allowing classes to be loaded on demand, which is useful for application that need flexibility. </li>
+                        <li> <b> network and distributed computing </b> java provides extensive libraries for networking, makint it suitable for developing networked and distributed application. </li>
+                        <li> <b> robust and reliable </b> java is designed to be robust, with features like strong type-checking and exception handling that enhance the reliablity of applications. </li>
+                        <li> <b> community and ecosystem </b> java has a large and active developer community, which means a wealth of resources, libraries, and frameworks are avilable for various types of applications. </li>
+                    </ol>
+                </section>
+
+                <section>
+
+                    <h2 title="Java Compare"> Compare Other Lanugages with Java </h1>
+                
+                        <article>
+                            <h3> Java VS C++ </h3>
+                            <ol>
+                                <li> <b>[ memory management ]:&nbsp;</b> java has automatic memory management (garbage collection), while C++ requires manual memory management.</li> 
+                                <li> <b>[ plathform independence ]:&nbsp;</b> java is pathform-independent due to the <a href='hello.html#jvm'>JVM</a>, while C++ code is compiled for a specific plathform. </li>
+                                <li> <b>[ object-oriented ]:&nbsp;</b> both are object-oriented, but java enforces it strictly, wherecase C++ provides more flexibility. </li>
+                                <li> <b>[ safety ]:&nbsp;</b> java is generally considered safer due to its memory management and strong typing. </li>
+                            </ol>
+                        </article>
+                        <article>
+                            <h3> Java VS Python </h3>
+                            <ol>
+                                <li> <b>[ type system ]:&nbsp;</b> java has a static type system, while python is dynamically typed. </li>
+                                <li> <b>[ performance ]:&nbsp;</b> java is generally faster than Python for computintensive tasks. </li>
+                                <li> <b>[ ecosystem ]:&nbsp;</b> python is known for its extensive libraries and ease of use, while java widely used in enterprise applications. </li>
+                                <li> <b>[ syntax ]:&nbsp;</b> python's syntax is often considered more concise and readable. </li>
+                            </ol>
+                        </article>
+                        <article>
+                            <h3> Java VS JavaScript </h3>
+                            <ol>
+                                <li> <b>[ use case ]:&nbsp;</b> java is often used for back-end server application and adroid mobile app developement, while javascript is primarlly used for web. </li>
+                                <li> <b>[ type system ]:&nbsp;</b> java is statically typed, whereas JavaScript is dynamically typed. </li>
+                                <li> <b>[ browser execution ]:&nbsp;</b> javaScript uns in web brosers, whereas java appplets in web brosers are less common today. </li>
+                            </ol>
+                        </article>
+                        <article>
+                            <h3> Java VS C# </h3>
+                            <ol>
+                                <li> <b>[ plathform ]:&nbsp;</b> java is cross-plathform and can run on various operationg systems, while C# is primarily used for windows applications. </li>
+                                <li> <b>[ ecosystem ]:&nbsp;</b> c# is closely tied to the microsoft ecosystem, while java has broder usage. </li>
+                                <li> <b>[ syntax ]:&nbsp;</b> both have similarities due to their common ancestry, but they have distinct features and libraries. </li>
+                            </ol>
+                        </article>
+                </section>
+
+                <section>
+
+                    <h2 title="Variable"> Variable in JAVA </h2>
+        
+                    <ul>
+                        <li> a name of container on memory address that can store any value inside. </li>
+                        <li> in Java variable is two type ( <b>instance</b> OR <b>local</b> ) variables. </li>
+                        <li> instance variable scope inside class other hand local varaible scope inside function. </li>  
+                        <li> instance variable have default value but local not any value </li>
+                    </ul>
+                    
+                    <h3> instance variable default value </h3>
+        
+<pre class="console">
+[ 0 ]   integer
+
+[ false ]   boolean
+
+[ 0.0 ]   floating
+
+[ ' ' ]   charactor
+</pre>
+
+                    <div class="hr"></div>
+                    <h3> Declare variable </h3>
+                    <mark>datatype vairable_name;</mark>
+
+                    <h3> Assign variable </h3>
+                    <mark>vairable_name = value;</mark>
+
+                    <h3> Insalize variable </h3>
+                    <mark>datatype vairable_name = value;</mark>
+                    <div class="hr"></div>
+        
+<pre class="terminal">
+class Test
+{
+    boolean data; // instance variables
+    
+	public static void main(String args[])
+	{
+	    // local variables
+	    
+	    int n;  // declare
+	    
+	    n = 0;  // assign
+	    
+	    int num = 1; // insalize
+	    
+        System.out.println(n+" "+num+" "+data);
+	}
+}
+</pre>
+
+                    <div class="br"></div>
+                    <div class="console">0 1 false</div>
+                
+                </section>
+
+                <section>
+
+                    <h1 title="Datatype"> Datetype in JAVA </h1>
+                    
+                    <p> The value hold in variable have different size of type that criteria called datatype. </p>
+                    
+                    <p> datatype is two type <b>(Primative) build-in</b> & <b>(Reference) drived </b>. </p>
+                    
+                    <h3 name="primative"> Primative { build-in } </h3>
+                    
+                    <ul>
+                        <li> Integer </li>
+                        <li> Floating Point </li>
+                        <li> Charactor </li>
+                        <li> Boolean </li>
+                    </ul>
+                    
+                    <h3 name="reference"> Reference { drived } </h3>
+                    
+                    <ul>
+                        <li> <a href="./array.html"> Array </a> </li>
+                        <li> <a href="./string.html"> String </a> </li>
+                        <li> <a href="./class_object.html"> Class </a> </li>
+                        <li> <a href="./interface.html"> Interface </a> </li>
+                    </ul>
+        
+                    <div class="hr"></div>
+                    <mark> datatype size = value </mark>
+                    <div class="hr"></div>
+
+<pre class="alert success">
+---------------------------------------
+| datatype      size       values     |
+---------------------------------------
+| short         2byte      integer    |
+| byte          1byte      integer    |
+| int           4byte      integer    |
+| long          8byte      integer    |
+| float         4byte      real       |
+| double        8byte      real       |
+| char          2byte      charactor  |
+| boolean       1bit       true|false |
+---------------------------------------
+</pre>
+
+                    <div class="br"></div>
+        
+<pre class="terminal">
+class Test
+{
+	public static void main(String args[])
+	{
+		byte byte_datatype = 1;
+		short short_datatype = 12345;
+		int int_datatype = 91252222;
+		long long_datatype = 232332131;
+
+		float float_datatype = 100.0099f;
+		double double_datatype = 2323.00001;
+
+		char char_datatype = 'x';
+
+		boolean boolean_datatype = true;
+
+		System.out.println(
+			"\n"+byte_datatype+
+			"\n"+short_datatype+
+			"\n"+int_datatype+
+			"\n"+long_datatype+
+			"\n"+float_datatype+
+			"\n"+double_datatype+
+			"\n"+char_datatype+
+			"\n"+boolean_datatype
+		);
+	}
+}
+</pre>
+
+                    <div class="br"></div>
+        
+<pre class="console">
+1
+12345
+91252222
+232332131
+100.0099
+2323.00001
+x
+true
+</pre>
+                </section>
+
+                <section>
+
+                    <h2 title="Command Line Arguments"> Command Line Arguments </h2>
+        
+                    <ul>
+                        <li> command line argument is the passing argument in the main function at run time. </li>
+                        <li> in java main is take string type argument. </li> 
+                        <li> that arugment is  stirng class array arugment. </li> 
+                        <li> we can pass multiple argument at interpret time. </li> 
+                    </ul>
+
+                    <div class="hr"></div>
+                    <mark cl>terminal:~ java bytecode argument1 argument2 ...</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class Test
+{
+	public static void main(String args[])
+	{
+		for (String i : args)
+		{
+			System.out.print(i+" ");
+		}
+	}
+}
+</pre>
+                    <div class="br"></div>
+        
+                    <mark class="console">Am I Right AND I Am Right</mark>
+                
+                </section>
+                <!-- operator -->
+                <section>
+
+                    <h1 title="Operators"> Operators in Java </h1>
+     
+                    <p> in computer programming, an opeator is a symbol or character that represents a specific operation to be performed on one or more operands. OPerators are used to manipulator or perform calculations on data. They fundamental to building and performing operations in code. </p>
+                    
+                    <ol>
+                        <li> Unary Operator </li>
+                        <li> Binary Operator </li>
+                        <li> Ternary Operator </li>
+                    </ol>
+                    
+                    <h2 title="Unary Operator"> unary operator </h2>
+                    
+                    <ul>
+                        <li> if opertor perform operation upon singal operand.</li>
+                        <li> we have been only tow unary operator {<b>incremetn</b> & <b>decrement</b>}. </li>
+                        <li> Unary increment operator increase 1 value of oprend. </li>
+                    </ul>
+                    
+                    <div class="hr"></div>
+                    <mark>operand++;</mark>
+                    <mark>++operand;</mark>
+                    <h6>OR</h6>
+                    <mark>operand--;</mark>
+                    <mark>--operand;</mark>
+                    <div class="hr"></div>
+               
+<pre class='terminal'>
+class Test
+{
+	public static void main(String args[])
+	{
+		int n = 12;
+
+		System.out.println("Increment "+(n++)+" "+(++n)+"\nDecrement"+(--n)+" "+(n--));
+	}
+}
+</pre>
+
+                    <div class="br"></div>
+        
+<pre class="console">
+Increment 12 14
+Decrement13 13
+</pre>
+
+                    <div class="hr"></div>
+                    
+                    <h2 title="Binary Operator"> binary operator </h2>
+        
+                    <ul>
+                        <li> The operator perform operation between two operand that called "binary operator".</li>
+                        <li> Thery are 5 type </li>
+                    </ul>
+                    
+                    <h3> arithmetic operators </h3>
+                    
+                    <p> used for basic mathematical operations. </p>
+                    
+                    <ul>
+                        <li> (<b> + </b>) addition </li>
+                        <li> (<b> - </b>) subtraction </li>
+                        <li> (<b> * </b>) mutliplication </li>
+                        <li> (<b> / </b>) division </li>
+                        <li> (<b> % </b>) modulus </li>
+                    </ul>
+                    
+                    <h3> comparison operators </h3>
+                    
+                    <p> used to comarve values and return a boolean result. </p>
+                    
+                    <ul>
+                        <li> (<b> == </b>) equal to </li>
+                        <li> (<b> != </b>) not equal to </li>
+                        <li> (<b> < </b>) less than </li>
+                        <li> (<b> > </b>) greater than </li>
+                        <li> (<b> <= </b>) less than or equal to </li>
+                        <li> (<b> >= </b>) greater than or equal to </li>
+                        <li> (<b> === </b>) value or data equal to </li>
+                    </ul>
+                    
+                    <h3> logical operators </h3>
+                    
+                    <p> used for combining or modifying boolean values. </p>
+                    
+                    <ul>
+                        <li> (<b> && </b>) logical AND </li>
+                        <li> (<b> || </b>) logical OR </li>
+                        <li> (<b> ! </b>) logical NOT </li>
+                    </ul>
+                    
+                    <h3> assignment operators </h3>
+                    
+                    <p> used to assign values to variables. </p>
+                    
+                    <ul>
+                        <li> (<b> = </b>) assignment </li>
+                        <li> (<b> += </b>) add and assign </li>
+                        <li> (<b> -= </b>) subtract and assign </li>
+                        <li> (<b> *= </b>) multiply and assign </li>
+                        <li> (<b> /= </b>) divide and assign </li>
+                        <li> (<b> %= </b>) modulus and assign </li>
+                    </ul>
+                    
+                    <h3> bitwise operators </h3>
+                    
+                    <p> used to manipulate individual bits in binary numbers. </p>
+                    
+                    <ul>
+                        <li> (<b> & </b>) bitwise AND </li>
+                        <li> (<b> | </b>) bitwise OR </li>
+                        <li> (<b> ^ </b>) bitwise XOR </li>
+                        <li> (<b> ~ </b>) bitwise NOT </li>
+                        <li> (<b> << </b>) left shift </li>
+                        <li> (<b> >> </b>) right shift </li>
+                    </ul>
+                
+                    <div class="hr"></div>
+        
+<pre class='terminal'>
+class Test
+{
+	public static void main(String args[])
+	{
+		// Arithmetic Operator
+
+		System.out.println(
+			"\n addition "+(1 + 2)+
+			"\n subtraction "+(2 - 1)+
+			"\n Multiplication "+(2 * 3)+
+			"\n Divition "+(9 / 3)+
+			"\n Modulas "+(7 % 3)
+		);
+
+		// Logical Operator
+
+		System.out.println(
+			"\n logical AND "+(true & true)+
+			"\n logical OR "+(false | true)+
+			"\n logical exclusive OR (XOR) "+(false ^ true)+
+			"\n conditional AND "+(true && false)+
+			"\n conditional OR "+(true || false)+
+			"\n logical negation "+(!(true))
+		);
+
+		// Relational Operator
+
+		System.out.println(
+			"\n greater than "+(1 > 2)+
+			"\n lower than "+(1 < 2)+
+			"\n greater and equal to "+(2 >= 3)+
+			"\n lower and equal to "+(4 <= 3)+
+			"\n equal to "+(2 == 2)+
+			"\n not equal to "+(3 != 5)
+		);
+
+		// Assignment Operator
+
+		short n1 = 5;
+
+		System.out.println(
+			"\n += "+(n1 += 2)+
+			"\n -= "+(n1 -= 3)+
+			"\n *= "+(n1 *= 3)+
+			"\n /= "+(n1 /= 2)+
+			"\n %= "+(n1 %= 2)
+		);
+
+		// Bitwise Operator
+
+		short x = 20, y = 0xaf;
+
+		short z = -24;
+
+		System.out.println(
+			"\n Bitwise AND "+(x & y)+
+			"\n Bitwise OR "+(x | y)+
+			"\n Bitwise Exclusive "+(x ^ y)+
+			"\n Bitwise Complement "+(~x)+
+			"\n Bitwise Shift Left "+(x << y)+
+			"\n Bitwise Shift Right "+(x >> y)+
+			"\n Bitwise Shift Right zero fill "+(x >>> y)
+		);
+	}
+}
+</pre>
+
+                    <div class="br"></div>
+
+        
+<pre class="console">
+
+ addition 3
+ subtraction 1
+ Multiplication 6
+ Divition 3
+ Modulas 1
+
+ logical AND true
+ logical OR true
+ logical exclusive OR (XOR) true
+ conditional AND false
+ conditional OR true
+ logical negation false
+
+ greater than false
+ lower than true
+ greater and equal to false
+ lower and equal to false
+ equal to true
+ not equal to true
+
+ += 7
+ -= 4
+ *= 12
+ /= 6
+ %= 0
+
+ Bitwise AND 4
+ Bitwise OR 191
+ Bitwise Exclusive 187
+ Bitwise Complement -21
+ Bitwise Shift Left 655360
+ Bitwise Shift Right 0
+ Bitwise Shift Right zero fill 0
+
+</pre>
+                    <div class="hr"></div>
+                    <h1 title="Ternary Operator"> ternary operator </h1>
+        
+                    <ul>
+                        <li> the opeator perform operation upon three operand that called ternary Operator. </li>
+                        <li> if expression is return true so execute first expression other else. </li>
+                        <li> it is very useful and short single if else code. </li>
+                    </ul>
+                    
+                    <article class="section">
+                        <h4 class=""> contorl flow </h4>
+                        <ol>
+                            <li> the <b>"condition"</b> is an expression that evaluates to either ture or flase. </li>
+                            <li> if the condition is true, the value of <b>"expressionIfTrue"</b> is returned. </li>
+                            <li> if the condititon is false, the value of <b>"expressionIfFalse"</b> is returned. </li>
+                        </ol>
+                    </article>
+                    
+                    <div class="hr"></div>
+                    <mark>condition ? expressionIfTrue : expressionIfFalse ;</mark>
+                    <div class="hr"></div>
+        
+<pre class='terminal'>
+class Test
+{
+	public static void main(String args[])
+	{
+
+		boolean n = (1 < 0)? true: false;
+
+		System.out.println("the value is "+n);
+	}
+}
+</pre>
+
+                    <div class="br"></div>
+        
+<pre class="console">
+the value is false
+</pre>
+                </section>
+                <!-- if -->
+                <section>
+
+                    <h3 title="If statement""> if else statement </h3>
+        
+                    <ul>
+                        <li> if else statement is controal structure statement that help to controal follow execute. </li>
+                        <li> if expression return true so execute in if statmenet. </li>    
+                        <li> if condition is return true so execute first block esle execute second block. </li>
+                        <li> ifelse statement is same like ternary operator. </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <mark>if (expression) { // true expression }</mark>
+                    <h6>OR</h6>
+                    <mark>if (expression) { // true expression } else { // false expression }</mark>
+                    <div class="hr"></div>
+        
+<pre class="terminal">
+class Test
+{
+	public static void main(String args[])
+	{
+		if (true)
+			System.out.println(" execute ");
+
+		if (2 % 4 == 0)
+		{
+			System.out.println(" right code ");
+		}
+		else
+		{
+			System.out.println(" wrong code ");
+		}
+	}
+}
+</pre>
+
+                    <div class="br"></div>
+        
+<pre class="console">
+ execute
+ right code
+</pre>
+
+                    <div class="hr"></div>
+                    <h2 title="Nested if statement"> nested if statement </h2>
+        
+                    <ul>
+                        <li> nested if else is using multiple "if else" combine. </li>
+                        <li> nested ness is two type inner and rooter. </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <mark>if (expression) { //code } else if (expression) { //code } ... else { //code }</mark>
+                    <h6>OR</h6>
+                    <mark>if (expression) { if (expression) { ... } else { ... } }</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class Test
+{
+	public static void main(String args[])
+	{
+		byte n = 3;
+		/*
+			if set not limit or else part is optional.
+		*/
+		if (n == 1)
+		{
+			n = 11;
+		}
+		if (n == 2)
+		{
+			n = 22;
+		}
+		if (n == 3)
+		{
+			n = 33;
+		}
+		else
+		{
+			n = 0;
+		}
+
+		System.out.println(n);
+		/*
+			inner if else use multiple if else is optional
+		*/
+		if (false)
+		{
+			if (true)
+			{
+				n = 12;
+			}
+		}
+		else
+		{
+			if (true)
+			{
+				if (false)
+				{
+					n = 13;
+				}
+				if (true)
+				{
+					n = 23;
+				}
+				else
+				{
+					n = 10;
+				}
+			}
+			else
+			{
+				n = 20;
+			}
+		}
+		System.out.println(n);
+	}
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+33
+23
+</pre>
+                </section>
+                <!-- switch -->
+                <section>
+
+                    <h3 title="Switch Statement"> switch statement </h3>
+        
+                    <ul>
+                        <li> switch is control statement that control flow of execution. </li>
+                        <li> it use if we are compare case value then execute code. </li>
+                        <li> we are use "break" keyword for stop for execute next case. </li>
+                        <li> we have "default" case in last that execute if not case work. </li>
+                        <li> but we are use also create some code with the help of "nested if else". </li>
+                    </ul>
+                    
+                    <h4> control flow </h4>
+                    
+                    <ol>
+                        <li> check switch expression. </li>
+                        <li> match case first to last. </li>
+                        <li> if case match execute code. </li>
+                        <li> if not any case match execute default. </li>
+                    </ol>
+                    
+                    <div class="hr"></div>
+                    <mark>switch (expression) { case value : //code break; case value : //code break; ... defautl : //code }</mark>
+                    <div class="hr"></div>
+        
+<pre class="terminal">
+class Test
+{
+	public static void main(String args[])
+	{
+		int n = 0, n1 = 2, n2 = 3;
+
+		switch (3)
+		{
+			case 1 : n = n1 + n2; break;
+
+			case 2 : n = n1 + n2; break;
+
+			case 3 : n = n1 + n2; break;
+
+			case 4 : n = n1 + n2; break;
+
+			case 5 : n = n1 + n2; break;
+
+			default : n = 0;
+		}
+		System.out.println(n);
+	}
+}
+</pre>
+                    <div class="br"></div>
+                    <div class="console">6</div>
+                
+                </section>
+                <!-- for -->
+                <section>
+        
+                    <h3 title="For Loop"> for loop </h3>
+                    
+                    <ul>
+                        <li> for loop is iterative statement. </li>
+                        <li> in loop we are know how to stop execute condition  initizalition. </li>
+                        <li> for loop initiazlition condition itration set before. </li>
+                    </ul>
+                    
+                    <article class="section">
+                        <h4> control flow </h4>
+                        <ol>
+                            <li> first check initialization. </li>
+                            <li> second check condition. </li>
+                            <li> execute code end to for loop closed bracket. </li>
+                            <li> return from closed bracket to condition. </li>
+                            <li> next goto iteration. </li>
+                            <li> execute code (3) repeat </li>
+                            <li> if condition return false loop control stop iteration. </li>
+                        </ol>
+                    </article>
+
+                    <div class="hr"></div>
+                    <mark>for (initialization; condition; iteration){ //code }</mark>
+                    <div class="hr"></div>
+                    
+<pre class="terminal">
+class Test
+{
+	public static void main(String args[])
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			System.out.println(i);
+		}
+	}
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+0
+1
+2
+3
+4
+</pre>
+                </section>
+                <!-- while -->
+                <section>
+        
+                    <h3 title="While Loop"> while loop </h3>
+        
+                    <ul>
+                        <li> while loop is loop that first check condtion then execute. </li>
+                        <li> it is hand that iteration than iteration depend upon user. </li>
+                        <li> contion return ture then loop execute. </li>
+                    </ul>
+                    
+                    <article class="section">
+                        <h4> control flow </h4>
+                        
+                        <ol>
+                            <li> check conditon. </li>
+                            <li> if condition return true execute inside block code. </li>
+                            <li> after end block go back to conditon check. </li>
+                            <li> loop iterative until to condition false. </li>
+                            <li> if condition is return false control execute out of while loop. </li>
+                        </ol>
+                    </article>
+
+                    <div class="hr"></div>
+                    <mark>while (condition) { //code }</mark>
+                    <div class="hr"></div>
+        
+<pre class="terminal">
+class Test
+{
+	public static void main(String args[])
+	{
+
+		boolean n = true;
+
+		while (n)
+		{
+			System.out.println(n);
+			n = false;
+		}
+		System.out.println(n);
+
+	}
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+true
+flase
+</pre>
+                </section>
+                <!-- do while -->
+                <section>
+
+                    <h3 title="Do While Loop"> do while loop </h3>
+        
+                    <ul>
+                        <li> dowhile loop is itertive loop but it run at once. </li>
+                        <li> it check conditon after execute inner code.</li>
+                    </ul>
+                    
+                    <article class="section">
+                        <h4> control flow </h4>
+                        <ol>
+                            <li> find do execute code. </li>
+                            <li> second find while check conditon. </li>
+                            <li> if condition true  goto do against. </li>
+                            <li> if stop control and out of loop if condition is flase </li>
+                        </ol>
+                    </article>
+                    
+                    <div class="hr"></div>
+                    <mark>do{ //code }while(condition);</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class Test
+{
+	public static void main()
+	{
+		n = true;
+		do
+		{
+			System.out.println(n);
+			n = false;
+		}
+		while(n);
+	}
+}
+</pre>
+                    <div class="br"></div>
+                    <div class="console">true</div>
+                
+                </section>
+                <!-- function -->
+                <section>
+
+                    <h2 title="Function"> Function </h2>
+        
+                    <ul>
+                        <li> function is set of code in bloack that have name. </li>
+                        <li> in java we have not declare function we complusary to define, not in case interface. </li>
+                        <li> we are not call non-static funtion without object. </li>
+                        <li> we are called mutliple time one function. </li>
+                        <li> we only call function inside the function. </li>
+                        <li> default accesspecifier is [ defualt ] type. </li>
+                    </ul>
+
+                    <article class="section">
+                        <h4> control flow </h4>
+                        <ol>
+                            <li> we have three type function.
+                            <li> void function : that return type void mean null. </li>
+                            <li> perimeter function : that call we can pass arguments. </li>
+                            <li> return function : that return some data. </li>
+                        </ol>
+                    </article>
+                    
+                    <div class="hr"></div>
+                    <h3>Define Function</h3>
+                    <mark> accesspecifer returntype function_name(datatype argument,...){ //code }</mark>
+                    <h3>Call Function</h3>
+                    <mark> function_name(perimeter, ...); </mark>
+                    <div class="hr"></div>
+        
+<pre class="terminal">
+class Test
+{
+	public static void main(String args[])
+	{
+		Test t = new Test();
+
+		t.null_function();
+
+		t.perimeter_function(true);
+
+		System.out.println(return_function());
+	}
+	void null_function()
+	{
+		System.out.println("just execute code");
+	}
+	void perimeter_function(boolean arguments)
+	{
+		System.out.println("if pass argument that it call");
+	}
+	static int return_function()
+	{
+		return 3;
+	}
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+just execute code
+if pass argument that it call
+3
+</pre>
+                </section>
+                <!-- class and object  -->
+                <section>
+
+                    <h1 title="Class & Object"> Class and Object </h1>
+        
+                    <ul>
+                        <li> class is blue print of any object that have locate memory by create object. </li>
+                        <li> class is also is collection of member variables or functions, </li>
+                        <li> In java class is also a datatype. </li>
+                        <li> object is real entity the is represent class in real world. </li>
+                        <li> in java object not take address of class it take only reference of class that make classes secure. </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <h3> class </h3>
+                    <mark>accessspecifier class ClassName { // member }</mark>
+                    <h3> object </h3>
+                    <mark>new Constructor().member;</mark>
+                    <h3> Reference Object </h3>
+                    <mark>ClassName refference_variable = new Constructor();</mark>
+                    <div class="hr"></div>
+        
+<pre class="terminal">
+class A
+{
+	int n; // instance variable : 
+    // that is comman for  member function and it default value is set by javac
+
+	/*
+		integer 	0
+		float  		0,0
+		charactor 	' '
+		boolean		false
+	*/
+
+	void f()
+	{
+		n = 10;
+	}
+}
+class B
+{
+	void f()
+	{
+		int n; // local variable : 
+        // that declare in any function have not any default value.
+		n = 12; // that not print without assign any value.
+	}
+}
+class C
+{
+	public static void main(String args[])
+	{
+		A a = new A();
+		B b = new B();
+
+		a.f();
+		b.f();
+
+		System.out.println(" a.n "+a.n);
+	}
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+ a.n 10
+</pre>
+                </section>
+                <!-- constructor -->
+                <section>
+
+                    <h2 title="Constructor"> Constructor </h2>
+        
+                    <ul>
+                        <li> constructor is special type function of class without any return type. </li>
+                        <li> it call by create object of class. </li>
+                        <li> in java constructor have must in class if program not create any constructor compiler create public accessifer default constructor. </li>
+                        <li> if program define any constructor so compiler never create any constructor in bytecode. </li>
+                        <li> we are not create object without constructor. </li>
+                        <li> constructor are three type. </li>
+                    </ul>
+                    
+                    <div class="hr"></div>
+                    <mark>ClassName( ) { //code }</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class A
+{
+    A()
+    {
+        System.out.println(" class A default constructor ");
+    }
+    /*
+        if we are not create default constructor so 
+        we are not use class without pass arguments in construcotor 
+    */
+}
+class Test
+{
+    public static void main(String args[])
+    {
+        new A(); // call default constructor
+    }
+}
+</pre>
+                    <div class="br"></div>        
+<pre class="console">
+ class A default constructor
+</pre>
+                
+                    <div class="hr"></div>
+                    <h2 title="Perimeter Constructor"> perimeter constructor </h1>
+        
+                    <ul>
+                        <li> perimeter constructor is same like constructor but they not call without pass arguments. </li>
+                        <li> if we have only perimeter constructor so we not create object without give arguments. </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <mark>ClassName (datatype argument_name) { // code }</mark>
+                    <div class="hr"></div>
+        
+<pre class="terminal">
+class Hello
+{
+    Hello(boolean args)
+    {
+        System.out.println(" if pass arguments than it is execute");
+    }
+}
+class Test
+{
+    public static void main(String args[])
+    {
+        new Hello(true);
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+ if pass arguments than it is execute
+</pre>
+                    <div class="hr"></div>
+                    <h2 title="Copy Constructor"> copy constructor </h2>
+                    
+                    <ul>
+                        <li> copy constructor is use to copy any object value by another object. </li>
+                        <li> copy constructor take argument as a objectreferance and copy vaslues that set in copy constructor. </li>
+                        <li> copy constructor use require same class object. </li>
+                    </ul>
+                    
+                    <div class="hr"></div>
+                    <mark>ClassName(ClassName reference_class){ properties = reference_class.properties }</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class Hello
+{
+	int n1, n2;
+
+	Hello(int n1, int n2)
+	{
+		this.n1 = n1;
+		this.n2 = n2;
+	}
+	int plus()
+	{
+		return (n1 + n2);
+	}
+	/* copy constructor */
+	Hello(A object)
+	{
+		n1 = object.n1;
+		n2 = object.n2;
+	}
+}
+class Test
+{
+	public static void main(String args[])
+	{
+		Hello refference_one = new Hello(5,3);	// call perimeter constructor
+
+		Hello refference_two = new Hello(refference_one); // call copy constructor
+
+		System.out.println(" first "+refference_one.plus()+"\n second "+refference_two.plus());
+	}
+}
+</pre>
+                    <div class="br"></div>
+        
+<pre class="console">
+ first 8
+ second 8
+</pre>
+                </section>
+                <!--  -->
+                <section>
+                    
+                </section>
+
+            </main>
+			<!-- footer -->
+			<footer class="" id="footer">
+				Website <span class="icon">&copy;</span> CopyRight & Developed by <a href="#"> Mayank </a> <span class="hide">| ( <a href="#">https://mayankdevil.github.io/MayankDevil/</a> ) </span>
+			</footer>
+		</div>
+		<!--  -->
+		<div id="lastColumn">
+			<!-- aside -->
+			<aside class="staticContainer" id="aside">
+				
+				<form action="" id="searchBox">
+					<input type="search" class="" id="searchBar" placeholder="Search ..." />
+				</form>
+				
+			</aside>
+		</div>
+	</div>
+
+</body>
+
+</html>
