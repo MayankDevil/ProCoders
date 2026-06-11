@@ -264,6 +264,31 @@ ol > li:before {
     
 }
 
+table {
+    width: 100%;
+    font-weight: bold;
+    color: var(--bs-dark);
+    border: 3px dashed var(--bs-gray-400);
+}
+
+table th {
+    font-weight: bold;
+    border-bottom: 3px dashed var(--bs-gray-400);
+}
+table thead tr:last-child {
+    font-style: italic;
+}
+
+table :is(th,td):not(:last-child) {
+    padding: 5px;
+    border-right: 3px dashed var(--bs-gray-400);
+}
+
+table td {
+    text-align: center;
+}
+
+
 /* code */
 
 .wrapper {
@@ -424,11 +449,11 @@ ol > li:before {
 }
 
 .terminal {
-    display: block;
+    display:block;
     box-sizing: border-box;
     overflow-x: scroll;
-    width: 95%;
-    /* margin: 1rem; */
+    max-width: 750px;
+    /* margin: 5px; */
     padding: 10px 20px;
     font-family: var(--monospace);
     color: var(--bs-gray-800);
@@ -439,7 +464,8 @@ ol > li:before {
 
 .console {
     display: inline-block;
-    width: 95%;
+    /* width: 95%; */
+    width: 750px;
     padding: 10px 20px;
     font-family: var(--monospace);
     color: var(--bs-gray-500);
@@ -459,7 +485,7 @@ ol > li:before {
 @media screen and (max-width:1100px) {
 
     .wrapper {
-        grid-template-columns: 100%;
+        grid-template-columns: 100% 0;
     }
 
     #lastColumn {
@@ -482,6 +508,12 @@ ol > li:before {
 
     :is(h1,h2,h3,h4,h5,h6)[title] {
         color: var(--bs-danger);
+    }
+
+    .terminal,
+    .console {
+        width: 95%;
+        /* margin: 5px; */
     }
 
     pre {
