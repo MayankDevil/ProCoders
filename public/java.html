@@ -43,7 +43,7 @@
 
                 <section>
                     
-                    <h1 title="What is Java?"> Learn Core Java </h1>
+                    <h1 title="What is Java?"> Java Language </h1>
                     
                     <p> JAVA is high level programming language create by Jame'e Gosling in "Sun MicroSystem" Since 1991 by name Oak that rename Java in 1995. Java is Pure Object Oriented Programming Language. Actually java is not like all programming language that execute in such system that they compiled | interpret.<p>
                     
@@ -220,19 +220,19 @@ class ClassName
 class Test
 {
     boolean data; // instance variables
-    
-	public static void main(String args[])
-	{
-	    // local variables
-	    
-	    int n;  // declare
-	    
-	    n = 0;  // assign
-	    
-	    int num = 1; // insalize
-	    
+
+    public static void main(String args[])
+    {
+        // local variables
+
+        int n;  // declare
+
+        n = 0;  // assign
+
+        int num = 1; // insalize
+
         System.out.println(n+" "+num+" "+data);
-	}
+    }
 }
 </pre>
 
@@ -291,31 +291,31 @@ class Test
 <pre class="terminal">
 class Test
 {
-	public static void main(String args[])
-	{
-		byte byte_datatype = 1;
-		short short_datatype = 12345;
-		int int_datatype = 91252222;
-		long long_datatype = 232332131;
+    public static void main(String args[])
+    {
+        byte byte_datatype = 1;
+        short short_datatype = 12345;
+        int int_datatype = 91252222;
+        long long_datatype = 232332131;
 
-		float float_datatype = 100.0099f;
-		double double_datatype = 2323.00001;
+        float float_datatype = 100.0099f;
+        double double_datatype = 2323.00001;
 
-		char char_datatype = 'x';
+        char char_datatype = 'x';
 
-		boolean boolean_datatype = true;
+        boolean boolean_datatype = true;
 
-		System.out.println(
-			"\n"+byte_datatype+
-			"\n"+short_datatype+
-			"\n"+int_datatype+
-			"\n"+long_datatype+
-			"\n"+float_datatype+
-			"\n"+double_datatype+
-			"\n"+char_datatype+
-			"\n"+boolean_datatype
-		);
-	}
+        System.out.println(
+            "\n"+byte_datatype+
+            "\n"+short_datatype+
+            "\n"+int_datatype+
+            "\n"+long_datatype+
+            "\n"+float_datatype+
+            "\n"+double_datatype+
+            "\n"+char_datatype+
+            "\n"+boolean_datatype
+        );
+    }
 }
 </pre>
 
@@ -351,13 +351,13 @@ true
 <pre class="terminal">
 class Test
 {
-	public static void main(String args[])
-	{
-		for (String i : args)
-		{
-			System.out.print(i+" ");
-		}
-	}
+    public static void main(String args[])
+    {
+        for (String i : args)
+        {
+            System.out.print(i+" ");
+        }
+    }
 }
 </pre>
                     <div class="br"></div>
@@ -397,12 +397,15 @@ class Test
 <pre class='terminal'>
 class Test
 {
-	public static void main(String args[])
-	{
-		int n = 12;
+    public static void main(String args[])
+    {
+        int n = 12;
 
-		System.out.println("Increment "+(n++)+" "+(++n)+"\nDecrement"+(--n)+" "+(n--));
-	}
+        System.out.println(
+            "Increment "+(n++)+" "+(++n)
+            +"\nDecrement"+(--n)+" "+(n--)
+        );
+    }
 }
 </pre>
 
@@ -489,68 +492,68 @@ Decrement13 13
 <pre class='terminal'>
 class Test
 {
-	public static void main(String args[])
-	{
-		// Arithmetic Operator
+    public static void main(String args[])
+    {
+        // Arithmetic Operator
 
-		System.out.println(
-			"\n addition "+(1 + 2)+
-			"\n subtraction "+(2 - 1)+
-			"\n Multiplication "+(2 * 3)+
-			"\n Divition "+(9 / 3)+
-			"\n Modulas "+(7 % 3)
-		);
+        System.out.println(
+            "\n addition "+(1 + 2)+
+            "\n subtraction "+(2 - 1)+
+            "\n Multiplication "+(2 * 3)+
+            "\n Divition "+(9 / 3)+
+            "\n Modulas "+(7 % 3)
+        );
 
-		// Logical Operator
+        // Logical Operator
 
-		System.out.println(
-			"\n logical AND "+(true & true)+
-			"\n logical OR "+(false | true)+
-			"\n logical exclusive OR (XOR) "+(false ^ true)+
-			"\n conditional AND "+(true && false)+
-			"\n conditional OR "+(true || false)+
-			"\n logical negation "+(!(true))
-		);
+        System.out.println(
+            "\n logical AND "+(true & true)+
+            "\n logical OR "+(false | true)+
+            "\n logical exclusive OR (XOR) "+(false ^ true)+
+            "\n conditional AND "+(true && false)+
+            "\n conditional OR "+(true || false)+
+            "\n logical negation "+(!(true))
+        );
 
-		// Relational Operator
+        // Relational Operator
 
-		System.out.println(
-			"\n greater than "+(1 > 2)+
-			"\n lower than "+(1 < 2)+
-			"\n greater and equal to "+(2 >= 3)+
-			"\n lower and equal to "+(4 <= 3)+
-			"\n equal to "+(2 == 2)+
-			"\n not equal to "+(3 != 5)
-		);
+        System.out.println(
+            "\n greater than "+(1 > 2)+
+            "\n lower than "+(1 < 2)+
+            "\n greater and equal to "+(2 >= 3)+
+            "\n lower and equal to "+(4 <= 3)+
+            "\n equal to "+(2 == 2)+
+            "\n not equal to "+(3 != 5)
+        );
 
-		// Assignment Operator
+        // Assignment Operator
 
-		short n1 = 5;
+        short n1 = 5;
 
-		System.out.println(
-			"\n += "+(n1 += 2)+
-			"\n -= "+(n1 -= 3)+
-			"\n *= "+(n1 *= 3)+
-			"\n /= "+(n1 /= 2)+
-			"\n %= "+(n1 %= 2)
-		);
+        System.out.println(
+            "\n += "+(n1 += 2)+
+            "\n -= "+(n1 -= 3)+
+            "\n *= "+(n1 *= 3)+
+            "\n /= "+(n1 /= 2)+
+            "\n %= "+(n1 %= 2)
+        );
 
-		// Bitwise Operator
+        // Bitwise Operator
 
-		short x = 20, y = 0xaf;
+        short x = 20, y = 0xaf;
 
-		short z = -24;
+        short z = -24;
 
-		System.out.println(
-			"\n Bitwise AND "+(x & y)+
-			"\n Bitwise OR "+(x | y)+
-			"\n Bitwise Exclusive "+(x ^ y)+
-			"\n Bitwise Complement "+(~x)+
-			"\n Bitwise Shift Left "+(x << y)+
-			"\n Bitwise Shift Right "+(x >> y)+
-			"\n Bitwise Shift Right zero fill "+(x >>> y)
-		);
-	}
+        System.out.println(
+            "\n Bitwise AND "+(x & y)+
+            "\n Bitwise OR "+(x | y)+
+            "\n Bitwise Exclusive "+(x ^ y)+
+            "\n Bitwise Complement "+(~x)+
+            "\n Bitwise Shift Left "+(x << y)+
+            "\n Bitwise Shift Right "+(x >> y)+
+            "\n Bitwise Shift Right zero fill "+(x >>> y)
+        );
+    }
 }
 </pre>
 
@@ -619,13 +622,12 @@ class Test
 <pre class='terminal'>
 class Test
 {
-	public static void main(String args[])
-	{
+    public static void main(String args[])
+    {
+        boolean n = (1 < 0)? true: false;
 
-		boolean n = (1 < 0)? true: false;
-
-		System.out.println("the value is "+n);
-	}
+        System.out.println("the value is "+n);
+    }
 }
 </pre>
 
@@ -656,20 +658,20 @@ the value is false
 <pre class="terminal">
 class Test
 {
-	public static void main(String args[])
-	{
-		if (true)
-			System.out.println(" execute ");
+    public static void main(String args[])
+    {
+        if (true)
+            System.out.println(" execute ");
 
-		if (2 % 4 == 0)
-		{
-			System.out.println(" right code ");
-		}
-		else
-		{
-			System.out.println(" wrong code ");
-		}
-	}
+        if (2 % 4 == 0)
+        {
+            System.out.println(" right code ");
+        }
+        else
+        {
+            System.out.println(" wrong code ");
+        }
+    }
 }
 </pre>
 
@@ -697,64 +699,64 @@ class Test
 <pre class="terminal">
 class Test
 {
-	public static void main(String args[])
-	{
-		byte n = 3;
-		/*
-			if set not limit or else part is optional.
-		*/
-		if (n == 1)
-		{
-			n = 11;
-		}
-		if (n == 2)
-		{
-			n = 22;
-		}
-		if (n == 3)
-		{
-			n = 33;
-		}
-		else
-		{
-			n = 0;
-		}
+    public static void main(String args[])
+    {
+        byte n = 3;
+        /*
+            if set not limit or else part is optional.
+        */
+        if (n == 1)
+        {
+            n = 11;
+        }
+        if (n == 2)
+        {
+            n = 22;
+        }
+        if (n == 3)
+        {
+            n = 33;
+        }
+        else
+        {
+            n = 0;
+        }
+        System.out.println(n);
 
-		System.out.println(n);
-		/*
-			inner if else use multiple if else is optional
-		*/
-		if (false)
-		{
-			if (true)
-			{
-				n = 12;
-			}
-		}
-		else
-		{
-			if (true)
-			{
-				if (false)
-				{
-					n = 13;
-				}
-				if (true)
-				{
-					n = 23;
-				}
-				else
-				{
-					n = 10;
-				}
-			}
-			else
-			{
-				n = 20;
-			}
-		}
-		System.out.println(n);
-	}
+        /*
+            inner if else use multiple if else is optional
+        */
+        if (false)
+        {
+            if (true)
+            {
+                n = 12;
+            }
+        }
+        else
+        {
+            if (true)
+            {
+                if (false)
+                {
+                    n = 13;
+                }
+                if (true)
+                {
+                    n = 23;
+                }
+                else
+                {
+                    n = 10;
+                }
+            }
+            else
+            {
+                n = 20;
+            }
+        }
+        System.out.println(n);
+    }
 }
 </pre>
                     <div class="br"></div>
@@ -793,26 +795,26 @@ class Test
 <pre class="terminal">
 class Test
 {
-	public static void main(String args[])
-	{
-		int n = 0, n1 = 2, n2 = 3;
+    public static void main(String args[])
+    {
+        int n = 0, n1 = 2, n2 = 3;
 
-		switch (3)
-		{
-			case 1 : n = n1 + n2; break;
+        switch (3)
+        {
+            case 1 : n = n1 + n2; break;
 
-			case 2 : n = n1 + n2; break;
+            case 2 : n = n1 + n2; break;
 
-			case 3 : n = n1 + n2; break;
+            case 3 : n = n1 + n2; break;
 
-			case 4 : n = n1 + n2; break;
+            case 4 : n = n1 + n2; break;
 
-			case 5 : n = n1 + n2; break;
+            case 5 : n = n1 + n2; break;
 
-			default : n = 0;
-		}
-		System.out.println(n);
-	}
+            default : n = 0;
+        }
+        System.out.println(n);
+    }
 }
 </pre>
                     <div class="br"></div>
@@ -850,13 +852,13 @@ class Test
 <pre class="terminal">
 class Test
 {
-	public static void main(String args[])
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			System.out.println(i);
-		}
-	}
+    public static void main(String args[])
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            System.out.println(i);
+        }
+    }
 }
 </pre>
                     <div class="br"></div>
@@ -899,19 +901,17 @@ class Test
 <pre class="terminal">
 class Test
 {
-	public static void main(String args[])
-	{
+    public static void main(String args[])
+    {
+        boolean n = true;
 
-		boolean n = true;
-
-		while (n)
-		{
-			System.out.println(n);
-			n = false;
-		}
-		System.out.println(n);
-
-	}
+        while (n)
+        {
+            System.out.println(n);
+            n = false;
+        }
+        System.out.println(n);
+    }
 }
 </pre>
                     <div class="br"></div>
@@ -948,16 +948,17 @@ flase
 <pre class="terminal">
 class Test
 {
-	public static void main()
-	{
-		n = true;
-		do
-		{
-			System.out.println(n);
-			n = false;
-		}
-		while(n);
-	}
+    public static void main()
+    {
+       n = true;
+    
+       do
+       {
+           System.out.println(n);
+           n = false;
+       }
+       while(n);
+    }
 }
 </pre>
                     <div class="br"></div>
@@ -998,28 +999,28 @@ class Test
 <pre class="terminal">
 class Test
 {
-	public static void main(String args[])
-	{
-		Test t = new Test();
+    public static void main(String args[])
+    {
+        Test t = new Test();
 
-		t.null_function();
+        t.null_function();
 
-		t.perimeter_function(true);
+        t.perimeter_function(true);
 
-		System.out.println(return_function());
-	}
-	void null_function()
-	{
-		System.out.println("just execute code");
-	}
-	void perimeter_function(boolean arguments)
-	{
-		System.out.println("if pass argument that it call");
-	}
-	static int return_function()
-	{
-		return 3;
-	}
+        System.out.println(return_function());
+    }
+    void null_function()
+    {
+        System.out.println("just execute code");
+    }
+    void perimeter_function(boolean arguments)
+    {
+        System.out.println("if pass argument that it call");
+    }
+    static int return_function()
+    {
+        return 3;
+    }
 }
 </pre>
                     <div class="br"></div>
@@ -1055,42 +1056,42 @@ if pass argument that it call
 <pre class="terminal">
 class A
 {
-	int n; // instance variable : 
-    // that is comman for  member function and it default value is set by javac
+    int n; // instance variable : that is comman for  member function and it default value is set by javac
 
-	/*
-		integer 	0
-		float  		0,0
-		charactor 	' '
-		boolean		false
-	*/
+    /*
+        integer 	0
+        float  		0,0
+        charactor 	' '
+        boolean		false
+    */
 
-	void f()
-	{
-		n = 10;
-	}
+    void f()
+    {
+        n = 10;
+    }
 }
+
 class B
 {
-	void f()
-	{
-		int n; // local variable : 
-        // that declare in any function have not any default value.
-		n = 12; // that not print without assign any value.
-	}
+    void f()
+    {
+        int n; // local variable : that declare in any function have not any default value.
+        n = 12; // that not print without assign any value.
+    }
 }
+
 class C
 {
-	public static void main(String args[])
-	{
-		A a = new A();
-		B b = new B();
+    public static void main(String args[])
+    {
+        A a = new A();
+        B b = new B();
 
-		a.f();
-		b.f();
+        a.f();
+        b.f();
 
-		System.out.println(" a.n "+a.n);
-	}
+        System.out.println(" a.n "+a.n);
+    }
 }
 </pre>
                     <div class="br"></div>
@@ -1191,34 +1192,39 @@ class Test
 <pre class="terminal">
 class Hello
 {
-	int n1, n2;
+    int n1, n2;
 
-	Hello(int n1, int n2)
-	{
-		this.n1 = n1;
-		this.n2 = n2;
-	}
-	int plus()
-	{
-		return (n1 + n2);
-	}
-	/* copy constructor */
-	Hello(A object)
-	{
-		n1 = object.n1;
-		n2 = object.n2;
-	}
+    Hello(int n1, int n2)
+    {
+        this.n1 = n1;
+        this.n2 = n2;
+    }
+    int plus()
+    {
+        return (n1 + n2);
+    }
+    /* copy constructor */
+    Hello(A object)
+    {
+        n1 = object.n1;
+        n2 = object.n2;
+    }
 }
 class Test
 {
-	public static void main(String args[])
-	{
-		Hello refference_one = new Hello(5,3);	// call perimeter constructor
+    public static void main(String args[])
+    {
+        Hello refference_one = new Hello(5,3);	
+        // call perimeter constructor
 
-		Hello refference_two = new Hello(refference_one); // call copy constructor
+        Hello refference_two = new Hello(refference_one); 
+        // call copy constructor
 
-		System.out.println(" first "+refference_one.plus()+"\n second "+refference_two.plus());
-	}
+        System.out.println(
+            " first "+refference_one.plus()+
+            "\n second "+refference_two.plus()
+        );
+    }
 }
 </pre>
                     <div class="br"></div>
@@ -1228,9 +1234,2049 @@ class Test
  second 8
 </pre>
                 </section>
-                <!--  -->
+                <!-- overload -->
+                <section>
+        
+                    <h2 title="Method Overload"> Method Overload </h2>
+        
+                    <ul>
+                        <li> overload is situation than over method is fail by arguments. </li>
+                        <li> so solving this problem we create overloading function accroding to arguments. </li>
+                        <li> we are create multiple function with same name but different arguments and different return type. </li>
+                        <li> it compiler responsiblity to select funtion according arguments. </li>
+                        <li> contructor is also a function that we are protect to overload. </li>
+                    </ul>
+
+                    <div class="hr"></div>
+        
+<pre class="terminal">
+class Test
+{
+    Test()
+    {
+        System.out.println("hello ");
+    }
+    Test(boolean args)
+    {
+        System.out.println(" hello true ");
+    }
+    public static void main(String args[])
+    {
+        Test t = new Test();
+
+        new Test(true);
+
+        System.out.println(t.punk(2));
+        // System.out.println(t.punk(2));
+        System.out.println(t.punk(2,3));
+    }
+    int punk(int n)
+    {
+        return (n + 1);
+    }
+    /*float punk(int n)
+    {
+        return (n);
+    }*/
+    float punk(int n1, int n2)
+    {
+        return (n1 / n2);
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+3
+0.6666666666666666 
+</pre>
+                </section>
+                <!-- inheritence -->
+                <section>
+
+                    <h1 title="Inheritence"> Inheritence </h1>
+        
+                    <ul>
+                        <li> inheritance is technique to extends one class to another class and make change inside. </li>
+                        <li> inheritacne always need more than one class first super_Class that we -extends- with sub_Class. </li>
+                        <li> we use extends keyword to inherit one class in sub_Class. </li>
+                        <li> in java one sub class have only one super class. </li>
+                        <li> one super_class have mutliple sub_class. </li>
+                        <li> we are aquire and change superclass member in subclass without object. </li>
+                    </ul>
+                    
+                    <div class="hr"></div>
+                    <mark>class SubClassName extends SuperClassName { //code }</mark>
+                    <div class="hr"></div>
+        
+<pre class="terminal">
+class SuperClass
+{
+    int n1,n2;
+
+    int plus(int n1, int n2)
+    {
+        return (n1 + n2);
+    }
+}
+class SubClass extends SuperClass
+{
+    void result()
+    {
+        n1 = 5;
+        n2 = 1;
+
+        System.out.println(" sum of "+n1+" and "+n2+" is "+plus(n1,n2));
+    }
+}
+class Test
+{
+    public static void main(String args[])
+    {
+        SubClass sub = new SubClass();
+
+        sub.result();
+    }
+}
+</pre>
+                    <div class="br"></div>
+        
+<pre class="console">
+ sum of 5 and 1 is 6
+</pre>
+                </section>
+                <!-- override -->
+                <section>
+
+                    <h2 title="Method Override"> Method Override </h2>
+        
+                    <ul>
+                        <li> it is use to update or chagne function functionality. </li>
+                        <li> overrideing is method to change superclass function functionality in subclass. </li>
+                        <li> method override is require inhertance. </li>
+                        <li> require same { returntype | functionname | arugments }. </li>
+                        <li> but accesspecifer require same or higher. </li>
+                    </ul>
+                    
+                    <div class="hr"></div>
+                    <mark>same_or_higher_accessspecifer samereturntype samefunctionname(samearguments){ // override code }</mark>
+                    <div class="hr"></div>  
+
+<pre class="terminal">
+class SuperClass
+{
+    void display()
+    {
+        System.out.print(4+5);
+    }
+}
+class SubClass
+{
+    void display()
+    {
+        System.out.println("override function functionality");
+    }
+}
+class Test
+{
+    public static void main(String args[])
+    {
+        new SubClass().display(); // anonymous function that not any variable track reference
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+override function functionality
+</pre>
+                </section>
+                <!-- dynamic method dispatch -->
+                <section>
+        
+                    <h2 title="Dynamic Method Dispatch"> Dynamic Method Dispatch </h2>
+                    
+                    <ul>
+                        <li> Dynamic Method Dispatch condition require that inheritance. </li>
+                        <li> Dynamic Method Dispatch is say that any SuperClass give reference of over SubClass object. </li>
+                        <li> but SuperClass reference variable only use your aquire member. </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <mark>SuperClass reference_object = new SubClass();</mark>
+                    <div class="hr"></div>
+                    
+<pre class="terminal">
+class SuperClass
+{
+    void display()
+    {
+    }
+}
+class SubClass extends SuperClass
+{
+    void display()
+    {
+        System.out.println(" i am display ");
+    }
+    void get()
+    {
+        System.out.println(" i am get ");
+    }
+}
+class Test
+{
+    public static void main(String args[])
+    {
+        SuperClass reference_variable = new SubClass();
+
+        reference_variable.display();
+
+        // reference_variable.get();
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+ i am display
+</pre>
+                </section>
+                <!-- super -->
                 <section>
                     
+                    <h2 title="Super Keyword"> Super Keyword </h2>
+        
+                    <ul>
+                        <li> super keyword is use for call superclass vairable that overwrite in subclass. </li>
+                        <li> it compulsoary to inheritence. </li>
+                        <li> it use to super keyword before variable is overwrite datatype else value. </li>
+                    </ul>
+                    <div class="hr"></div>
+                    <mark>super.class_variable_name;</mark>
+                    <div class="hr"></div>
+        
+<pre class="terminal">
+class SuperClass
+{
+    SuperClass()
+    {
+        System.out.println(" in SuperClass \n o value is "+o+"\n datatype o is "+x);
+    }
+    int x = 10;
+    int o = 12;
+}
+class SubClass extends SuperClass
+{
+    SubClass()
+    {
+        System.out.println(" in SubClas \n o vlaue is "+o+"\n x datatype is "+x+"\n super.o value is "+super.o+"\n suerp.x datatype is "+super.x);
+    }
+    char x = 'A';
+    int o = 10;
+}
+class Test
+{
+    public static void main(String args[])
+    {
+        new SubClass();
+    }
+}
+</pre>
+                    <div class="br"></div>
+        
+<pre class="console">
+ in SubClas
+ o vlaue is 10
+ x datatype is 'A'
+ super.o value is 12
+ suerp.x datatype is 10 
+</pre>
+                    <div class="hr"></div>
+                    <h2 title="Super Function"> Super Function </h2>
+        
+                    <ul>
+                        <li> than we call subclass constructor it call your superclass constructor after firstline of code. </li>
+                        <li> if superclass have no default constructor so require call perimeter constructor. </li>
+                        <li> super() function is use to call superclass argument constructor. </li>
+                        <li> super() always write in the subclass constructor first line. </li>
+                    </ul>
+
+                    <article class="section">
+                        <h4> flow control </h4>
+                        <ol>
+                            <li> call subclass object call to subClass Constructor. </li>
+                            <li> subClass Constructor call to superClass Constructor. </li>
+                            <li> SuperClass Constructor scan SuperClass. </li>
+                            <li> After Scan SuperClass complete constructor code. </li>
+                            <li> Next complete code go back to subclass constructor. </li>
+                            <li> Than subclass constructor scan subclass. </li>
+                            <li> Afterend subclass constructor execute your code. </li>
+                            <li> finally object return sacn classes reference. </li>
+                        </ol>
+                    </article>
+
+                    <div class="hr"></div>
+                    <mark>super(peimeter);</mark>
+                    <div class="hr"></div>  
+
+<pre class="terminal">
+class SuperClass
+{
+	int n = 10;
+
+	/*SuperClass()
+	{
+		System.out.println(" class A ");
+	}*/
+
+	SuperClass(boolean code)
+	{}
+}
+
+class SubClass extends SuperClass
+{
+	SubClass()
+	{
+		super(true);
+		System.out.println(" class Super "+n);
+	}
+}
+
+class Test
+{
+	public static void main(String args[])
+	{
+		new SubClass();
+	}
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+ class Super 10
+</pre>
+                </section>
+                <!-- abstract -->
+                <section>
+                    
+                    <h1 title="Abstract"> Abstract </h1>
+        
+                    <ul>
+                        <li> abstract is keyword that mean incompleted. </li>
+                        <li> we not create abstract class object. </li>
+                        <li> we only use abstract class by inheritance. </li>
+                        <li> if inheritance class have abstract funtion so they make your subclass abstract. </li>
+                        <li> abstrac keyword use to create abstract function also abstract class. </li>
+                        <li> abstract function make class abstract. </li>
+                        <li> for unabstract your subclass we complete abstract function by use to function override. </li> 
+                    </ul>
+
+                    <div class="hr"></div>
+                    <mark>abstract class SuperClassName { abstract returntype functionName(args) { // code } }</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+abstract class SuperClass
+{
+    // abstract void display() {}
+}
+class SubClass extends SuperClass
+{
+    /*void display()
+    {
+    }*/
+}
+class Test
+{
+    public static void main(String args[])
+    {
+        new SubClass();
+
+        System.out.println(" execute ");
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+ execute
+</pre>
+                </section>
+                <!-- final -->
+                <section>
+
+                    <h1 title="Final"> Final </h1>
+        
+                    <ul>
+                        <li> final is keyword that mean commited last.
+                        <li> final Keyword use with { <b>class</b> | <b>function</b> | <b>variable</b> }.
+                        <li> if we define final class they <i>not be inherit</i> with other class.
+                        <li> we only use final class with create object.
+                        <li> we are <i>never use <b>abstract</b> or <b>final</b> keyword</i> with together.
+                        <li> if we define final function they not override.
+                        <li> if we are define final variable they value not be change.
+                    </ul>
+
+                    <div class="hr"></div>
+                    <h3> final class </h3>
+                    <mark>final class ClassName { // code }</mark>
+                    <h3> final function </h3>
+                    <mark>accessspecifier final returntype functionName(arguments,...) { // code }</mark>
+                    <h3> final varialbe </h3>
+                    <mark>final datatype variable_name = value;</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class SuperClass
+{
+    final int i = 12;
+
+    final function display()
+    {}
+}
+class SubClass extends SuperClass
+{
+    function display()
+    {
+        System.out.println(" not override final function"+i);
+    }
+}
+class Test
+{
+    public static void main(String args[])
+    {
+        SubClass sub = new SubClass();
+        SuperClass sup = new SuperClass();
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+./function.java:5: error: duplicate class: Test
+class Test
+^
+final.java:11: error: cannot access function
+	final function display()
+	      ^
+  bad source file: ./function.java
+    file does not contain class function
+    Please remove or make sure it appears in the correct subdirectory of the sourcepath.
+final.java:14: error: cannot inherit from final SuperClass
+class SubClass extends SuperClass
+                       ^
+final.java:16: error: display() in SubClass cannot override display() in SuperClass
+	function display()
+	         ^
+  overridden method is final
+4 errors
+</pre>
+                </section>
+                <!-- interface -->
+                <section>
+
+                    <h1 title="Interface"> Interface </h1>
+                    
+                    <ul>
+                        <li> interface is idea that collect inside declare public abtract function AND initialize public static final variales. </li>
+                        <li> we are not create interface object. </li>
+                        <li> we are implements one or multiple interface with class either other interfaces. </li>
+                        <li> if we are add interface with class so we are overide all fuction another your class is abstract. </li>
+                    </ul>
+                
+                    
+                    <div class="hr"></div>
+                    <h3> implements </h3>
+                    <mark>Accessspecifer class  classname implements Interface,Interface,...{ //code }</mark>
+                    <h3> extends to implements </h3>
+                    <mark>ACCESSIFER class SubClassName extends SuperClassName implements Interface,Interface,... { //code }</mark>
+                
+                    <p> if we are add interface and superclass in subclass we follow order. </p>
+                
+                    <div class="hr"></div>
+        
+<pre class="terminal">
+interface MyIdea
+{
+    void display();
+    int n = 10;
+}
+interface JustIdea
+{
+    int n = 0;
+}
+interface CopyIdea extends MyIdea
+{
+    void display();
+}
+class Test implements CopyIdea,JustIdea
+{
+    public void display()
+    {
+        System.out.println(" JustIdea n is "+JustIdea.n+" MyIdea n is "+MyIdea.n);
+    }
+    public static void main(String args[])
+    {
+        // Test t =
+
+        new Test().display();
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+JustIdea n is 0 MyIdea n is 10
+</pre>
+                </section>
+                <!-- package -->
+                <section>
+
+                    <h1 title="Package"> Package </h1>
+        
+                    <p> A packages are the collection of classes, interfaces and other packages. A pakages can havae multiple classes and multiple interface. all the inbuild packages are lowercase by default package is imported in ever source file that is (<b> java.lang.* </b>). The represent package is two why. </p>
+
+                    <ol>
+                        <li><h6> Qualified Name </h6>
+                            <ul>
+                                <li> in it use to we define all path with interface or class. </li>
+                                <li> with it compiler find the full calss path of bytecode. </li>
+                            </ul>
+                            <div class="hr"></div>
+                            <mark>new java.util.Scanner(System.in).nextLine();</mark>
+                            <div class="hr"></div>
+                        </li>
+                        <li><h6> UnQualified Name </h6>
+                            <ul>
+                                <li> in it use import keyword add all class or interface with your source_file. </li>
+                                <li> it is use beforbegin of all source_code and afterend of package_name. </li>
+                            </ul>
+                            <div class="hr"></div>
+                            <mark>import java.util.Scanner;	// call single bytecode</mark>
+                            <h6>OR</h6>
+                            <mark>import java.util.*;			// call all in package</mark>
+                            <div class="hr"></div>
+                        </li>
+                    </ol>
+                    
+                    <h2> How to define Package ? </h2>
+                    
+                    <ul>
+                        <li> we also create programmer define package. </li>
+                        <li> first line of souce_code use keyword [ package package_name; ]. </li>
+                        <li> we are make multiple source_file with in same package. </li>
+                        <li> but don't use samename (class or interface) in same pacakge it overwrite first. </li>
+                        <li> package is treit like directory. </li>
+                        <li> package define source file compile use <b> { javac -d / source_file.java  } </b>. </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <mark>package package_name;</mark>
+                    <div class="hr"></div>
+        
+<pre class="terminal">
+package mypackage;
+
+import java.lang.Integer;
+
+class Test
+{
+    public static void main(String args[])
+    {
+        java.lang.String number = "10";
+
+        System.out.println((Integer.parseInt(number) + 2));
+    }
+}
+</pre>
+                    <div class="br"></div>       
+<pre class="console">
+12
+$ tree
+.
+├── mypackage
+│   └── Test.class
+├── README.md
+└── package.java
+
+2 directories, 34 files
+</pre>
+                </section>
+                <!-- accessspecifier -->
+                <section>
+
+                    <h2 title="AccessSpecifier"> AccessSpecifier </h2>
+        
+                    <p> AccessSpecifier is the define access control mean scope of all classes, functions and variables. it is keywords they use before classes and they members (not include default).</p>
+                    
+                    <div class="br"></div>
+
+                    <article class="section">
+                        <h4> Java 4type AccessSpecifier in order <b>(lowest to highest)</b> scope = </h4>
+                        <ol>
+                            <li>private</li>
+                            <li>default</li>
+                            <li>protected</li>
+                            <li>public</li>
+                        </ol>
+                    </article>
+                    
+                    <ul>
+                        <li> private is very small scope only self class. </li>
+                        <li> default is not any keyword. </li>
+                        <li> if you are not default any accessspecifier is be default. </li>
+                        <li> public class is once in one source_file. </li>
+                        <li> public class have be same name of source_filename. </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <h3> Access Scope </h3>
+                    <table class="">
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Access</th>
+                                <th colspan="3"> Same Class</th>
+                                <th colspan="2"> Other Class</th>
+                            </tr>
+                            <tr>
+                                <th>SameClass</th>
+                                <th>SubClass</th>
+                                <th>OtherClass</th>
+                                <th>SubClass</th>
+                                <th>OtherClass</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>private</td>
+                                <td>x</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>default</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>protected</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>public</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                            </tr>
+                        </tbody>
+                    </table>     
+                    <div class="hr"></div>
+        
+<pre class="terminal">
+//public class AccessSpecifier
+public class accessspecifier
+{
+
+}
+//protected class Hello
+class Hello
+{
+    public int x = 6;
+    private int n = 5;
+
+    protected void display()
+    {
+        System.out.println("private n access : "+n);
+    }
+}
+class Test
+{
+    public static void main(String args[])
+    {
+        Hello hello = new Hello();
+
+        hello.display();
+
+        System.out.println("public x access : "+hello.x);
+
+//		System.out.println(hello.n);
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+accessspecifier.java:6: error: class AccessSpecifier is public, should be declared in a file named AccessSpecifier.java
+public class AccessSpecifier
+    ^
+accessspecifier.java:10: error: modifier protected not allowed here
+protected class Hello
+
+accessspecifier.java:21: error: modifier private not allowed here
+private class Test
+        ^
+accessspecifier.java:32: error: n has private access in Hello
+        System.out.println(hello.n);
+                                ^
+4 errors
+
+------------------------------------------------------------
+private n access : 5
+public x access : 6
+</pre>
+                </section>
+                <!-- Exception -->
+                <section>
+
+                    <h1 title="Exception"> Exception </h1>
+        
+                    <ul>
+                        <li> exception is the run time error that break control or execution of program. </li>
+                        <li> Java language is hand the exception by terminte program and give techniqual error. </li>
+                        <li> So handling those exception java have mutliple inbuild classes that called exception class. </li>
+                    </ul>
+                    
+                    <article class="section">
+                        <h4> inbuild Exception class type </h4>            
+                        <ol>
+                            <li><h6> Checked </h6>
+                                <p> those exception for the java compiler enfore to hand you. </p>
+                            </li>
+                            <li><h6> Unchecked : </h6>
+                                <p> those exception for the java compiler not force to hand you. </p>
+                            </li>   
+                        </ol>
+                    </article>
+                    
+                    <p> in exception classes follow <a href="./inheritence.html">inhertance</a> that extends at top [<b> java.lang.Exception </b>] & ExceptionClass super class is [<b> java.lang.Throwable </b>]. Throwable implements [<b> java.io.Serializable </b>] <a href="./interface.html">interface</a> </p>
+
+                    <div class="br"></div>
+                
+                    <article class="section">
+                        <h4> for exception handling </h4>
+                        <ol class="console3">
+                            <li> <a href="throws.html"> throws </a> </li>
+                            <li> <a href=tryCatch.html""> try catch </a> </li>
+                            <li> <a href="tryCatchFinally.html"> try catch finally </a> </li>
+                            <li> <a href="throw.html"> throw </a> </li>
+                        </ol>
+                    </article>
+
+                    <div class="hr"></div>
+                    <h3 title="Throws"> throws </h3>
+                    
+                    <ul>
+                        <li> throws clause is exception handling mechanisum. </li>
+                        <li> throws is overpass the compiler exception detecting. </li>
+                        <li> it is handle <b> Unchecked </b> exception </li>
+                        <li> throws pass is not professional way to handlign exception. </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <mark>returntype functionName(arguments,...) throws ExceptionClassName { //code }</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class Test
+{
+    public static void main(String args[]) throws Exception
+    {
+        // System.out.println(args[0]); // comipler unchecked exception
+
+        char x = (char) System.in.read();
+
+        System.out.println(x);
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at Test.main(throws.java:9)
+----------------------------------------------------------------
+
+throws.java:11: error: unreported exception IOException; must be caught or declared to be thrown
+		char x = (char) System.in.read();
+		                              ^
+1 error
+
+----------------------------------------------------------------
+6
+6
+</pre>
+                    <div class="hr"></div>
+                    <h3 title="Try Catch"> try catch </h3>
+                    
+                    <ul>
+                        <li> try catch block is use for handling {Checked OR Unchecked} both Exceptions. </li>
+                        <li> try block inside programmer write exception code and stop to crase program. </li>
+                        <li> catch function that use to exception handling. </li>
+                        <li> catch function take arugments as "java.lang.Exception"; </li>
+                        <li> we are use multiple  try catch in one program. </li>
+                        <li> we are use multiple catch function with one try. </li>
+                    </ul>
+                    
+                    <article class="section">
+                        <h4> follow control </h4>
+                        <ol>
+                            <li> if try block code cause exception  control goto catchfunction. </li>
+                            <li> catch funtion check if exception class handle exception. </li>
+                            <li> if handle so execute catch block else go next catch function. </li>
+                            <li> if exception handled so control follow try ctach last end block out side. </li>
+                        </ol>
+                    </article>
+
+                    <div class="hr"></div>
+                    <mark>try { //exception code } catch(ExceptionClass error_object) { //handling  }</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class Test
+{
+    public static void main(String args[])
+    {
+        try
+        {
+            System.out.println(args[0]);
+        }
+        catch(java.lang.ArrayIndexOutOfBoundsException error)
+        {
+            System.out.println(" PLEASE PASS ARGUMENT AT INTERATE TIME");
+        }
+        catch(Exception error)
+        {
+            System.out.println(" UNSEEN ERROR "+error.getMessage());
+        }
+        System.out.println(" execute");
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at Test.main(try_catch.java:24)
+
+// --------------------------------------------------------------
+ PLEASE PASS ARGUMENT AT INTERATE TIME
+ execute
+</pre>
+                    <div class="hr"></div>
+                    <h3 title="Try Catch Finally"> try catch finally </h3>
+                    
+                    <ul>
+                        <li> finally is last block of trycatch that compulsary to execute. </li>
+                        <li> we are skip catch between try finllay than finally first execute after expection execute. </li>
+                        <li> we are not use finally without try. </li>
+                        <li> we are use only once finally with one try statement. </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <mark>try { //exception code } catch(ExceptionClass error_object) { //handling code } finally { //compulsary code }</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class Test
+{
+    public static void main(String args[])
+    {
+        try
+        {
+            System.out.println(3/0);
+        }
+        catch(java.lang.ArithmeticException error)
+        {
+            System.out.println("ZERO IS NOT DIVIDE BY ANY NUMBER, SIR");
+        }
+        catch(java.lang.Exception error)
+        {
+            System.out.println("UNSEENED ERROR "+error);
+        }
+        finally
+        {
+            System.out.println("PROGRAM HAVE SOME EXCEPTION");
+        }
+        System.out.println("execute");
+    }
+}
+</pre>
+                    <div class="br"></div>
+        
+<pre class="console">
+PROGRAM HAVE SOME EXCEPTION
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+    at Test.main(tryCatchFinally.java:21)
+// -------------------------------------------------------
+ZERO IS NOT DIVIDE BY ANY NUMBER, SIR
+PROGRAM HAVE SOME EXCEPTION
+execute
+// -------------------------------------------------------
+tryCatchFinally.java:31: error: 'finally' without 'try'
+        finally
+        ^
+1 error
+</pre>
+                    <div class="hr"></div>
+                    <h3 title="Throw"> throw </h3>
+
+                    <div class="alert error"> RESEARCH ON IT </div>
+      
+                </section>
+                <!-- io -->
+                <section>
+
+                    <h2 title="Byte Oriented"> byte oriented </h2>
+      
+                    <ul>
+                        <li> byte Oriented mean deal in binary (0 & 1). </li>
+                        <li> byte Oriented Superime (top most) classes are InputStream and OutputStream. </li>
+                        <li> 
+                            byte Oriented Superime Classes in <b>"java.io"</b> <a href='./package.html'> package </a>. 
+                            <div class="hr"></div>
+                            <mark>
+                                public abstract class java.io.InputStream implements java.io.Closeable {}<br>
+                                public abstract class java.io.OutputStream implements java.io.Closeable, java.io.Flushable {}
+                            </mark>
+                            <div class="hr"></div>
+                        </li>
+                        <li> both abstract classes but they object present in <b>"java.lang.System"</b>. </li>
+                    </ul>
+
+
+<pre class='alert success'>
+System
+{
+    public static final java.io.InputStream in;
+
+    public static final java.io.OutputStream out;
+}
+</pre>
+		
+                    <h3> input statement </h3>
+                            
+                    <ul>
+                        <li> Byte oriented method take all datatype Input not include (charactor). </li>
+                        <li> Byte oriented input take by Scanner class. </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <mark>new java.util.Scanner(System.in).next();</mark>
+                    <div class="hr"></div>
+                
+                    <h3> output statement </h3>
+                            
+                    <ul>
+                        <li> <b> System </b>  : is class inside "java.lang" package </li>
+                        <li> <b> out </b>     : is object of jva.io.OutputStream  </li>
+                        <li> <b> print() </b>  : is function of OutputStream class </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <mark>java.lang.System.out.print(" // code ");</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class Test
+{
+    public static void main(String args[])
+    {
+        java.util.Scanner input = new java.util.Scanner(System.in);
+
+        System.out.print("\n enter number = ");
+
+        int n = input.nextInt();
+
+        System.out.print("\n enter decimal = ");
+
+        float f = input.nextFloat();
+
+        System.out.print("\n enter string = ");
+
+        String s = input.next();
+
+        System.out.print("\n enter boolean = ");
+
+        boolean b = input.nextBoolean();
+
+        System.out.println(" "+n+" "+f+" "+s+" "+b);
+    }
+}
+</pre>
+                    <div class="br"></div>       
+<pre class="console">
+ enter number = 1
+ enter decimal = 0.1
+ enter string = hello sir
+ enter boolean = flase
+ 1 0.1 hello false
+</pre>
+
+                    <div class="hr"></div>
+                    <h2 title="Charactor Oriented"> charactor oriented </h2>
+                    
+                    <ul>
+                        <li> charactor oriented make to deal with charactor datatype. </li>
+                        <li> charactor oriented get in charactor datatype that follow <b> Universal Standared Code </b>. </li>
+                        <li> charactor oriented superime (top most) classes are <b> Reader </b> & <b> Wirter </b>. </li>
+
+                        <li> charactor oriented classes package in "java.io". </li>
+                        <li> both classes are abstract. 
+                            <div class="hr"></div>
+                            <mark>
+                                public abstract class java.io.Reader implements java.lang.Readable, java.io.Closeable {}<br>
+                                public abstract class java.io.Writer implements java.lang.Appendabl, java.io.Closeable, java.io.Flushable {}
+                            </mark>
+                            <div class="hr"></div>
+                        </li>
+                    </ul>
+                    
+                    <h3> input </h3>
+                    
+                    <ul>
+                        <li> we are get charactor oriented input use <b>java.io.BufferedReader</b> class. </li>
+                        <li> but BufferedReader class have not any default constructor. </li>
+
+                        <div class="hr"></div>
+                        <mark>
+                            public java.io.BufferedReader(java.io.Reader, int)<br>
+                            public java.io.BUfferedReader(java.io.Reader)
+                        </mark>
+                        <div class="hr"></div>
+
+                    </ul>
+
+                    <h3> { solution } </h3>
+
+                    <ul>
+                        <li> we have ReaderClass sub class <b>[ InputStreamReader ]</b> that give <a href='#dynamicMethodDispatch.html'> our super class reference </a>. </li>
+                        <li> InputStreamReader have 4 constructor but not any deault contructor. </li>
+                    </ul>
+                    
+                    <mark>
+                        public java.io.InputStreamReader(java.io.InputStream);<br>
+                        public java.io.InputStreamReader(java.io.InputStream, java.lang.String) throws java.io.UnsupportedEncodingException;<br>
+                        public java.io.InputStreamReader(java.io.InputStream, java.nio.charset.Charset);<br>
+                        public java.io.InputStreamReader(java.io.InputStream, java.nio.charset.CharsetDecoder);<br>
+                    </mark>
+                    
+                    </ul>
+                    
+                    <h3> output </h3>
+                    
+                    <ul>
+                        <li> we are set charactor oriented output by <b>java.io.PrintWriter</b> class. </li>
+                        <li> InputStreamReader have 11 constructor but not any deault contructor. </li>
+                        <li> but PrintWriter compalsoury to <b> close() </b> </li>
+                    </ul>
+
+<pre class="console">
+public java.io.PrintWriter(java.io.Writer);
+
+public java.io.PrintWriter(java.io.Writer, boolean);
+
+public java.io.PrintWriter(java.io.OutputStream);
+
+public java.io.PrintWriter(java.io.OutputStream, boolean);
+
+public java.io.PrintWriter(java.io.OutputStream, boolean, java.nio.charset.Charset);
+
+public java.io.PrintWriter(java.lang.String) throws java.io.FileNotFoundException;
+
+public java.io.PrintWriter(java.lang.String, java.lang.String) throws java.io.FileNotFoundException, java.io.UnsupportedEncodingException;
+
+public java.io.PrintWriter(java.lang.String, java.nio.charset.Charset) throws java.io.IOException;
+
+public java.io.PrintWriter(java.io.File) throws java.io.FileNotFoundException;
+
+public java.io.PrintWriter(java.io.File, java.lang.String) throws java.io.FileNotFoundException, java.io.UnsupportedEncodingException;
+
+public java.io.PrintWriter(java.io.File, java.nio.charset.Charset) throws java.io.IOException;
+</pre>
+                <div class="br"></div>
+        
+<pre class="terminal">
+class Test
+{
+    public static void main(String args[]) throws java.io.IOException
+    {
+        // java.io.BufferedReader input = ;
+        
+        String myLine = new java.io.BufferedReader(new java.io.InputStreamReader(System.in)).readLine();
+
+        java.io.PrintWriter writer = new java.io.PrintWriter(System.out);
+
+        writer.println("="+myLine);
+        
+        writer.close();
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+if you are like website so follow me in (github or linkedin) below footer
+-if you are like website so follow me in (github or linkedin) below footer
+</pre>
+                </section>
+                <!-- array -->
+                <section>
+
+                    <h1 title="Array"> Array </h1>
+                    
+                    <ul>
+                        <li> array is special type vairable that can store inside mutiple value. </li>
+                        <li> in java all value <b> same datatype </b>. </li>
+                        <li> the value is control by <b> index </b> number. </li>
+                        <li> index started by <b> index[0] </b> 'ZERO' number and end <b> (Array Length - 1) </b>. </li>
+                        <li> in Java array is dynamic that memory allocation in heap memory. </li>
+                    </ul>
+        
+<pre class='alert success'>
+[0][1][2][3]  index
+ |  |  |  |
+(9)(2)(1)(1)  value
+
+</pre>
+                    <p>array make dynamic linklist use reference of next index</p>
+
+                    <ol>
+                        <li> <h6> declartion </h6>
+                            <div class="hr"></div>
+                            <mark>datatype array_name[];</mark>
+                            <div class="hr"></div>                    
+                        </li>
+                        <li> <h6> memory allocation </h6> 
+                            <div class="hr"></div>
+                            <mark>array_name = new dataype[Size];</mark>
+                            <div class="hr"></div>
+                        </li>
+                        <li> <h6> assign </h6> 
+                            <div class="hr"></div>
+                            <mark>array_name[index] = value;</mark>
+                            <div class="hr"></div>
+                        </li>
+                    </ol>
+
+                    <div class="hr"></div>
+                    
+                    <h3> insalization = ( assign at declaration time ) </h3>
+                    <mark>datatype array_name[] = { value,... };</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class Test
+{
+    public static void main(String args[])
+    {
+        int a[]; 	// declartion
+
+        a = new int[3]; 	// memory allocation
+
+        a[0] = 1; 		// assign
+        a[1] = 2;
+        a[2] = 3;
+
+        try
+        {
+            for (int i = 0; i < a.length; i++)
+                System.out.print("\n index["+i+"] = "+a[i]);
+        }
+        catch(ArrayIndexOutOfBoundsException error)
+        {
+            System.out.print(error);
+        }
+
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+ index[0] = 1
+ index[1] = 2
+ index[2] = 3
+</pre>
+                    <div class="hr"></div>
+                    <h2 title="Mutliple Dimesnsions Arrray"> Multiple Dimensions Array  </h2>
+        
+                    <ul>
+                        <li> 2D Array is method to store array inside multiple array. </li>
+                        <li> it array have two dimentaional array (row and column). </li>
+                        <li> 2d array is dynamic in Java. </li>
+                        <li> default value is set. </li>
+                    </ul>
+        
+        
+<pre class='alert success'>
+ [0]	[1]		[2]
+  |		 |		 |
+{(1)	(2)		(3)}    [0]
+
+{(4)	(5)		(6)}    [1]
+
+{(7)	(8)		(9)}    [2]
+
+[0][1] = 2
+[2][2] = 9
+
+in 2Dimenstional Array we have row inside column
+</pre>
+
+                    <article class="section">
+
+                        <ol>
+                            <li> <h6> syntax : declartion </h6> 
+                                <div class="hr"></div>
+                                <mark>datatype array_name[][];</mark>
+                                <div class="hr"></div>      
+                            </li>
+                            <li> <h6> syntax : memory allocation </h6> 
+                                <div class="hr"></div>
+                                <mark>array_name = new dataype[Column_Size][Row_Size];</mark>
+                                <div class="hr"></div>
+                            </li>
+                            <li> <h6> syntax : assign </h6> 
+                                <div class="hr"></div>
+                                <mark>array_name[index][index] = value;</mark>
+                                <div class="hr"></div>
+                            </li>
+                        </ol>
+                    </article>
+
+                    <div class="hr"></div>
+                    <h3>insalization = ( assign at declaration time ) </h3>
+                    <mark>datatype array_name[][] = { {value, ...}, ... };</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class Test
+{
+    public static void main(String args[])
+    {
+        int a[][];
+
+        a = new int[3][3];
+
+        a[0][0]	= 1;
+        a[0][1]	= 2;
+        a[0][2]	= 3;
+
+        a[1][0]	= 4;
+        a[1][1]	= 5;
+        a[1][2]	= 6;
+
+        a[2][0]	= 7;
+        a[2][1]	= 8;
+        a[2][2]	= 9;
+
+        for (int o = 0; o < a.length; o++)
+            for (int i = 0; i < a[o].length; i++)
+                System.out.println("index["+o+"]["+i+"]"+a[o][i]);
+
+    }
+}
+</pre>
+                <div class="br"></div>
+<pre class="console">
+index[0][0]1
+index[0][1]2
+index[0][2]3
+index[1][0]4
+index[1][1]5
+index[1][2]6
+index[2][0]7
+index[2][1]8
+index[2][2]9
+</pre>
+                    <div class="hr"></div>
+                    <h2 title="Jacked Array"> Jacked Array </h2>
+        
+                    <ul>
+                        <li> jacked array is array inside array. </li>
+                        <li> different index difference size define. </li>
+                        <li> it not matrix like structure. </li>
+                    </ul>
+        
+<pre class='alert success'>
+{X}	[0]	[1]	[2]
+
+[0]	(1)	(2)	(3)
+
+[1]	(4)
+
+[2]	(5)	(6)
+</pre>
+
+                    <div class="hr"></div>
+                    <h3> declartion </h3>
+                    <mark>datatype array[][] = new datatype[Size][];</mark>
+                    <h3> insalization = ( assign at declaration time ) </h3>
+                    <mark>
+                        array[index] = new datatype[size];<br>
+                        array[index] = new datatype[size];<br>
+                        array[index] = new datatype[size];
+                    </mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class Test
+{
+    public static void main(String args[])
+    {
+        // declare
+
+        int a[][] = new int[3][];
+
+        // memory allocation
+
+        a[0] = new int[3];
+        a[1] = new int[1];
+        a[2] = new int[2];
+
+        // assign
+
+        a[0][0] = 1;
+        a[0][1] = 2;
+        a[0][2] = 3;
+
+        a[1][0] = 4;
+
+        a[2][0] = 5;
+        a[2][1] = 6;
+
+        // traversal
+
+        for (int o = 0; o < a[0].length; o++)
+            for (int i : a[o])
+                System.out.println(i);
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+1
+2
+3
+4
+5
+6
+</pre>
+                </section>
+                <!-- for each -->
+                <section>
+        
+                    <h3 title="Foreach Loop"> foreach loop </h3>
+                    
+                    <ul>
+                        <li> foreach loop is special type loop that purpose to execute array. </li>
+                        <li> this is execute until to than next reference is not null. </li>
+                        <li> it similear control flow like linked list traversal function </li>
+                    </ul>
+                    
+                    <article class="section">
+                        <h4> control flow </h4>
+                        <ol>
+                            <li> array variable take head node reference. </li>
+                            <li> that arry variable store in element. </li>
+                            <li> and array reference set next index. </li>
+                            <li> after execute to end block. </li>
+                            <li> repeat loop(1) until to next refernce is not null. </li>
+                        </ol>
+                    </article>
+                    <div class="hr"></div>
+                    <mark>for (datatype element_name : array) { //code }</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class Test
+{
+    public static void main(String args[])
+    {
+        int array[] = {1,2,3,4};	// insalize array at time not compulsary set size
+
+        for (int i : array)
+        {
+            System.out.println(i);
+        }
+
+        System.out.println("2D Array");
+
+        int array2[][] = {
+            {1,2,3},
+            {4,5,6},
+            {7,8,9}
+        };						// insalize 2D array at time not compulsary set size
+
+        for (int o = 0; o < array2[0].length; o++)
+        {
+            for (int i : array2[o])
+            {
+                System.out.println(i);
+            }
+        }
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+1
+2
+3
+4
+2D Array
+1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre>
+                </section>
+                <!-- string -->
+                <section>
+
+                    <h1 title="String"> String </h1>
+        
+                    <ul>
+                        <li> String is class in Java that present in "java.lang.String" package. </li> 
+                        <li> there object are <b> immutable(read-only) </b> one the object has been created there is no way to modify the string of text represent. </li> 
+                        <li> Create string object 2 type { implicit & explicit }. </li>
+                        <li> Java JVM store string value in <b>"_STRING_CONSTRANT_POOL_"</b> that inside value not (modify or duplicate). </li> 
+                    </ul>
+                            
+                    <ol>
+                        <li> not duplicate : if some value give by different variable so string constract pool occur old value refernce that variable also. </li> 
+                        <li> not modifiy : if some value not referered by any variable in string constract pool that not CLEARED by "garbage collecter". </li>         
+                    </ol>
+                    
+                    <div class="hr"></div>
+                    <h3> implicit </h3>
+                    <mark>String string_variable_name = "value of string";</mark>
+                    <p> explicit value save in string constrant pool either save in heap memory. </p>
+                    <h3> explicit </h3>
+                    <mark>String object_name = new String("string value");</mark>
+                    <p> implicit value save in only string constrant pool. </p>
+                    <div class="hr"></div>
+        
+<pre class="terminal">
+class Test
+{
+    public static void main(String args[])
+    {
+        String a = "First";		// "First" addin _STRING_CONSTRANT_POOL_
+
+        String b, c = "Devil";	// "Devil" addin _STRING_CONSTRANT_POOL_
+
+        a = c;	// "Devil" refernceby A eithervalue "First" presentin _STRING_CONSTRANT_POOL_
+
+        b = a;	// "Devil" refernceby B
+
+        String d = new String("Second");	// "Second" addin _STING_CONSTRANT_POOL_ eitherin Heap Memory
+
+        d = "First"; // "Third" overwrite "Second" in HeapMemory
+
+        /*
+            HeapMemory { "First" }
+            _STRING_CONSTRANT_POOL_ {"First","Devil","Second"}
+        */
+
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
+
+    }
+}
+</pre>
+                <div class="br"></div>
+
+<pre class="console">
+First
+First
+Devil
+Second
+// -----------------------------------------------
+string.java:36: error: variable c might not have been initialized
+		String c = b+c;
+		             ^
+1 error
+// -----------------------------------------------
+Devil
+Devil
+Devil
+First
+</pre>
+                    <div class="hr"></div>
+                    <h4> java.lang.String </h4>
+                    <div class="hr"></div>
+        
+<pre class="console">
+Compiled from "String.java"
+public final class java.lang.String implements java.io.Serializable, java.lang.Comparable&#60;java.lang.String&#62;, java.lang.CharSequence {
+    static final boolean COMPACT_STRINGS;
+    public static final java.util.Comparator&#60;java.lang.String&#62; CASE_INSENSITIVE_ORDER;
+    static final byte LATIN1;
+    static final byte UTF16;
+    public java.lang.String();
+    public java.lang.String(java.lang.String);
+    public java.lang.String(char[]);
+    public java.lang.String(char[], int, int);
+    public java.lang.String(int[], int, int);
+    public java.lang.String(byte[], int, int, int);
+    public java.lang.String(byte[], int);
+    public java.lang.String(byte[], int, int, java.lang.String) throws java.io.UnsupportedEncodingException;
+    public java.lang.String(byte[], int, int, java.nio.charset.Charset);
+    public java.lang.String(byte[], java.lang.String) throws java.io.UnsupportedEncodingException;
+    public java.lang.String(byte[], java.nio.charset.Charset);
+    public java.lang.String(byte[], int, int);
+    public java.lang.String(byte[]);
+    public java.lang.String(java.lang.StringBuffer);
+    public java.lang.String(java.lang.StringBuilder);
+    public int length();
+    public boolean isEmpty();
+    public char charAt(int);
+    public int codePointAt(int);
+    public int codePointBefore(int);
+    public int codePointCount(int, int);
+    public int offsetByCodePoints(int, int);
+    public void getChars(int, int, char[], int);
+    public void getBytes(int, int, byte[], int);
+    public byte[] getBytes(java.lang.String) throws java.io.UnsupportedEncodingException;
+    public byte[] getBytes(java.nio.charset.Charset);
+    public byte[] getBytes();
+    public boolean equals(java.lang.Object);
+    public boolean contentEquals(java.lang.StringBuffer);
+    public boolean contentEquals(java.lang.CharSequence);
+    public boolean equalsIgnoreCase(java.lang.String);
+    public int compareTo(java.lang.String);
+    public int compareToIgnoreCase(java.lang.String);
+    public boolean regionMatches(int, java.lang.String, int, int);
+    public boolean regionMatches(boolean, int, java.lang.String, int, int);
+    public boolean startsWith(java.lang.String, int);
+    public boolean startsWith(java.lang.String);
+    public boolean endsWith(java.lang.String);
+    public int hashCode();
+    public int indexOf(int);
+    public int indexOf(int, int);
+    public int lastIndexOf(int);
+    public int lastIndexOf(int, int);
+    public int indexOf(java.lang.String);
+    public int indexOf(java.lang.String, int);
+    static int indexOf(byte[], byte, int, java.lang.String, int);
+    public int lastIndexOf(java.lang.String);
+    public int lastIndexOf(java.lang.String, int);
+    static int lastIndexOf(byte[], byte, int, java.lang.String, int);
+    public java.lang.String substring(int);
+    public java.lang.String substring(int, int);
+    public java.lang.CharSequence subSequence(int, int);
+    public java.lang.String concat(java.lang.String);
+    public java.lang.String replace(char, char);
+    public boolean matches(java.lang.String);
+    public boolean contains(java.lang.CharSequence);
+    public java.lang.String replaceFirst(java.lang.String, java.lang.String);
+    public java.lang.String replaceAll(java.lang.String, java.lang.String);
+    public java.lang.String replace(java.lang.CharSequence, java.lang.CharSequence);
+    public java.lang.String[] split(java.lang.String, int);
+    public java.lang.String[] split(java.lang.String);
+    public static java.lang.String join(java.lang.CharSequence, java.lang.CharSequence...);
+    public static java.lang.String join(java.lang.CharSequence, java.lang.Iterable&#60;? extends java.lang.CharSequence&#62;);
+    public java.lang.String toLowerCase(java.util.Locale);
+    public java.lang.String toLowerCase();
+    public java.lang.String toUpperCase(java.util.Locale);
+    public java.lang.String toUpperCase();
+    public java.lang.String trim();
+    public java.lang.String strip();
+    public java.lang.String stripLeading();
+    public java.lang.String stripTrailing();
+    public boolean isBlank();
+    public java.util.stream.Stream&#60;java.lang.String&#62; lines();
+    public java.lang.String toString();
+    public java.util.stream.IntStream chars();
+    public java.util.stream.IntStream codePoints();
+    public char[] toCharArray();
+    public static java.lang.String format(java.lang.String, java.lang.Object...);
+    public static java.lang.String format(java.util.Locale, java.lang.String, java.lang.Object...);
+    public static java.lang.String valueOf(java.lang.Object);
+    public static java.lang.String valueOf(char[]);
+    public static java.lang.String valueOf(char[], int, int);
+    public static java.lang.String copyValueOf(char[], int, int);
+    public static java.lang.String copyValueOf(char[]);
+    public static java.lang.String valueOf(boolean);
+    public static java.lang.String valueOf(char);
+    public static java.lang.String valueOf(int);
+    public static java.lang.String valueOf(long);
+    public static java.lang.String valueOf(float);
+    public static java.lang.String valueOf(double);
+    public native java.lang.String intern();
+    public java.lang.String repeat(int);
+    void getBytes(byte[], int, byte);
+    java.lang.String(char[], int, int, java.lang.Void);
+    java.lang.String(java.lang.AbstractStringBuilder, java.lang.Void);
+    java.lang.String(byte[], byte);
+    byte coder();
+    byte[] value();
+    static void checkIndex(int, int);
+    static void checkOffset(int, int);
+    static void checkBoundsOffCount(int, int, int);
+    static void checkBoundsBeginEnd(int, int, int);
+    static java.lang.String valueOfCodePoint(int);
+    public int compareTo(java.lang.Object);
+    static {};
+}
+</pre>
+                </section>
+                <!-- math -->
+                <section>
+                    
+                    <h1 class="Math"> Math </h1>
+                    
+                    <ul>
+                        <li> Math class present in <b>java.lang</b> package. </li>    
+                        <li> Math class provides method for comman mathematical operation and constants, offering a utility for numeric calculations </li>
+                        <li> Only <b>private constructor</b> in Math class so not create this object </li>
+                        <li> Math class all member are static use easy by class_name </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <mark>Math.static_variable</mark>
+                    <h6>OR</h6>
+                    <mark>Math.static_function()</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class Test
+{
+    public static void main(String args[])
+    {
+        // java.lang.Math m = new java.lang.Math(); // only private constructor
+
+        System.out.println(Math.E);
+
+        /* E final static variable : return the base of natural logarithm value 2.718281828459045 */
+
+        System.out.println(Math.PI);
+
+        /* PI final static variable : return the Math PI value 3.141592653589793 */
+
+        System.out.println(Math.abs(0.5));
+
+        /* absolute function abs(x) : return the absolute value of x argument { int long float double } */
+
+        System.out.println(Math.random());
+
+        /* random() function random() : return the pseudo=random number greater than or equal to 0.0 and less than 1.0 */
+
+        System.out.println(Math.round(1.4));
+
+        /* round-of function round() : return before value if x is less x.4 else after value */
+
+        System.out.println("x"+Math.rint(3.5));
+
+        /* round half of even function rint(x) : return banker round of value */
+
+        System.out.println(Math.max(1,0));
+
+        /* maximun function max(x,y) : return the maximum between x and y number */
+
+        System.out.println(Math.min(0,1));
+
+        /* minumn function min(x,y) : return the minumn between x and y number */
+
+        System.out.println(Math.pow(2,3));
+
+        /* power function pow(x,y) : return value of x number that power y */
+
+        System.out.println(Math.sqrt(16));
+
+        /* square root function sqrt(x) : return the square root of x */
+
+        System.out.println(Math.cbrt(9.0));
+                                
+        /* cube root function cbrt(x) : return the cubroot of x */
+        
+        System.out.println(Math.log(16));
+
+        /* logarithm function log(x) : return the natural number logarithm (base) of x */
+
+        System.out.println(Math.ceil(7.8));
+                                
+        /* ceil function ceil(x) : return the smallest integer that is grater than or equal to parameter x */
+        
+        System.out.println(Math.floor(7.8));
+                                
+        /* floor function floor(x) : return the largest integer that is less than or equal to parameter x */
+
+        System.out.println(Math.exp(2.0));
+
+        /* exponent function exp(X) : return the natural number e (=2.718) raised to the power of x */
+
+        System.out.println(Math.sin(Math.PI/2));
+                                
+        /* sin function sin(x) : return the trignometric sine of angle a in radians */
+        
+        System.out.println(Math.cos(Math.PI/2));
+                                
+        /* cos function cos(x) : return the trignometric consine of angle a in radians */
+                                
+        System.out.println(Math.tan(Math.PI/4));
+                                
+        /* tan function tan(x) : return the trignometric tangent of angle a in radians */
+                                
+        System.out.println(Math.asin(1));     
+        
+        /* asin function asin(x) : return the arc sine of y */
+                                
+        System.out.println(Math.acos(0));
+                                
+        /* Return the arc cosine of y */
+                                
+        System.out.println(Math.atan(1));
+                                
+        /* atan function atan(x ) : return the arc tangent of y */ 
+
+        System.out.println(Math.signum(4.2));
+
+        /* signum function signum(x) : return { -0.1 | 0 | 0.1 } respectively x */
+
+        System.out.println(Math.nextUp(3));
+
+        /* greater than function nextUp(x) : return next greater floating point value respective x */
+
+        System.out.println(Math.nextDown(3));
+
+        /* less than function nextDown(x) : return previous less floating point value respective x */
+
+        System.out.println(Math.nextAfter(2,3));
+
+        /* between than nextAfter(x,y) : return floating point value between x and y */
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+2.718281828459045
+3.141592653589793
+0.5
+0.8256714951989446
+1
+x4.0
+1
+0
+8.0
+4.0
+2.080083823051904
+2.772588722239781
+8.0
+7.0
+7.38905609893065
+1.0
+6.123233995736766E-17
+0.9999999999999999
+1.5707963267948966
+1.5707963267948966
+0.7853981633974483
+1.0
+3.0000002
+2.9999998
+2.0000002
+</pre>
+                    <div class="hr"></div>
+                    <h4> java.lang.Math </h4>
+                    <div class="hr"></div>
+
+<pre class="console">
+Compiled from "Math.java"
+public final class java.lang.Math {
+    public static final double E;
+    public static final double PI;
+    static double twoToTheDoubleScaleUp;
+    static double twoToTheDoubleScaleDown;
+    static final boolean $assertionsDisabled;
+    public static double sin(double);
+    public static double cos(double);
+    public static double tan(double);
+    public static double asin(double);
+    public static double acos(double);
+    public static double atan(double);
+    public static double toRadians(double);
+    public static double toDegrees(double);
+    public static double exp(double);
+    public static double log(double);
+    public static double log10(double);
+    public static double sqrt(double);
+    public static double cbrt(double);
+    public static double IEEEremainder(double, double);
+    public static double ceil(double);
+    public static double floor(double);
+    public static double rint(double);
+    public static double atan2(double, double);
+    public static double pow(double, double);
+    public static int round(float);
+    public static long round(double);
+    public static double random();
+    public static int addExact(int, int);
+    public static long addExact(long, long);
+    public static int subtractExact(int, int);
+    public static long subtractExact(long, long);
+    public static int multiplyExact(int, int);
+    public static long multiplyExact(long, int);
+    public static long multiplyExact(long, long);
+    public static int incrementExact(int);
+    public static long incrementExact(long);
+    public static int decrementExact(int);
+    public static long decrementExact(long);
+    public static int negateExact(int);
+    public static long negateExact(long);
+    public static int toIntExact(long);
+    public static long multiplyFull(int, int);
+    public static long multiplyHigh(long, long);
+    public static int floorDiv(int, int);
+    public static long floorDiv(long, int);
+    public static long floorDiv(long, long);
+    public static int floorMod(int, int);
+    public static int floorMod(long, int);
+    public static long floorMod(long, long);
+    public static int abs(int);
+    public static long abs(long);
+    public static float abs(float);
+    public static double abs(double);
+    public static int max(int, int);
+    public static long max(long, long);
+    public static float max(float, float);
+    public static double max(double, double);
+    public static int min(int, int);
+    public static long min(long, long);
+    public static float min(float, float);
+    public static double min(double, double);
+    public static double fma(double, double, double);
+    public static float fma(float, float, float);
+    public static double ulp(double);
+    public static float ulp(float);
+    public static double signum(double);
+    public static float signum(float);
+    public static double sinh(double);
+    public static double cosh(double);
+    public static double tanh(double);
+    public static double hypot(double, double);
+    public static double expm1(double);
+    public static double log1p(double);
+    public static double copySign(double, double);
+    public static float copySign(float, float);
+    public static int getExponent(float);
+    public static int getExponent(double);
+    public static double nextAfter(double, double);
+    public static float nextAfter(float, double);
+    public static double nextUp(double);
+    public static float nextUp(float);
+    public static double nextDown(double);
+    public static float nextDown(float);
+    public static double scalb(double, int);
+    public static float scalb(float, int);
+    static double powerOfTwoD(int);
+    static float powerOfTwoF(int);
+    static {};
+}
+</pre>
+                </section>
+                <!--  -->
+                <section>
+
+                    <h2 title="String Buffer"> String Buffer </h2>
+                    
+                    <ul>
+                        <li> StringBuffer is class in Java that present inside <b>"java.lang.StringBuffer"</b> package. </li>
+                        <li> StringBuffer class object value is <b>mutable</b>. </li>
+                        <li> it only store in heap memory. </li>
+                        <li> in it value assign by constructor function. </li>
+                    </ul>
+                    
+                    <div class="hr"></div>
+                    <mark>StringBuffer object_name = new StringBuffer("string value");</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+class Test
+{
+    public static void main(String args[])
+    {
+        StringBuffer a = new StringBuffer("first");
+
+        System.out.println(a+" length is "+a.length());
+
+        a.append("second");
+
+        System.out.println(a+" charAt 4 "+a.charAt(4));
+
+        a.setCharAt(4,'i');
+
+        System.out.println(a.charAt(4));
+
+        a.replace(0,5,"third");
+
+        System.out.println(a);
+
+        System.out.println(a.reverse());
+
+        StringBuffer b = a;	// string buffer reference pass
+
+        System.out.println(" a equals( b ) "+a.equals(b));
+
+
+        String c = "four";
+
+        String d = c; // string d = c
+
+        System.out.println(" c equals( d )"+c.equals(d));
+
+        System.out.println(" c equals( a )"+c.equals(a));
+
+//		c = b; // error: incompatible types: StringBuffer cannot be converted to String
+
+        System.out.println(" a equals( c )"+a.equals(c));
+
+        a.delete(0,a.length());
+
+        System.out.println(a);
+    }
+}
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+first length is 5
+firstsecond charAt 4 t
+i
+thirdsecond
+dnocesdriht
+ a equals( b ) true
+ c equals( d )true
+ c equals( a )false
+ a equals( c )false
+</pre>
+                    <div class="hr"></div>
+                    <h4> java.lang.StringBuffer </h4>
+                    <div class="hr"></div>
+
+<pre class="console">
+Compiled from "StringBuffer.java"
+public final class java.lang.StringBuffer extends java.lang.AbstractStringBuilder implements java.io.Serializable, java.lang.Comparable<java.lang.StringBuffer>, java.lang.CharSequence {
+	static final long serialVersionUID;
+	public java.lang.StringBuffer();
+	public java.lang.StringBuffer(int);
+	public java.lang.StringBuffer(java.lang.String);
+	public java.lang.StringBuffer(java.lang.CharSequence);
+	public synchronized int compareTo(java.lang.StringBuffer);
+	public synchronized int length();
+	public synchronized int capacity();
+	public synchronized void ensureCapacity(int);
+	public synchronized void trimToSize();
+	public synchronized void setLength(int);
+	public synchronized char charAt(int);
+	public synchronized int codePointAt(int);
+	public synchronized int codePointBefore(int);
+	public synchronized int codePointCount(int, int);
+	public synchronized int offsetByCodePoints(int, int);
+	public synchronized void getChars(int, int, char[], int);
+	public synchronized void setCharAt(int, char);
+	public synchronized java.lang.StringBuffer append(java.lang.Object);
+	public synchronized java.lang.StringBuffer append(java.lang.String);
+	public synchronized java.lang.StringBuffer append(java.lang.StringBuffer);
+	synchronized java.lang.StringBuffer append(java.lang.AbstractStringBuilder);
+	public synchronized java.lang.StringBuffer append(java.lang.CharSequence);
+	public synchronized java.lang.StringBuffer append(java.lang.CharSequence, int, int);
+	public synchronized java.lang.StringBuffer append(char[]);
+	public synchronized java.lang.StringBuffer append(char[], int, int);
+	public synchronized java.lang.StringBuffer append(boolean);
+	public synchronized java.lang.StringBuffer append(char);
+	public synchronized java.lang.StringBuffer append(int);
+	public synchronized java.lang.StringBuffer appendCodePoint(int);
+	public synchronized java.lang.StringBuffer append(long);
+	public synchronized java.lang.StringBuffer append(float);
+	public synchronized java.lang.StringBuffer append(double);
+	public synchronized java.lang.StringBuffer delete(int, int);
+	public synchronized java.lang.StringBuffer deleteCharAt(int);
+	public synchronized java.lang.StringBuffer replace(int, int, java.lang.String);
+	public synchronized java.lang.String substring(int);
+	public synchronized java.lang.CharSequence subSequence(int, int);
+	public synchronized java.lang.String substring(int, int);
+	public synchronized java.lang.StringBuffer insert(int, char[], int, int);
+	public synchronized java.lang.StringBuffer insert(int, java.lang.Object);
+	public synchronized java.lang.StringBuffer insert(int, java.lang.String);
+	public synchronized java.lang.StringBuffer insert(int, char[]);
+	public java.lang.StringBuffer insert(int, java.lang.CharSequence);
+	public synchronized java.lang.StringBuffer insert(int, java.lang.CharSequence, int, int);
+	public java.lang.StringBuffer insert(int, boolean);
+	public synchronized java.lang.StringBuffer insert(int, char);
+	public java.lang.StringBuffer insert(int, int);
+	public java.lang.StringBuffer insert(int, long);
+	public java.lang.StringBuffer insert(int, float);
+	public java.lang.StringBuffer insert(int, double);
+	public int indexOf(java.lang.String);
+	public synchronized int indexOf(java.lang.String, int);
+	public int lastIndexOf(java.lang.String);
+	public synchronized int lastIndexOf(java.lang.String, int);
+	public synchronized java.lang.StringBuffer reverse();
+	public synchronized java.lang.String toString();
+	synchronized void getBytes(byte[], int, byte);
+	public java.util.stream.IntStream codePoints();
+	public java.util.stream.IntStream chars();
+	public java.lang.AbstractStringBuilder reverse();
+	public java.lang.AbstractStringBuilder insert(int, double);
+	public java.lang.AbstractStringBuilder insert(int, float);
+	public java.lang.AbstractStringBuilder insert(int, long);
+	public java.lang.AbstractStringBuilder insert(int, int);
+	public java.lang.AbstractStringBuilder insert(int, char);
+	public java.lang.AbstractStringBuilder insert(int, boolean);
+	public java.lang.AbstractStringBuilder insert(int, java.lang.CharSequence, int, int);
+	public java.lang.AbstractStringBuilder insert(int, java.lang.CharSequence);
+	public java.lang.AbstractStringBuilder insert(int, char[]);
+	public java.lang.AbstractStringBuilder insert(int, java.lang.String);
+	public java.lang.AbstractStringBuilder insert(int, java.lang.Object);
+	public java.lang.AbstractStringBuilder insert(int, char[], int, int);
+	public java.lang.AbstractStringBuilder replace(int, int, java.lang.String);
+	public java.lang.AbstractStringBuilder deleteCharAt(int);
+	public java.lang.AbstractStringBuilder appendCodePoint(int);
+	public java.lang.AbstractStringBuilder delete(int, int);
+	public java.lang.AbstractStringBuilder append(double);
+	public java.lang.AbstractStringBuilder append(float);
+	public java.lang.AbstractStringBuilder append(long);
+	public java.lang.AbstractStringBuilder append(int);
+	public java.lang.AbstractStringBuilder append(char);
+	public java.lang.AbstractStringBuilder append(boolean);
+	public java.lang.AbstractStringBuilder append(char[], int, int);
+	public java.lang.AbstractStringBuilder append(char[]);
+	public java.lang.AbstractStringBuilder append(java.lang.CharSequence, int, int);
+	public java.lang.AbstractStringBuilder append(java.lang.CharSequence);
+	java.lang.AbstractStringBuilder append(java.lang.AbstractStringBuilder);
+	public java.lang.AbstractStringBuilder append(java.lang.StringBuffer);
+	public java.lang.AbstractStringBuilder append(java.lang.String);
+	public java.lang.AbstractStringBuilder append(java.lang.Object);
+	public java.lang.Appendable append(char) throws java.io.IOException;
+	public java.lang.Appendable append(java.lang.CharSequence, int, int) throws java.io.IOException;
+	public java.lang.Appendable append(java.lang.CharSequence) throws java.io.IOException;
+	public int compareTo(java.lang.Object);
+	static {};
+}
+</pre>
                 </section>
 
             </main>
