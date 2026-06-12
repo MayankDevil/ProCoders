@@ -128,13 +128,14 @@
 
                     <p> Variables in PHP are used to store data. They start with a dollar sign ($) followed by an identifier. PHP variables are case-sensitive. </p>
 
-                    <h4> PHP Scope </h4>
-
-                    <ul>
-                        <li> <b>Local scope:</b> Variables declared within a function. </li>
-                        <li> <b>Global scope:</b> Variables declared outside functions. </li>
-                        <li> <b>Static scope:</b> Variables within a function that retain their values between function calls. </li>
-                    </ul>
+                    <article class="section">
+                        <h4> PHP Scope </h4>
+                        <ol>
+                            <li> <b>Local scope:</b> Variables declared within a function. </li>
+                            <li> <b>Global scope:</b> Variables declared outside functions. </li>
+                            <li> <b>Static scope:</b> Variables within a function that retain their values between function calls. </li>
+                        </ol>
+                    </article>
 
                     <div class="hr"></div>
                     <mark> $variable_name = value; </mark>
@@ -212,110 +213,56 @@ null {$void_data} ";
                 
                 </section>
 
-                <section id="operation">
-                
-                    <h1> Operation </h1>
+                <section id="operator">
+                    
+                    <h2 title="Ternary Operator">Ternary Operator</h2>
 
-                    <p>  </p>
+                    <p>The ternary operator is a short way to write simple if else statements.</p>
 
-                    <h3> calculater program using <h5>arithemetic operator</h5> and <h5>switch statement</h5> </h3>
+                    <div class="hr"></div>
+                    <mark>condition ? true_code : false_code;</mark>
+                    <div class="hr"></div>
 
-<pre class="console">
+<pre class="terminal">
 &#60;&#63;php
-    # calculator.php : enter default number and calculate
-    $n1 = 4;
-    $n2 = 2;
-    $n = 0;
-    $choice = 3;
-    switch ($choice)
-    {
-        case 1 : $n = $n1 + $n2; break;
-        case 2 : $n = $n1 - $n2; break;
-        case 3 : $n = $n1 * $n2; break;
-        case 4 : $n = $n1 / $n2; break;
-        case 5 : $n = $n1 % $n2; break;
-        default : $n = "enter choice between [1 to 5]";
-    }
-    echo (" output : ".$n);
+
+    $age = 20;
+
+    echo ($age >= 18) ? "Adult" : "Minor";
+
 &#63;&#62;
 </pre>
-                    <div class="output"> output : 8 </div>
-
-                    <h3> find even else odd between 100 number using <h5> for loop </h5> and <h5> if else statement </h5> </h3>
-
-<pre class="console">
-&#60;&#63;php
-    # find odd or even number between 0 to 100 number
-    $n = 100;
-    for ($i = 1; $i < $n; $i++)
-    {
-        if ($i % 2 == 0)
-        {
-            echo ("&#60;div&#60; number ".$i." is even &#60;/div&#60;");
-        }
-        else
-        {
-            echo ("&#60;div&#60; number ".$i." is odd &#60;/div&#60;");
-        }
-    }
-&#63;&#62;
-</pre>
-                    <div class="output"> number 1 is odd <br> number 2 is even <br> number 3 is odd <br> ...<br> number 100 is even  </div>
-                     
-
-                    <h3> factorial find program using <h5> dowhile loop </h5> and <h5> assignment operator </h5> </h3>
-
-<pre class="console">
-&#60;&#63;php
-    # factorial.php :
-    $n = 3;
-    $f = 1;
-    $i = 1;
-    do
-    {
-        $f = $i * $f;
-        $i++
-    }
-    while($i <= $n); 
-    echo ("factorial of ".$n." is ".$f);
-&#63;&#62;
-</pre>
-                    <div class="output"> factorial of 3 is 6 </div>
-
-
-                    <h3> find number is prime or not using <h5> while loop </h5> and <h5> if statement </h5> </h3>
-
-<pre class="console">
-&#60;&#63;php
-    # primeNumber.php : fnd the number is prime or not
-    $n = 11;
-    $is_prime =  true;
-    $i = 2;
-    while ($i < $n)
-    {
-        if ($n % $i == 0) $is_prime = false;
-        $i++;
-    }
-    if ($is_prime) echo(" prime "); else echo(" not prime ");
-&#63;&#62;
-</pre>
-                    <div class="output"> prime </div>
-                
+                    <div class="br"></div>
+                    <div class="console">Adult</div>
                 </section>
 
-                <section>
+                <section id="controlStatement">
 
                     <h1 title="Control Statement"> Control Statement </h1>
 
-                    <p> In Porgram Developer required to execute code then some specific condition done or other code then condition not fulfilled for this we use Control Statement to mantain control flow. </p>
+                    <p>In programming, sometimes we need to execute different blocks of code depending on a specific condition. Control Statements help developers control the flow of program execution. They decide which code should run and which code should skip based on conditions.</p>
 
-                    <h2> If else Statement </h2>
+                    <h2 title="If Else Statement"> If else Statement </h2>
+
+                    <p>The <b>if</b> statement executes a block of code only when the given condition is true. If the condition is false, the <b>else</b> block will execute.</p>
 
                     <div class="hr"></div>
                     <mark> if (expression) { #true } </mark>
                     <h6>OR</h6>
                     <mark> if (expression) { #true } else { #false } </mark>
                     <div class="hr"></div>
+                    
+                    <article class="section">
+                        <h4>Control Flow</h4>
+                        <ol>
+                            <li>The program first evaluates the <b>if condition</b>.</li>
+                            <li>If the condition result is <b>true</b>, the if block code will execute.</li>
+                            <li>After executing the if block, the program continues with the next statement.</li>
+                            <li>If the condition result is <b>false</b>, the if block will be skipped.</li>
+                            <li>In an <b>if else</b> statement, the else block will execute when the condition is false.</li>
+                            <li>After completion, program execution continues with the remaining code.</li>
+                        </ol>
+                    </article>
 
 <pre class="terminal">
 &#60;&#63;php
@@ -339,8 +286,673 @@ null {$void_data} ";
                     <div class="br"></div>
                     <div class="console">Welcome Guest <br>add logout</div>
 
-                    <h2> Nested If Statement </h2>
+                    <div class="hr"></div>
+                    <h2 title="Nested If Statement">Nested If Statement</h2>
 
+                    <p> A nested if statement means writing one <b>if statement</b> inside another <b>if statement</b>.It is useful when we need to check multiple conditions step by step. </p>
+                    
+                    <div class="hr"></div>
+                    <mark>if (condition) { if (condition) { // code } } else { // code }</mark>
+                    <h6>OR</h6>
+                    <mark> if (condition) {} else if (condition) {} else {}</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    $age = 23;
+
+    if ($age >= 18) {
+
+        if ($age >= 21) {
+            echo "Eligible for driving and other activities";
+        } else {
+            echo "Eligible for driving only";
+        }
+
+    } else {
+
+        echo "Not Eligible";
+    }
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    
+                    <div class="console">Eligible for driving and other activities</div>
+
+                    <div class="hr"></div>
+                    <h2 title="Else If Statement">Else If Statement</h2>
+
+                    <p>The <b>else if</b> statement is used when we have multiple conditions. PHP checks conditions one by one and executes the first true condition.</p>
+
+                    <div class="hr"></div>
+                    <mark>if(condition) { } else if(condition) { } else { }</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    $marks = 75;
+
+    if ($marks >= 90) {
+
+        echo "Grade A";
+
+    } else if ($marks >= 60) {
+
+        echo "Grade B";
+
+    } else {
+
+        echo "Fail";
+    }
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">Grade B</div>
+
+                    <div class="hr"></div>
+                    <h2 title="Switch Statement">Switch Statement</h2>
+
+                    <p> The <b>switch</b> statement is used when we need to compare one value with multiple possible values. It provides a cleaner way to write multiple <b>else if</b> conditions.</p>
+
+                    <div class="hr"></div>
+                    <mark> swtich (experssion) { case value1 : //code case value2 : // code default : //code }</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Control Flow</h4>
+                        <ol>
+                            <li>The program first evaluates the <b>switch expression</b>.</li>
+                            <li>The value is compared with each <b>case</b> value one by one.</li>
+                            <li>If a matching case is found, that case block will execute.</li>
+                            <li>After executing the case block, the <b>break</b> statement stops the switch.</li>
+                            <li>If no case matches, the <b>default</b> block will execute.</li>
+                            <li> After completion, program execution continues with the next statement.</li>
+                        </ol>
+                    </article>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    $day = "Monday";
+
+    switch ($day) {
+
+        case "Monday": echo "Today is Monday";
+            break;
+
+        case "Tuesday": echo "Today is Tuesday";
+            break;
+
+        case "Wednesday": echo "Today is Wednesday";
+            break;
+
+        default: echo "Invalid Day";
+    }
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">Today is Monday</div>
+
+                </section>
+
+                <section id="IterationStatement">
+
+                    <h2 title="For Loop">For Loop</h2>
+
+                    <p>The <b>for loop</b> is used when we know how many times we want to execute a block of code. It repeats the code until the given condition becomes false.</p>
+
+                    <div class="hr"></div>
+                    <mark>for (initialization; condition; increment) { //code }</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Control Flow</h4>
+                        <ol>
+                            <li>The program initializes the loop variable.</li>
+                            <li>The condition is checked before every iteration.</li>
+                            <li>If the condition is <b>true</b>, the loop block executes.</li>
+                            <li>After execution, the increment/decrement operation runs.</li>
+                            <li>The loop continues until the condition becomes <b>false</b>.</li>
+                            <li>After completion, program execution moves to the next statement.</li>
+                        </ol>
+                    </article>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    for ($i = 1; $i <= 5; $i++) {
+
+        echo "Number : " . $i . "&#60;br&#62;";
+    }
+
+&#63;&#62;
+</pre>
+
+<div class="br"></div>
+
+<div class="console">
+Number : 1 <br>
+Number : 2 <br>
+Number : 3 <br>
+Number : 4 <br>
+Number : 5
+</div>
+
+                    <div class="hr"></div>
+                    <h2 title="While Loop">While Loop</h2>
+
+                    <p> The <b>while loop</b> executes a block of code as long as the given condition remains true.</p>
+
+                    <div class="hr"></div>
+                    <mark>while (condition) { //code }</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Control Flow</h4>
+                        <ol>
+                            <li>The program checks the <b>while condition</b>.</li>
+                            <li>If the condition is <b>true</b>, the loop block executes.</li>
+                            <li>After execution, the condition is checked again.</li>
+                            <li>The loop continues until the condition becomes <b>false</b>.</li>
+                            <li>If the condition is false, the loop stops.</li>
+                        </ol>
+                    </article>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    $i = 1;
+
+    while ($i <= 5) {
+
+        echo "Number : " . $i . "&#60;br&#62;";
+        $i++;
+    }
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+Number : 1
+Number : 2
+Number : 3
+Number : 4
+Number : 5
+</pre>
+
+                    <div class="hr"></div>
+                    <h2 title="Do While Loop">Do While Loop</h2>
+
+                    <p> The <b>do while loop</b> executes the code block first and checks the condition after execution. It always runs at least one time.</p>
+
+                    <div class="hr"></div>
+                    <mark>do { //code } while (condition);</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Control Flow</h4>
+                        <ol>
+                            <li>The program executes the loop block first.</li>
+                            <li>After execution, the condition is checked.</li>
+                            <li>If the condition is <b>true</b>, the loop runs again.</li>
+                            <li>If the condition is <b>false</b>, the loop stops.</li>
+                            <li>The code executes at least one time even if the condition is false.</li>
+                        </ol>
+                    </article>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    $i = 1;
+
+    do {
+        echo "Number : " . $i . "&#60;br&#62;";
+
+        $i++;
+
+    } while ($i <= 5);
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+Number : 1 <br>
+Number : 2 <br>
+Number : 3 <br>
+Number : 4 <br>
+Number : 5
+</pre>
+                </section>
+
+                <section id="function">
+
+                    <h1 title="Function">Function</h1>
+
+                    <p> A <b>function</b> is a reusable block of code that performs a specific task. Functions help to reduce code repetition and make programs easier to maintain. </p>
+
+                    <div class="hr"></div>
+                    <mark>function functionName() { // code }</mark>
+                    <h6>OR</h6>
+                    <mark>functionName();</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Function Flow</h4>
+                        <ol>
+                            <li>The program finds the function call.</li>
+                            <li>The control moves to the function definition.</li>
+                            <li>The code inside the function executes.</li>
+                            <li>If the function returns a value, it sends the value back.</li>
+                            <li>After execution, control returns to the next statement.</li>
+                        </ol>
+                    </article>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    function message() {
+
+        echo "Welcome to PHP Function";
+    }
+    message();
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">Welcome to PHP Function</div>
+
+                    <div class="hr"></div>
+                    <h2 title="Function With Parameters">Function With Parameters</h2>
+
+                    <p>Parameters allow us to pass data into a function.A function can accept one or more parameters.</p>
+
+                    <div class="hr"></div>
+                    <mark>function functionName($parameter) { // code }</mark>
+                    <h6>OR</h6>
+                    <mark>functionName(value)</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    function welcome($name) {
+
+        echo "Welcome " . $name;
+    }
+    welcome("Mayank");
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">Welcome Mayank</div>
+
+                    <div class="hr"></div>
+                    <h2 title="Function Return Value">Function Return Value</h2>
+
+                    <p> The <b>return</b> statement sends a value back from the function. After return executes, the function stops.</p>
+
+                    <div class="hr"></div>
+                    <mark>function functionName() { return value; }</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Return Flow</h4>
+                        <ol>
+                            <li>The function starts execution.</li>
+                            <li>The code inside the function runs.</li>
+                            <li>The return statement sends a value back.</li>
+                            <li>The function execution stops.</li>
+                            <li>The returned value can be stored or used.</li>
+                        </ol>
+                    </article>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    function add($a, $b) {
+
+        return $a + $b;
+
+    }
+    $result = add(10,20);
+
+    echo $result;
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">30</div>
+
+                    <div class="hr"></div>
+                    <h2 title="Default Parameter">Default Parameter</h2>
+
+                    <p> Default parameters provide a default value when no argument is passed during function calling.</p>
+
+                    <div class="hr"></div>
+                    <mark>function name($parameter = value) { }</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    function user($name = "Guest") {
+
+        echo "Hello " . $name;
+    }
+    user();
+
+    user("Mayank");
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+<pre class="console">
+Hello Guest
+Hello Mayank
+</pre>
+                </section>
+
+                <section id="cookies">
+
+                    <h1 title="Cookies">Cookies</h1>
+
+                    <p> A <b>cookie</b> is a small piece of data stored in the user's browser. Cookies are used to remember user information between requests, such as login status, preferences, and other settings.</p>
+
+                    <div class="hr"></div>
+                    <mark>setcookie(name, value, expire, path);</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Cookie Flow</h4>
+                        <ol>
+                            <li>The server creates a cookie using the <b>setcookie()</b> function.</li>
+                            <li>The cookie is stored inside the user's browser.</li>
+                            <li>The browser sends the cookie back with every request to the same website.</li>
+                            <li>PHP reads the cookie using the <b>$_COOKIE</b> super global array.</li>
+                            <li>The server uses cookie data to remember user information.</li>
+                            <li>A cookie can be removed by setting an expired time.</li>
+                        </ol>
+                    </article>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    setcookie(
+        "theme",
+        "dark",
+        time() + 3600,
+        "/"
+    );
+    echo "Cookie Created";
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">Cookie Created</div>
+
+                    <div class="hr"></div>
+                    <h2 title="Access Cookie">Access Cookie</h2>
+
+                    <p>Cookies can be accessed using the <b>$_COOKIE</b> array.</p>
+                    <div class="hr"></div>
+                    <mark>$_COOKIE['cookie_name'];</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    if(isset($_COOKIE["theme"])) {
+
+        echo "Theme is " . $_COOKIE["theme"];
+
+    } else {
+
+        echo "Cookie not found";
+    }   
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">Theme is dark</div>
+
+                    <div class="hr"></div>
+                    <h2 title="Delete Cookie">Delete Cookie</h2>
+
+                    <p>To delete a cookie, set its expiration time to a past time.</p>
+
+                    <div class="hr"></div>
+                    <mark>setcookie(name, "", time() - 3600);</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    setcookie(
+        "theme",
+        "",
+        time() - 3600,
+        "/"
+    );
+    echo "Cookie Deleted";
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">Cookie Deleted</div>
+
+                </section>
+
+                <section class="session">
+
+                    <h1 title="Session">Session</h1>
+
+                    <p> A <b>session</b> is used to store user information on the server. Unlike cookies, session data is not stored in the user's browser. Sessions are commonly used for login systems, authentication, and temporary data storage.</p>
+
+                    <div class="hr"></div>
+                    <mark>session_start();</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Session Flow</h4>
+                        <ol>
+                            <li>The program starts a session using <b>session_start()</b>.</li>
+                            <li>PHP creates a unique session ID for the user.</li>
+                            <li>Session data is stored on the server.</li>
+                            <li>The browser keeps the session ID to identify the user.</li>
+                            <li>PHP accesses session data using the <b>$_SESSION</b> array.</li>
+                            <li>The session can be destroyed when the user logs out.</li>
+                        </ol>
+                    </article>
+
+                    <h2 title="Create Session">Create Session</h2>
+                    <div class="hr"></div>
+                    <mark> $_SESSION['name'] = value; </mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    session_start();
+
+    if (verified($password)) {
+
+        $_SESSION["username"] = "Mayank";
+        $_SESSION["role"] = "Admin";
+    }
+    echo "User Logined";
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">User Logined</div>
+
+                    <div class="hr"></div>
+                    <h2 title="Access Session">Access Session</h2>
+
+                    <p>Session values can be accessed using the <b>$_SESSION</b> super global array.</p>
+
+                    <div class="hr"></div>
+                    <mark>$_SESSION['session_name'];</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    session_start();
+
+    if(!isset($_SESSION["username"])) {
+
+        header("location:/login");
+        exit();
+    }
+    echo "Welcome ". $_SESSION["username"];
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">Welcome Mayank</div>
+
+                    <div class="hr"></div>
+                    <h2 title="Destroy Session">Destroy Session</h2>
+
+                    <p> The <b>session_destroy()</b> function removes all session data. It is commonly used during logout.</p>
+
+                    <div class="hr"></div>
+                    <mark>session_unset();</mark>
+                    <h6>AND</h6>
+                    <mark>session_destroy();</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    session_start();
+
+    session_unset();
+    session_destroy();
+
+    echo "Logged Out";
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">Logged Out</div>
+
+                </section>
+
+                <section id="request">
+
+                    <h1 title="Server Variable">SERVER Variable</h1>
+
+                    <p> The <b>$_SERVER</b> is a PHP super global variable that contains information about the server, request, and execution environment. It provides details like current file path, request method, browser information, and server details.</p>
+
+                    <div class="hr"></div>
+                    <mark>$_SERVER</mark>
+                    <h6>OR</h6>
+                    <mark>$_SERVER['keyName'];</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Server Variable Flow</h4>
+                        <ol>
+                            <li>The user sends a request to the web server.</li>
+                            <li>The server processes the request.</li>
+                            <li>PHP creates the <b>$_SERVER</b> array with request information.</li>
+                            <li>The program accesses required server data using keys.</li>
+                            <li>PHP returns the response to the user.</li>
+                        </ol>
+                    </article>
+
+                    <div class="hr"></div>
+                    <ul>
+                        <li> <b>$_SERVER["PHP_SELF"]</b> Returns current executing file name</li>
+                        <li> <b>$_SERVER["REQUEST_METHOD"]</b> Returns request method (GET / POST)</li>
+                        <li><b>$_SERVER["SERVER_NAME"]</b> Returns server host name </li>
+                        <li> <b>$_SERVER["REMOTE_ADDR"]</b> Returns user's IP address </li>
+                        <li> <b>$_SERVER["HTTP_USER_AGENT"]</b> Returns browser information</li>
+                    </ul>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+
+    echo "Current File : "
+    . $_SERVER["PHP_SELF"];
+
+
+    echo "&#60;br&#62;";
+
+
+    echo "Request Method : "
+    . $_SERVER["REQUEST_METHOD"];
+
+
+    echo "&#60;br&#62;";
+
+
+    echo "Server Name : "
+    . $_SERVER["SERVER_NAME"];
+
+
+&#63;&#62;
+</pre>
+
+
+<div class="br"></div>
+
+
+<div class="console">
+Current File : /index.php <br>
+Request Method : GET <br>
+Server Name : localhost
+</div>
+
+
+
+
+<div class="hr"></div>
+
+<h2 title="Check Request Method">Check Request Method</h2>
+
+<p>
+    The <b>REQUEST_METHOD</b> is commonly used in form handling to check
+    whether data is submitted using GET or POST.
+</p>
+
+
+<div class="hr"></div>
+
+
+<pre class="terminal">
+&#60;&#63;php
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        echo "Form Submitted";
+
+    } else {
+
+        echo "Open Form";
+
+    }
+
+
+&#63;&#62;
+</pre>
+
+
+<div class="br"></div>
+
+
+<div class="console">
+Open Form
+</div>
                 </section>
 
             </main>
