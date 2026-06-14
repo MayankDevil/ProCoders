@@ -871,66 +871,49 @@ Hello Mayank
 
                     <div class="hr"></div>
                     <ul>
-                        <li> <b>$_SERVER["PHP_SELF"]</b> Returns current executing file name</li>
-                        <li> <b>$_SERVER["REQUEST_METHOD"]</b> Returns request method (GET / POST)</li>
-                        <li><b>$_SERVER["SERVER_NAME"]</b> Returns server host name </li>
-                        <li> <b>$_SERVER["REMOTE_ADDR"]</b> Returns user's IP address </li>
-                        <li> <b>$_SERVER["HTTP_USER_AGENT"]</b> Returns browser information</li>
+                        <li><b>$_SERVER["PHP_SELF"]</b> - Returns current executing file name.</li>
+                        <li><b>$_SERVER["SERVER_ADDR"]</b> - Returns the IP address of the server.</li>
+                        <li><b>$_SERVER["SERVER_NAME"]</b> - Returns the server host name.</li>
+                        <li><b>$_SERVER["SERVER_SOFTWARE"]</b> - Returns server software information.</li>
+                        <li><b>$_SERVER["SERVER_PROTOCOL"]</b> - Returns the name and version of the protocol.</li>
+                        <li><b>$_SERVER["REQUEST_METHOD"]</b> - Returns request method (GET, POST, PUT, DELETE).</li>
+                        <li><b>$_SERVER["REQUEST_TIME"]</b> - Returns timestamp when request started.</li>
+                        <li><b>$_SERVER["REQUEST_TIME_FLOAT"]</b> - Returns request start time with microseconds.</li>
+                        <li><b>$_SERVER["QUERY_STRING"]</b> - Returns query string from URL.</li>
+                        <li><b>$_SERVER["DOCUMENT_ROOT"]</b> - Returns root directory of current website.</li>
+                        <li><b>$_SERVER["SCRIPT_FILENAME"]</b> - Returns full path of current script.</li>
+                        <li><b>$_SERVER["SCRIPT_NAME"]</b> - Returns current script path.</li>
+                        <li><b>$_SERVER["SCRIPT_URI"]</b> - Returns full URL of current script.</li>
+                        <li><b>$_SERVER["HTTP_HOST"]</b> - Returns current host name.</li>
+                        <li><b>$_SERVER["HTTP_USER_AGENT"]</b> - Returns browser and device information.</li>
+                        <li><b>$_SERVER["HTTP_ACCEPT"]</b> - Returns accepted content types.</li>
+                        <li><b>$_SERVER["HTTP_ACCEPT_LANGUAGE"]</b> - Returns user's language preference.</li>
+                        <li><b>$_SERVER["HTTP_REFERER"]</b> - Returns previous page URL.</li>
+                        <li><b>$_SERVER["REMOTE_ADDR"]</b> - Returns user's IP address.</li>
+                        <li><b>$_SERVER["REMOTE_HOST"]</b> - Returns user's host name.</li>
+                        <li><b>$_SERVER["REMOTE_PORT"]</b> - Returns user's port number.</li>
+                        <li><b>$_SERVER["HTTPS"]</b> - Checks whether HTTPS connection is enabled.</li>
+                        <li><b>$_SERVER["GATEWAY_INTERFACE"]</b> - Returns CGI version used by server.</li>
+                        <li><b>$_SERVER["SERVER_PORT"]</b> - Returns server port number.</li>
+                        <li><b>$_SERVER["SERVER_ADMIN"]</b> - Returns server administrator email.</li>
+                        <li><b>$_SERVER["PATH_INFO"]</b> - Returns extra path information.</li>
                     </ul>
                     <div class="hr"></div>
-
 <pre class="terminal">
 &#60;&#63;php
 
-    echo "Current File : "
-    . $_SERVER["PHP_SELF"];
+    echo "PHP_SELF : " . $_SERVER['PHP_SELF'] . "&#60;br&#62;";
 
+    echo "REMOTE_ADDR : " . $_SERVER['REMOTE_ADDR'] . "&#60;br&#62;";
 
-    echo "&#60;br&#62;";
+    echo "HTTP_USER_AGENT : " . $_SERVER['HTTP_USER_AGENT'] . "&#60;br&#62;";
 
+    
+    $request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-    echo "Request Method : "
-    . $_SERVER["REQUEST_METHOD"];
+    $request = rtrim($request, '/');
 
-
-    echo "&#60;br&#62;";
-
-
-    echo "Server Name : "
-    . $_SERVER["SERVER_NAME"];
-
-
-&#63;&#62;
-</pre>
-
-
-<div class="br"></div>
-
-
-<div class="console">
-Current File : /index.php <br>
-Request Method : GET <br>
-Server Name : localhost
-</div>
-
-
-
-
-<div class="hr"></div>
-
-<h2 title="Check Request Method">Check Request Method</h2>
-
-<p>
-    The <b>REQUEST_METHOD</b> is commonly used in form handling to check
-    whether data is submitted using GET or POST.
-</p>
-
-
-<div class="hr"></div>
-
-
-<pre class="terminal">
-&#60;&#63;php
+    echo "Request : " . $request . ;
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -939,20 +922,407 @@ Server Name : localhost
     } else {
 
         echo "Open Form";
-
     }
 
+    echo "Base Address = " 
+    . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https://" : "http://" 
+    . $_SERVER['SERVER_NAME'] . ":" 
+    . $_SERVER['SERVER_PORT'] . "/" ;
 
-&#63;&#62;
+?&#62;
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+PHP_SELF : /index.php
+REMOTE_ADDR : 127.0.0.1
+HTTP_USER_AGENT : Chrome Browser
+Request : /
+Open Form
+Base Address = https://localhost:8000/
+</pre>
+                </section>
+
+                <section id="formHandling">
+
+                    <h1 title="Form Handling"> Form Handling </h1>
+
+                    <p>Form Handling is used to collect user input and process the data in PHP. PHP receives form data using super global variables like <b>$_GET</b>, <b>$_POST</b>, and <b>$_REQUEST</b>.</p>
+                    
+                    <div class="hr"></div>
+                    <mark>$_GET['field_name']</mark>
+                    <h6>OR</h6>
+                    <mark>$_POST['field_name']</mark>
+                    <h6>OR</h6>
+                    <mark>$_REQUEST['field_name']</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Form Handling Flow</h4>
+                        <ol>
+                            <li>The user enters data into the HTML form that required name.</li>
+                            <li>The user clicks the submit button that type submit to triger form.</li>
+                            <li>The browser sends form data to the action value location.</li>
+                            <li>PHP receives data using <b>$_GET</b> or <b>$_POST</b>.</li>
+                            <li>PHP processes the data and returns the response.</li>
+                        </ol>
+                    </article>
+
+<pre class="terminal">
+&#60;?php
+
+    if (isset($_REQUEST['submit']) && $_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        echo "Username : " 
+        . htmlspecialchars($_REQUEST['username']) . "&#60;br&#62;"
+        . "Number : " 
+        . htmlspecialchars($_REQUEST['number']) . "&#60;br&#62;"
+        . "Email : " 
+        . htmlspecialchars($_REQUEST['email']) . "&#60;br&#62;" 
+        . "Password : " 
+        . htmlspecialchars($_REQUEST['password']) . "&#60;br&#62;";
+
+    } else {
+
+?&#62;
+    
+    &#60;form action="&#60;?= $_SERVER['PHP_SELF'] =&#62;" method="POST" &#62;
+
+        &#60;label for="username"&#62; Enter Username : &#60;/label&#62;
+        &#60;input type="text" name="username" /&#62;
+
+        &#60;label for="number"&#62; Enter Number : &#60;/label&#62;
+        &#60;input type="tel" name="number" /&#62;
+
+        &#60;label for="mail"&#62; Enter Email-Id : &#60;/label&#62;
+        &#60;input type="email" name="email" /&#62;
+
+        &#60;label for="password"&#62; Enter Password : &#60;/label&#62;
+        &#60;input type="password" name="password" /&#62;
+
+        &#60;input type="submit" value="Login" name="submit" /&#62;
+
+    &#60;/form&#62;
+
+    
+&#60;&#63;php } ?&#62;
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+Username : Mayank
+Number : 9999999999
+Email : example@gmail.com
+Password : 12345
+</pre>
+                    <div class="hr"></div>
+                    <h2 title="Checkbox Form Data">Get Checkbox Data</h2>
+
+                    <p> Checkbox allows users to select multiple values. To receive multiple checkbox values in PHP, use an array in the input name by adding <b>[]</b> after the name.</p>
+
+                    <div class="hr"></div>
+                    <mark>name="field_name[]"</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Checkbox Flow</h4>
+                        <ol>
+                            <li>The user selects one or multiple checkbox options.</li>
+                            <li>The browser sends selected values as an array.</li>
+                            <li>PHP receives checkbox data using <b>$_POST</b> or <b>$_REQUEST</b>.</li>
+                            <li>The array is processed using a loop.</li>
+                            <li>Each selected value is displayed or stored.</li>
+                        </ol>
+                    </article>
+
+<pre class="terminal">
+&#60;?php
+
+    if(isset($_POST['submit'])) {
+
+        $browsers = $_POST['browsers'];
+
+        foreach($browsers as $browser) {
+
+            echo $browser . "&#60;br&#62;";
+        }
+    }
+
+?&#62;
+
+&#60;form method="POST" action="&#60;?= $_SERVER['PHP_SELF'] =&#62;"&#62;
+
+    &#60;label&#62; 
+        &#60;input type="checkbox" name="browsers[]" value="Chrome"&#62; Chrome
+    &#60;/label&#62;
+    &#60;label&#62; 
+        &#60;input type="checkbox" name="browsers[]" value="FireFox"&#62; FireFox
+    &#60;/label&#62;
+    &#60;label&#62; 
+        &#60;input type="checkbox" name="browsers[]" value="Edge"&#62; Edge
+    &#60;/label&#62;
+    &#60;label&#62; 
+        &#60;input type="checkbox" name="browsers[]" value="Safari"&#62; Safari
+    &#60;/label&#62;
+
+    &#60;button name="submit" type="submit"&#62; Submit &#60;/button&#62;
+
+&#60;/form&#62;
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+Chrome
+FireFox
+Edge
+</pre>
+                    <div class="hr"></div>
+                    <h2 title="File Upload Form">File Upload</h2>
+
+                    <p>File Upload allows users to send files from their computer to the server.PHP handles uploaded files using the <b>$_FILES</b> super global variable.</p>
+
+                    <div class="hr"></div>
+                    <mark>$_FILES</mark>
+                    <h6>OR</h6>
+                    <mark>$_FILES['field_name']</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>File Upload Flow</h4>
+                        <ol>
+                            <li>The user selects a file from the form required <b>enctype="multipart/form-data"</b> atribute.</li>
+                            <li>The browser sends file data to the server.</li>
+                            <li>PHP stores file information inside the <b>$_FILES</b> array.</li>
+                            <li>The uploaded file is moved from temporary location to server folder.</li>
+                            <li>The file can be saved, renamed, or validated.</li>
+                        </ol>
+                    </article>
+
+<pre class="terminal">
+&#60;?php
+
+if(isset($_POST['submit'])) {
+
+    $fileName = $_FILES['image']['name'];
+    $fileTmp = $_FILES['image']['tmp_name'];
+    $fileSize = $_FILES['image']['size'];
+    $fileType = $_FILES['image']['type'];
+    $fileError = $_FILES['image']['error'];
+
+    // Get file extension
+
+    $extension = strtolower(
+        pathinfo($fileName, PATHINFO_EXTENSION)
+    );
+
+    if($fileError != 0) {
+        
+        // Check upload error
+        echo "File Upload Error";
+        
+    } else if(!in_array($extension, [ "jpg", "jpeg", "png", "gif"])) {
+        
+        // Check extension
+        echo "Invalid File Type";
+    
+    } else if($fileSize > 2 * 1024 * 1024) {
+        
+        // Check size (2MB)
+        echo "File Size Must Be Less Than 2MB";
+    
+    } else {
+        
+        // New unique file name
+
+        $path = "uploads/" . time() . "." . $extension;
+
+        if(move_uploaded_file($fileTmp, $path)) {
+
+            echo "File Uploaded Successfully";
+        } else {
+
+            echo "File Upload Failed";
+        }
+    }
+}
+?&#62;
+
+&#60;form method="POST" enctype="multipart/form-data" action="&#60;?= echo $_SERVER['PHP_SELF'] =&#62;"&#62;
+
+    &#60;label&#62; Select Image :&#60;/label&#62;
+
+    &#60;input type="file"name="profile" &#62;
+
+    &#60;input type="submit" name="submit" value="Upload" /&#62;
+
+&#60;/form&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">File Uploaded Successfully</div>
+
+                </section>
+
+                <section>
+
+                    <h1 title="Database Handling">Database Handling</h1>
+
+                    <div class="hr"></div>
+                    <h3> Old Database Handling (SECURITY ISSUE) </h3>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;?php
+
+    $host = "localhost";
+    $user = "root";
+    $password = "";
+    $database = "test";
+
+    /* database connection establise */
+
+    $connection = mysqli_connect(
+        $host,
+        $user,
+        $password,
+        $database
+    ) OR die("Database Connection Unestablished");
+
+    /* query execution */
+    
+    $sql = "INSERT INTO Admin(id, name, status) VALUES(
+        1, 'Kali', 1
+    )";
+    
+    $return_data = mysqli_query(
+        $connection,
+        $sql
+    );
+
+    echo "AFFECTED row -> " . mysqli_affected_rows($connection);
+
+    /* Fetch data */
+
+    $sql = "SELECT id, name, status FROM Admin";
+    
+    $return_data = mysqli_query(
+        $connection,
+        $sql
+    );
+
+    if (mysqli_num_rows($return_data) > 0) {
+
+        while ($row = mysqli_fetch_assoc($return_data)) {
+
+            echo "ID : " . $row['id'] 
+            . "Name : " . $row['name'] 
+            . "Status : " . $row['status'] ? 'enable' : 'disable' ;
+        }
+    }
+
+    /* connection close */
+
+    mysqli_close(
+        $connection
+    );
+
+?&#62;
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+Affected row -> 1
+ID : 1
+Name : Kali
+Status : enable
+</pre>
+                    <div class="hr"></div>
+                    <div class="hr"></div>
+
+<h2 title="Database Connection Class">Database Connection Class</h2>
+
+<p> A database connection class is used to create a reusable connection between PHP and MySQL database. It avoids writing connection code again and again. </p>
+
+
+<div class="hr"></div>
+<h3> Connection </h3>
+<mark> connection_object = new mysqli( hostname, username, password, database) </mark>
+<h3> Affected rows </h3>
+<mark> connection_object->affected_rows </mark>
+<h3> Execute Query </h3>
+<mark> return_data = connection_object->query($sql) </mark>
+<h3> Fetch assoc </h3>
+<mark> return_data->fetch_assoc() </mark>
+<h3> Close Connection </h3>
+<mark> connection_object->close() </mark>
+<h6>AND</h6>
+<mark>connection_object = NULL</mark>
+<div class="hr"></div>
+
+<pre class="terminal">
+
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "test";
+
+
+/* Database Connection Establish */
+
+$connection = new mysqli(
+    $host,
+    $user,
+    $password,
+    $database
+);
+
+if($connection->connect_error)
+{
+    die("Database Connection Unestablished : " . $connection->connect_error);
+}
+
+/* Query Execution */
+
+$sql = "
+    INSERT INTO Admin(
+        id, name, status
+    ) VALUES(
+        1, 'Kali', 1
+    )
+";
+
+$return_data = $connection->query($sql);
+
+echo "Affected Row -> " . $connection->affected_rows;
+
+/* Fetch Data */
+
+$sql = " SELECT id, name, status FROM Admin";
+
+$return_data = $connection->query($sql);
+
+if($return_data->num_rows > 0)
+{
+    while($row = $return_data->fetch_assoc()) {
+
+        echo "ID : "
+        . $row['id']
+        . "Name : "
+        . $row['name']
+        . "Status : "
+        . ($row['status'] ? "Enable" : "Disable") ;
+    }
+}
+else
+{
+    echo "No Data Found";
+}
+
+/* Connection Close */
+
+$connection->close();
+
 </pre>
 
-
-<div class="br"></div>
-
-
-<div class="console">
-Open Form
-</div>
                 </section>
 
             </main>
