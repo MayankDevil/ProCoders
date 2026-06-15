@@ -658,6 +658,647 @@ Hello Mayank
 </pre>
                 </section>
 
+                <section id="oop">
+
+                    <h1 title="OOP"> Object Oriented Programming (OOP)</h1>
+
+                    <p> <b>Object Oriented Programming</b> is a programming approach that organizes code using <b>objects</b> and <b>classes</b>. It helps developers write reusable, secure, and maintainable code.
+
+                    <div class="br"></div>
+
+                    <h3 title="Class"> Class </h3>
+                    <p> A <b>class</b> is a blueprint or template used to create objects. It defines properties (variables) and methods
+                        (functions) that an object can use. </p>
+                    <div class="hr"></div>
+                    <mark>class ClassName { // properties and methods }</mark>
+                    <div class="hr"></div>
+                    <h3 title="Object"> Object </h3>
+                    <p> An <b>object</b> is an instance of a class that created using the <b>new</b> keyword.</p>
+                    <div class="hr"></div>
+                    <mark> $object = new ClassName()</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <ul>
+                            <li>The program creates a class as a blueprint.</li>
+                            <li>The class contains properties and methods.</li>
+                            <li>The object can access class properties and methods.</li>
+                            <li>Multiple objects can be created from one class.</li>
+                        </ul>
+                    </article>
+
+                    <div class="br"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+
+class Client
+{
+    // Property
+    public $name;
+
+    // Method
+    public function message()
+    {
+        echo "Welcome " . $this->name;
+    }
+}
+// Object
+
+$c1 = new Client();
+$c2 = new Client();
+
+$c1->name = "Mayank"; // Access Property
+$c1->message(); // Access Method
+
+$c2->name = "Kali"; // Access Property
+$c2->message(); // Access Method
+
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">Welcome Mayank Welcome Kali</div>
+
+                </section>
+
+                <section id="constructor">
+
+                    <h2 title="Constructor and Destructor">Constructor and Destructor</h2>
+
+                    <p> A <b>constructor</b> is a special method that automatically runs when an object is created. It is mainly used to initialize object properties.</p>
+                    <p> A <b>destructor</b> is a special method that automatically runs when an object is destroyed or the script finishes. It is used to perform cleanup tasks.</p>
+
+                    <div class="hr"></div>
+                    <mark>__construct() { //object initialize code } </mark>
+                    <h6>OR</h6>
+                    <mark>__destruct() { //after end code }</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Constructor Flow</h4>
+                        <ol>
+                            <li>The program creates a class.</li>
+                            <li>An object is created using the <b>new</b> keyword.</li>
+                            <li>The <b>__construct()</b> method automatically executes.</li>
+                            <li>Initial values are assigned to object properties.</li>
+                            <li>The object is ready to use.</li>
+                        </ol>
+                        <h4>Destructor Flow</h4>
+                        <ol>
+                            <li>The object finishes its work.</li>
+                            <li>The script ends or the object is removed.</li>
+                            <li>The <b>__destruct()</b> method automatically executes.</li>
+                            <li>Cleanup operations are performed.</li>
+                        </ol>
+                    </article>
+
+<pre class="terminal">
+&#60;&#63;php
+
+// constructor example
+
+class Employee
+{
+    public $id;
+    public $name;
+    public $salary;
+
+
+    pubilc function __construct($id, $name, $salary) {
+
+        $this->id = $id;
+        $this->name = $name;
+        $this->salary = $salary;
+    }
+
+    public function status () {
+
+        echo "Employee " . $this->id . " name is " .$this->name . " and salary is " . $this->salary . "&#60;br&#62;";
+    }
+}
+$emp1 = new Employee(1, "Mehak", 10000);
+$emp2 = new Employee(2, "Manak", 20000);
+
+$emp2->status();
+$emp1->status();
+
+// destructor example
+
+class Database
+{
+    public function __construct()
+    {
+        echo "1. Database Connected &#60;br&#62;";
+    }
+    public function insert()
+    {
+        echo "2. Insert Query Execute &#60;br&#62;";
+    }
+    public function fetch()
+    {
+        echo "3. Fetch Data &#60;br&#62;";
+    }
+    public function __destruct()
+    {
+        echo "4. Database Connection Closed";
+    }
+}
+$db = new Database();
+
+// Method Calls
+
+$db->insert();
+$db->fetch();
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+Employee 2 name is Manak and salary is 20000
+Employee 1 name is Mehak and salary is 10000
+1. Database Connected
+2. Insert Query Execute
+3. Fetch Data
+4. Database Connection Closed
+</pre>
+                </section>
+
+                <section id="inheritence">
+
+                <h1 title="Inheritance">Inheritance</h1>
+
+                <p> <b>Inheritance</b> is an OOP feature that allows one class to use the properties and methods of another class. It
+                    helps to reuse existing code and reduce duplication.</p>
+                <p> The class which provides properties and methods is called the <b>Parent Class</b>, and the class which receives them
+                    is called the <b>Child Class</b>.</p>
+
+                <div class="hr"></div>
+                <mark>class Child extends Parent { // code }</mark>
+                <div class="hr"></div>
+
+                <article class="section">
+                    <h4>Inheritance Flow</h4>
+                    <ol>
+                        <li>The program creates a parent class with common properties and methods.</li>
+                        <li>A child class uses the <b>extends</b> keyword.</li>
+                        <li>The child class inherits parent class members.</li>
+                        <li>The child class can use inherited methods and properties.</li>
+                        <li>The child class can add its own properties and methods.</li>
+                    </ol>
+                </article>
+
+<pre class="terminal">
+&#60;&#63;php
+
+class Person
+{
+    public $id;
+    public $name;
+
+    public function setId($id) {
+
+        $this->id = $id;
+    }
+    public function setName($name) {
+
+        $this->name = $name;
+    }
+}
+
+class Employee extends Person
+{
+    public salary;
+    
+    public function status () {
+
+        echo "Employee " . $this->id . " name is " .$this->name . " and salary is " . $this->salary . "&#60;br&#62;";
+    }
+}
+$emp = new Employee();
+
+$emp->setId(3);
+$emp->setName("Kalid");
+
+$emp->salary = 30000;
+
+$emp->status();
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+Employee 3 name is Kalid and salary is 30000
+</pre>
+
+                    <div class="hr"></div>
+                    <h2 title="Method Overrding">Method Overriding</h2>
+                    
+                    <ul>
+                        <li>Method overriding happens when a child class creates a method with the same name as the parent class method.</li>
+                        <li>The method name in both parent and child class must be the same.</li>
+                        <li>The child class method replaces the parent class method when called using the child object.</li>
+                        <li>Method overriding is used to change or customize parent class behavior.</li>
+                        <li>The access modifier of the child method cannot be more restrictive than the parent method.</li>
+                    </ul>
+                    <div class="hr"></div>
+                    <mark> accessmodifer function methodName (args) { //Override super class code } </mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+
+class User
+{
+    public function role()
+    {
+        echo "Normal User";
+    }
+}
+class Admin extends User
+{
+    public function role()
+    {
+        echo "Admin User";
+    }
+}
+$obj = new Admin();
+$obj->role();
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+
+<div class="console">
+Admin User
+</div>
+                    <div class="hr"></div>
+
+                    <h2 title="Parent and Self Keyword">Parent and Self Keyword</h2>
+
+                    <p> Parent and Self Keyword is used with the scope resolution operator <b>::</b>  </p>
+
+                    <article class="section">
+                    <ol>
+                        <li><b>self</b> is used to access members of the current class </li>
+                        <li><b>parent</b> is used to access members of the parent class </li>
+                    </ol>
+                    </article>
+
+                    <div class="hr"></div>
+                    <mark>self::member</mark>
+                    <h6>AND</h6>
+                    <mark>parent::member</mark>
+                    <div class="hr"></div>
+
+<pre class="terminal">
+&#60;&#63;php
+
+class User
+{
+    public function role()
+    {
+        echo "User Role";
+    }
+    public function message()
+    {
+        echo "Parent Method";
+    }
+}
+
+class Admin extends User
+{
+    public function role()
+    {
+        echo "Admin Role";
+    }
+    public function show()
+    {
+        self::role();   // calling current class method
+
+        echo "&#60;br&#62;";
+        
+        parent::message();  // calling parent class method
+    }
+}
+
+$admin = new Admin();
+
+$admin->show();
+
+?&#62;
+</pre>
+
+
+<div class="br"></div>
+
+
+<pre class="console">
+Admin Role
+Parent Method
+</pre>
+                    <div class="hr"></div>
+                                        
+                    <h2 title="Access Modifiers">Access Modifiers</h2>
+
+                    <p>Access Modifiers control the visibility of class properties and methods.They decide where class members can be accessed.</p>
+
+                    <div class="hr"></div>
+                    <mark>public $property;</mark>
+                    <h6>OR</h6>
+                    <mark>private $property;</mark>
+                    <h6>OR</h6>
+                    <mark>protected $property;</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Access Modifier Types</h4>
+                        <ol>
+                            <li><b>public</b> members can be accessed from anywhere:inside class, child class, and outside object.</li>
+                            <li><b>private</b> members can only be accessed inside the same class.</li>
+                            <li><b>protected</b> members can be accessed inside the class and child classes.</li>
+                        </ol>
+                    </article>
+
+<pre class="terminal">
+&#60;&#63;php
+
+class User
+{
+    // public property
+    public $username = "Mayank";
+
+    // private property
+    private $password = "12345";
+
+    // protected property
+    protected $email = "mayank@gmail.com";
+
+    public function showPassword()
+    {
+        echo $this->password;
+    }
+    public function showEmail()
+    {
+        echo $this->email;
+    }
+}
+class Admin extends User
+{
+    public function adminData()
+    {
+        echo $this->username;  // public - allowed
+
+        echo $this->email;     // protected - allowed
+
+        // echo $this->password; 
+        // private - not allowed
+    }
+}
+$user = new User();
+
+// public property
+echo $user->username;
+
+// private property
+$user->showPassword();
+
+// protected property
+$user->showEmail();
+
+$admin = new Admin();
+
+$admin->adminData(); 
+
+// These will give error:
+
+// echo $user->password;
+
+// echo $user->email;
+
+?&#62;
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+Mayank
+12345
+mayank@gmail.com
+Mayank
+mayank@gmail.com
+</pre>
+
+                </section>
+
+                <section id="static">
+
+                    <h1 title="Static"> Static Keyword </h1>
+
+                    <p> The <b> static member </b> share same value among all object of a class. Static member accessed using the class name with the scope resolution operator.  </p>
+
+                    <div class="hr"></div>
+                    <h3> static property </h3>
+                    <mark> accessspecifier static variable = value </mark>
+                    <h3> static method </h3>
+                    <mark> public static function methodName (args) {} </mark>
+                    <h3> Access static member </h3>
+                    <mark> StaticClass::member </mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                    <h4>Static Rules</h4>
+                    <ol>
+                        <li>Static property is accessed using <b>ClassName::$property</b>.</li>
+                        <li>Static method is accessed using <b>ClassName::method()</b>.</li>
+                        <li>Inside a class, static members can be accessed using <b>self::</b>.</li>
+                        <li>Static methods cannot directly access non-static properties.</li>
+                    </ol>
+                    </article>
+
+<pre class="terminal">
+&#60;&#63;php
+
+class Counter
+{
+    public static $count = 0;
+
+    public function increase()
+    {
+        self::$count++;
+    }
+    public static function show()
+    {
+        echo self::$count;
+    }
+}
+
+$a = new Counter();
+
+$a->increase();
+
+$b = new Counter();
+
+$b->increase();
+
+Counter::show();
+
+?&#62;
+</pre>
+                <div class="br"></div>
+                <div class="console">2</div>
+
+                </section>
+
+                <section id="abstract">
+
+                    <h1 title="Abstract">Abstract Class</h1>
+
+                    <ul>
+                        <li> The <b>abstract</b> keyword is used before a class or method to define incomplete functionality. </li>
+                        <li> Abstract class contain <i>abstract or normal</i> both method.</li>
+                        <li> Once abstract method make whole class abstract. </li>
+                    </ul>
+
+                    <div class="hr"></div>
+                    <h3> abstract class </h3>
+                    <mark>abstract class IncompleteClass { // members }</mark>
+                    <h3> declare abstract method </h3>
+                    <mark> abstract public function role(); </mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Abstract Class Rules</h4>
+                        <ul>
+                            <li>Abstract class cannot create an object.</li>
+                            <li>Abstract methods do not have a body.</li>
+                            <li>Child class must implement all abstract methods.</li>
+                            <li>Child class override all abstract method to unabstract.</li>
+                        </ul>
+                    </article>
+
+<pre class="terminal">
+&#60;&#63;php
+
+
+abstract class User
+{
+
+    abstract public function role();
+
+
+    public function message()
+    {
+        echo "Welcome User";
+    }
+
+}
+
+
+
+class Admin extends User
+{
+
+    public function role()
+    {
+        echo "Admin Role";
+    }
+
+}
+
+
+
+$admin = new Admin();
+
+
+$admin->role();
+
+echo "&#60;br&#62;";
+
+
+$admin->message();
+
+
+
+?&#62;
+</pre>
+
+
+<div class="br"></div>
+
+
+<pre class="console">
+Admin Role
+Welcome User
+</pre>
+                </section>
+
+                <section id="final">
+
+                    <h1 title="Final"> Final Keyword </h1>
+
+                    <p>The <b>final</b> keyword is used to prevent inheritance and method overriding. It allows a class or method to remain unchanged by child classes.</p>
+
+                    <div class="hr"></div>
+                    <mark>final class ClassName</mark>
+                    <h6>OR</h6>
+                    <mark>final public function methodName()</mark>
+                    <div class="hr"></div>
+
+                    <article class="section">
+                        <h4>Final Rules</h4>
+                        <ul>
+                            <li>A <b>final class</b> cannot be inherited by another class.</li>
+                            <li>A <b>final method</b> cannot be overridden by a child class.</li>
+                            <li>Final is used when we want to stop changing class behavior.</li>
+                            <li>Final methods can still be accessed normally.</li>
+                        </ul>
+                    </article>
+
+<pre class="terminal">
+&#60;&#63;php
+
+/* final class User 
+{
+    public function login () 
+    {
+        echo "User Login";
+    }
+} */
+
+class User
+{
+    final public function login()
+    {
+        echo "User Login";
+    }
+}
+
+class Admin extends User
+{
+    // Error:
+    // Cannot override final method
+
+    /*
+    public function login()
+    {
+        echo "Admin Login";
+    }
+    */
+}
+
+$admin = new Admin();
+
+$admin->login();
+
+?&#62;
+</pre>
+                    <div class="br"></div>
+                    <div class="console">User Login</div>
+
+                </section>
+
                 <section id="cookies">
 
                     <h1 title="Cookies">Cookies</h1>
@@ -1162,7 +1803,7 @@ if(isset($_POST['submit'])) {
 
                 </section>
 
-                <section>
+                <section id="database">
 
                     <h1 title="Database Handling">Database Handling</h1>
 
@@ -1236,93 +1877,625 @@ Name : Kali
 Status : enable
 </pre>
                     <div class="hr"></div>
-                    <div class="hr"></div>
 
-<h2 title="Database Connection Class">Database Connection Class</h2>
+                    <h2 title="Database Connection Class">Database Connection Class</h2>
 
-<p> A database connection class is used to create a reusable connection between PHP and MySQL database. It avoids writing connection code again and again. </p>
+                    <p> A database connection class is used to create a reusable connection between PHP and MySQL database. It avoids writing database connection code again and again.</p>
 
+<article class="section">
+
+<ol>
+
+
+<li>
+
+<h6>Database Connection</h6>
+
+<p>
+    The <b>mysqli</b> class creates a connection between PHP application
+    and MySQL database using database credentials.
+</p>
 
 <div class="hr"></div>
-<h3> Connection </h3>
-<mark> connection_object = new mysqli( hostname, username, password, database) </mark>
-<h3> Affected rows </h3>
-<mark> connection_object->affected_rows </mark>
-<h3> Execute Query </h3>
-<mark> return_data = connection_object->query($sql) </mark>
-<h3> Fetch assoc </h3>
-<mark> return_data->fetch_assoc() </mark>
-<h3> Close Connection </h3>
-<mark> connection_object->close() </mark>
-<h6>AND</h6>
-<mark>connection_object = NULL</mark>
+
+<mark>
+new mysqli(hostname, username, password, database)
+</mark>
+
 <div class="hr"></div>
+
+</li>
+
+
+
+<li>
+
+<h6>Connection Error</h6>
+
+<p>
+    The <b>connect_error</b> property checks whether the database
+    connection failed and returns the error message.
+</p>
+
+<div class="hr"></div>
+
+<mark>
+connection_object->connect_error
+</mark>
+
+<div class="hr"></div>
+
+</li>
+
+
+
+<li>
+
+<h6>Database Operation</h6>
+
+<p>
+    After successful connection, SQL queries can be executed
+    to insert, update, delete, or fetch database records.
+</p>
+
+<div class="hr"></div>
+
+<mark>
+connection_object->query($sql)
+</mark>
+
+<div class="hr"></div>
+
+</li>
+
+
+
+<li>
+
+<h6>Connection Close</h6>
+
+<p>
+    The <b>close()</b> method closes the database connection
+    and releases the connection resources.
+</p>
+
+<div class="hr"></div>
+
+<mark>
+connection_object->close()
+</mark>
+
+<div class="hr"></div>
+
+</li>
+
+
+</ol>
+
+</article>
 
 <pre class="terminal">
+&#60;?php
 
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "test";
+/* Connection Establised */
 
-
-/* Database Connection Establish */
-
-$connection = new mysqli(
-    $host,
-    $user,
-    $password,
-    $database
+$db = new mysqli(
+    hostname,
+    username,
+    password,
+    database
 );
 
-if($connection->connect_error)
-{
-    die("Database Connection Unestablished : " . $connection->connect_error);
+/* Connection Status Verified */
+
+if ($db->connect_error) {
+    
+    die("connection Unestablished");
+
+} else {
+
+    // All database query execute or data fetch between this
+
 }
 
-/* Query Execution */
+/* Connection Closed */
 
-$sql = "
-    INSERT INTO Admin(
-        id, name, status
-    ) VALUES(
-        1, 'Kali', 1
-    )
-";
+$db->close();
 
-$return_data = $connection->query($sql);
+$db = null;
 
-echo "Affected Row -> " . $connection->affected_rows;
+?&#62;
+</pre>
+<article class="section">
 
-/* Fetch Data */
+<ol>
 
-$sql = " SELECT id, name, status FROM Admin";
 
-$return_data = $connection->query($sql);
+<li>
 
-if($return_data->num_rows > 0)
-{
-    while($row = $return_data->fetch_assoc()) {
+<h6>Prepare Query</h6>
 
-        echo "ID : "
-        . $row['id']
-        . "Name : "
-        . $row['name']
-        . "Status : "
-        . ($row['status'] ? "Enable" : "Disable") ;
+<p>
+    The <b>prepare()</b> method creates a prepared statement from an SQL query.
+    It helps to execute queries safely and prevents SQL injection.
+</p>
+
+<div class="hr"></div>
+
+<mark>
+connection_object->prepare(query)
+</mark>
+
+<div class="hr"></div>
+
+</li>
+
+
+
+<li>
+
+<h6>Bind Values</h6>
+
+<p>
+    The <b>bind_param()</b> method attaches values to placeholders
+    (?) in the prepared query.
+</p>
+
+<div class="hr"></div>
+
+<mark>
+statement_object->bind_param(type, values, ...)
+</mark>
+
+<div class="hr"></div>
+
+</li>
+
+
+
+<li>
+
+<h6>Execute Statement</h6>
+
+<p>
+    The <b>execute()</b> method runs the prepared SQL statement
+    with the provided values.
+</p>
+
+<div class="hr"></div>
+
+<mark>
+statement_object->execute()
+</mark>
+
+<div class="hr"></div>
+
+</li>
+
+
+
+<li>
+
+<h6>Statement Error</h6>
+
+<p>
+    The <b>error</b> property stores the error message if
+    prepare or execute operation fails.
+</p>
+
+<div class="hr"></div>
+
+<mark>
+statement_object->error
+</mark>
+
+<div class="hr"></div>
+
+</li>
+
+
+
+<li>
+
+<h6>Get Result</h6>
+
+<p>
+    The <b>get_result()</b> method returns the result object
+    after executing a SELECT prepared statement.
+</p>
+
+<div class="hr"></div>
+
+<mark>
+result_object = statement_object->get_result()
+</mark>
+
+<div class="hr"></div>
+
+</li>
+
+
+
+<li>
+
+<h6>Close Statement</h6>
+
+<p>
+    The <b>close()</b> method releases the prepared statement
+    and frees resources.
+</p>
+
+<div class="hr"></div>
+
+<mark>
+statement_object->close()
+</mark>
+
+<div class="hr"></div>
+
+</li>
+
+
+</ol>
+
+</article>
+
+<pre class="terminal">
+&#60;?php
+
+    // between connection
+
+    $query = "INSERT INTO client(id, name, status) VALUES (?, ?, ?)";
+
+    $statement = $db->prepare($query);
+
+    if (!$statement) 
+    {
+        $statement->close();
+        die("Statement Error : Please check query !" . $db->error);
     }
-}
-else
-{
-    echo "No Data Found";
-}
+    $statement->bind_param("isi", 3, "Monika", 1);
+    
+    if(!$statement->execute()) 
+    {
+        die("Execute Error : Check data or values !" . $statement->error);
+    }
 
-/* Connection Close */
+    echo "Database affected rows " . $db->affected_rows;
 
-$connection->close();
-
+    // database result fetch
+    
+    $statement->close();
+?&#62;
 </pre>
 
+                    <article class="section"><ol>
+                        <li>
+                            <h6>Get Result</h6>
+                            <p>
+                                The <b>get_result()</b> method converts the executed prepared statement
+                                result into a result object. This object is used to fetch database records.
+                            </p>
+                            <div class="hr"></div>
+                            <mark>
+                                result_object = statement_object->get_result()
+                            </mark>
+                            <div class="hr"></div>
+                        </li>
+                        <li>
+                            <h6>Number of Rows</h6>
+                            <p>
+                                The <b>num_rows</b> property returns the total number of rows
+                                available in the result object.
+                            </p>
+                            <div class="hr"></div>
+                            <mark>
+                                result_object->num_rows
+                            </mark>
+                            <div class="hr"></div>
+                        </li>
+                        <li>
+                            <h6>Fetch Associative Array</h6>
+                            <p>
+                                The <b>fetch_assoc()</b> method fetches one row from the result
+                                as an associative array using column names as keys.
+                            </p>
+                            <div class="hr"></div>
+                            <mark>
+                                result_object->fetch_assoc()</mark>
+                            <div class="hr"></div>
+                        </li>
+                    </ol>
+                    </article>
+
+<pre class="terminal">
+&#60;?php
+
+    // between connection
+
+    $query = "SELECT id, name, status FROM client";
+
+    $statement = $db->prepare($query);
+    
+    if (!$statement) 
+    {
+        $statement->close();
+        die("Statement Error : Please check query !" . $db->error);
+    }
+    $statement->execute();
+
+    $result = $statement->get_result();
+
+    if ($result->num_rows) {
+
+        $data = $result->fetch_assoc()
+
+        echo "<pre>";
+        printr($data);
+        echo "</pre>";
+    }
+    
+?&#62;
+</pre>
+
+                    <div class="hr"></div>
+                    <h2 title="Fetch Methods">Fetch Methods</h2>
+
+                    <p>Fetch methods are used to read data returned by a SELECT query.They convert database rows into PHP arrays.</p>
+
+                    <div class="hr"></div>
+                    <article class="section">
+                        <h4>Fetch Types</h4>
+                        <ol>
+                            <li>
+                                <h6>Fetch Associative Array</h6>
+                                <div class="hr"></div>
+                                <mark>$result->fetch_assoc()</mark>
+                                <p>Returns one row as an associative array.Column names are used as array keys.</p>
+                            </li>
+                            <li>
+                                <h6>Fetch Numeric Array</h6>
+                                <div class="hr"></div>
+                                <mark>$result->fetch_row()</mark>
+                                <p>Returns one row as a numeric array.Data is accessed using index numbers.</p>
+                            </li>
+                            <li>
+                                <h6>Fetch Both Array</h6>
+                                <div class="hr"></div>
+                                <mark>$result->fetch_array()</mark>
+                                <p>Returns one row as both associative and numeric array.</p>
+                            </li>
+                            <li>
+                                <h6>Fetch All Rows</h6>
+                                <div class="hr"></div>
+                                <mark>$result->fetch_all(MYSQLI_ASSOC)</mark>
+                                <p>Returns all rows at once as an array.</p>
+                            </li>
+                        </ol>
+
+                    </article>
+
+<pre class="terminal">
+&#60;?php
+
+    // between connection
+
+    $sql = "SELECT * FROM client;";
+
+    $data =  $db->query($sql);
+
+    $rows = $data->fetch_all(MYSQLI_ASSOC);
+
+    foreach () {
+        echo "ID : "
+        . $row['id']
+        . " Name : "
+        . $row['name']
+        . " Status : "
+        . $row['status']
+        . "&#60;br&#62;";
+    }
+
+?&#62;
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+ID : 1 Name : Kali Status : 1
+ID : 2 Name : Monika Status : 1
+ID : 3 Name : Rahul Status : 0
+</pre>
+
+                </section>
+
+                <section id="">
+
+
+                    <div class="hr"></div>
+
+<h2 title="Header Function">Header Function</h2>
+
+
+<p>
+    The <b>header()</b> function is a built-in PHP function used to send
+    raw HTTP headers from the server to the browser.
+    It gives instructions to the browser about how to handle the response.
+</p>
+
+
+<div class="hr"></div>
+
+
+<mark>
+header("header-name: value");
+</mark>
+
+
+<div class="hr"></div>
+
+
+<article class="section">
+
+<h4>What is HTTP Header?</h4>
+
+<ul>
+
+    <li>
+        HTTP headers are information sent between server and browser
+        with every request and response.
+    </li>
+
+    <li>
+        Headers contain details like content type, redirection,
+        cache rules, authentication, and file information.
+    </li>
+
+    <li>
+        PHP uses <b>header()</b> to modify these response headers.
+    </li>
+
+</ul>
+
+
+<h4>Header Rules</h4>
+
+<ul>
+
+    <li>
+        The <b>header()</b> function must be used before any output.
+    </li>
+
+    <li>
+        HTML code, echo, print, or whitespace before header() can cause
+        "headers already sent" error.
+    </li>
+
+    <li>
+        Multiple headers can be sent in one PHP file.
+    </li>
+
+    <li>
+        After sending a redirect header, use <b>exit</b> or <b>die</b>
+        to stop further execution.
+    </li>
+
+</ul>
+
+</article>
+
+
+<pre class="terminal">
+&#60;?php
+
+// redirect page
+
+header("Location: dashboard.php");
+
+exit;
+
+// Browser understands that response is HTML.
+
+header("Content-Type: text/html");
+
+// JSON API Response
+
+header("Location: home.php");
+
+header("Content-Type: application/json");
+
+header("Content-Type: text/plain");
+
+header("Content-Disposition: attachment; filename=a.pdf");
+echo "Download File";
+
+
+header("Cache-Control: no-cache");
+echo json_encode([
+"name" => "Mayank",
+"role" => "Developer"
+]);
+
+// Browser downloads the response instead of displaying it.
+
+header(
+"Content-Disposition: attachment; filename=test.txt"
+);
+
+
+// 
+
+header("Cache-Control: no-cache, no-store");
+
+
+?&#62;
+</pre>
+
+<pre class="console">
+User moved to dashboard.php
+{
+    "name":"Mayank",
+    "role":"Developer"
+}
+</pre>
+
+
+<div class="hr"></div>
+
+<h2 title="Include and Require">Include and Require</h2>
+
+
+<p>
+    The <b>include</b> and <b>require</b> statements are used to insert the
+    content of one PHP file into another PHP file.
+    They help to reuse code and organize large applications.
+</p>
+
+
+<div class="hr"></div>
+
+
+<mark>
+include "file.php";
+</mark>
+
+<h6>OR</h6>
+
+<mark>
+require "file.php";
+</mark>
+
+
+<div class="hr"></div>
+
+
+<article class="section">
+
+<h4>Include and Require Rules</h4>
+
+<ul>
+
+    <li>
+        <b>include</b> gives a warning if the file is not found,
+        but script execution continues.
+    </li>
+
+    <li>
+        <b>require</b> gives a fatal error if the file is not found,
+        and script execution stops.
+    </li>
+
+    <li>
+        Both statements can be used for reusable files like
+        database connection, functions, and classes.
+    </li>
+
+    <li>
+        The file path can be relative or absolute.
+    </li>
+
+</ul>
+
+</article>
                 </section>
 
             </main>

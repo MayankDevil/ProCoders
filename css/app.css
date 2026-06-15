@@ -1,5 +1,5 @@
 * {
-
+    user-select: none;
     margin: 0;
     padding: 0;
     font-family:var(--sans-serif);
@@ -23,7 +23,6 @@
 }
 
 ::selection {
-    
     color: var(--white);
     background: var(--black);
 }
@@ -193,6 +192,7 @@ a {
 }
 
 pre {
+    user-select: text;
     font-size: medium;
     font-family: var(--monospace);
     overflow-x: scroll;
@@ -449,6 +449,7 @@ table td {
 }
 
 .terminal {
+    user-select: text;
     display:block;
     box-sizing: border-box;
     overflow-x: scroll;
@@ -463,6 +464,7 @@ table td {
 }
 
 .console {
+    user-select: text;
     display: inline-block;
     /* width: 95%; */
     width: 750px;
