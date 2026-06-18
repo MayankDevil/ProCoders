@@ -827,27 +827,27 @@ Employee 1 name is Mehak and salary is 10000
 
                 <section id="inheritence">
 
-                <h1 title="Inheritance">Inheritance</h1>
+                    <h1 title="Inheritance">Inheritance</h1>
 
-                <p> <b>Inheritance</b> is an OOP feature that allows one class to use the properties and methods of another class. It
-                    helps to reuse existing code and reduce duplication.</p>
-                <p> The class which provides properties and methods is called the <b>Parent Class</b>, and the class which receives them
-                    is called the <b>Child Class</b>.</p>
+                    <p> <b>Inheritance</b> is an OOP feature that allows one class to use the properties and methods of another class. It
+                        helps to reuse existing code and reduce duplication.</p>
+                    <p> The class which provides properties and methods is called the <b>Parent Class</b>, and the class which receives them
+                        is called the <b>Child Class</b>.</p>
 
-                <div class="hr"></div>
-                <mark>class Child extends Parent { // code }</mark>
-                <div class="hr"></div>
+                    <div class="hr"></div>
+                    <mark>class Child extends Parent { // code }</mark>
+                    <div class="hr"></div>
 
-                <article class="section">
-                    <h4>Inheritance Flow</h4>
-                    <ol>
-                        <li>The program creates a parent class with common properties and methods.</li>
-                        <li>A child class uses the <b>extends</b> keyword.</li>
-                        <li>The child class inherits parent class members.</li>
-                        <li>The child class can use inherited methods and properties.</li>
-                        <li>The child class can add its own properties and methods.</li>
-                    </ol>
-                </article>
+                    <article class="section">
+                        <h4>Inheritance Flow</h4>
+                        <ol>
+                            <li>The program creates a parent class with common properties and methods.</li>
+                            <li>A child class uses the <b>extends</b> keyword.</li>
+                            <li>The child class inherits parent class members.</li>
+                            <li>The child class can use inherited methods and properties.</li>
+                            <li>The child class can add its own properties and methods.</li>
+                        </ol>
+                    </article>
 
 <pre class="terminal">
 &#60;&#63;php
@@ -931,11 +931,9 @@ $obj->role();
 </pre>
                     <div class="br"></div>
 
-<div class="console">
-Admin User
-</div>
+                    <div class="console">Admin User</div>
+                    
                     <div class="hr"></div>
-
                     <h2 title="Parent and Self Keyword">Parent and Self Keyword</h2>
 
                     <p> Parent and Self Keyword is used with the scope resolution operator <b>::</b>  </p>
@@ -1882,97 +1880,52 @@ Status : enable
 
                     <p> A database connection class is used to create a reusable connection between PHP and MySQL database. It avoids writing database connection code again and again.</p>
 
-<article class="section">
-
-<ol>
-
-
-<li>
-
-<h6>Database Connection</h6>
-
-<p>
-    The <b>mysqli</b> class creates a connection between PHP application
-    and MySQL database using database credentials.
-</p>
-
-<div class="hr"></div>
-
-<mark>
-new mysqli(hostname, username, password, database)
-</mark>
-
-<div class="hr"></div>
-
-</li>
-
-
-
-<li>
-
-<h6>Connection Error</h6>
-
-<p>
-    The <b>connect_error</b> property checks whether the database
-    connection failed and returns the error message.
-</p>
-
-<div class="hr"></div>
-
-<mark>
-connection_object->connect_error
-</mark>
-
-<div class="hr"></div>
-
-</li>
-
-
-
-<li>
-
-<h6>Database Operation</h6>
-
-<p>
-    After successful connection, SQL queries can be executed
-    to insert, update, delete, or fetch database records.
-</p>
-
-<div class="hr"></div>
-
-<mark>
-connection_object->query($sql)
-</mark>
-
-<div class="hr"></div>
-
-</li>
-
-
-
-<li>
-
-<h6>Connection Close</h6>
-
-<p>
-    The <b>close()</b> method closes the database connection
-    and releases the connection resources.
-</p>
-
-<div class="hr"></div>
-
-<mark>
-connection_object->close()
-</mark>
-
-<div class="hr"></div>
-
-</li>
-
-
-</ol>
-
-</article>
+                    <article class="section">
+                        <h4> Established Connection To Database </h4>
+                        <ol>
+                            <li>
+                                <h6>Database Connection</h6>
+                                <p>
+                                    The <b>mysqli</b> class creates a connection between PHP application
+                                    and MySQL database using database credentials.
+                                </p>
+                                <mark>
+                                    new mysqli(hostname, username, password, database)
+                                </mark>
+                            </li>
+                            <li>
+                                <h6>Connection Error</h6>
+                                <p>
+                                    The <b>connect_error</b> property checks whether the database
+                                    connection failed and returns the error message.
+                                </p>
+                                <mark>
+                                    connection_object->connect_error
+                                </mark>
+                            </li>
+                            <li>
+                                <h6>Database Operation</h6>
+                                <p>
+                                    After successful connection, SQL queries can be executed
+                                    to insert, update, delete, or fetch database records.
+                                </p>
+                                <mark>
+                                    connection_object->query($sql)
+                                </mark>
+                            </li>
+                            <li>
+                                <h6>Connection Close</h6>
+                                <p>
+                                    The <b>close()</b> method closes the database connection
+                                    and releases the connection resources.
+                                </p>
+                                <mark>
+                                    connection_object->close()
+                                </mark>
+                            </li>
+                        </ol>
+                    </article>
+                    <div class="hr"></div>
 
 <pre class="terminal">
 &#60;?php
@@ -2006,139 +1959,59 @@ $db = null;
 
 ?&#62;
 </pre>
-<article class="section">
 
-<ol>
-
-
-<li>
-
-<h6>Prepare Query</h6>
-
-<p>
-    The <b>prepare()</b> method creates a prepared statement from an SQL query.
-    It helps to execute queries safely and prevents SQL injection.
-</p>
-
-<div class="hr"></div>
-
-<mark>
-connection_object->prepare(query)
-</mark>
-
-<div class="hr"></div>
-
-</li>
-
-
-
-<li>
-
-<h6>Bind Values</h6>
-
-<p>
-    The <b>bind_param()</b> method attaches values to placeholders
-    (?) in the prepared query.
-</p>
-
-<div class="hr"></div>
-
-<mark>
-statement_object->bind_param(type, values, ...)
-</mark>
-
-<div class="hr"></div>
-
-</li>
-
-
-
-<li>
-
-<h6>Execute Statement</h6>
-
-<p>
-    The <b>execute()</b> method runs the prepared SQL statement
-    with the provided values.
-</p>
-
-<div class="hr"></div>
-
-<mark>
-statement_object->execute()
-</mark>
-
-<div class="hr"></div>
-
-</li>
-
-
-
-<li>
-
-<h6>Statement Error</h6>
-
-<p>
-    The <b>error</b> property stores the error message if
-    prepare or execute operation fails.
-</p>
-
-<div class="hr"></div>
-
-<mark>
-statement_object->error
-</mark>
-
-<div class="hr"></div>
-
-</li>
-
-
-
-<li>
-
-<h6>Get Result</h6>
-
-<p>
-    The <b>get_result()</b> method returns the result object
-    after executing a SELECT prepared statement.
-</p>
-
-<div class="hr"></div>
-
-<mark>
-result_object = statement_object->get_result()
-</mark>
-
-<div class="hr"></div>
-
-</li>
-
-
-
-<li>
-
-<h6>Close Statement</h6>
-
-<p>
-    The <b>close()</b> method releases the prepared statement
-    and frees resources.
-</p>
-
-<div class="hr"></div>
-
-<mark>
-statement_object->close()
-</mark>
-
-<div class="hr"></div>
-
-</li>
-
-
-</ol>
-
-</article>
+                    <article class="section">
+                        <ol>
+                            <li>
+                                <h6>Prepare Query</h6>
+                                <p>
+                                    The <b>prepare()</b> method creates a prepared statement from an SQL query.
+                                    It helps to execute queries safely and prevents SQL injection.
+                                </p>
+                                <mark>connection_object->prepare(query)</mark>
+                            </li>
+                            <li>
+                                <h6>Bind Values</h6>
+                                <p>
+                                    The <b>bind_param()</b> method attaches values to placeholders
+                                    (?) in the prepared query.
+                                </p>
+                                <mark>statement_object->bind_param(type, values, ...)</mark>
+                            </li>
+                            <li>
+                                <h6>Execute Statement</h6>
+                                <p>
+                                    The <b>execute()</b> method runs the prepared SQL statement
+                                    with the provided values.
+                                </p>
+                                <mark>statement_object->execute()</mark>
+                            </li>
+                            <li>
+                                <h6>Statement Error</h6>
+                                <p>
+                                    The <b>error</b> property stores the error message if
+                                    prepare or execute operation fails.
+                                </p>
+                                <mark>statement_object->error</mark>
+                            </li>
+                            <li>
+                                <h6>Get Result</h6>
+                                <p>
+                                    The <b>get_result()</b> method returns the result object
+                                    after executing a SELECT prepared statement.
+                                </p>
+                                <mark>result_object = statement_object->get_result()</mark>
+                            </li>
+                            <li>
+                                <h6>Close Statement</h6>
+                                <p>
+                                    The <b>close()</b> method releases the prepared statement
+                                    and frees resources.
+                                </p>
+                                <mark>statement_object->close()</mark>
+                            </li>
+                        </ol>
+                    </article>
 
 <pre class="terminal">
 &#60;?php
@@ -2176,11 +2049,7 @@ statement_object->close()
                                 The <b>get_result()</b> method converts the executed prepared statement
                                 result into a result object. This object is used to fetch database records.
                             </p>
-                            <div class="hr"></div>
-                            <mark>
-                                result_object = statement_object->get_result()
-                            </mark>
-                            <div class="hr"></div>
+                            <mark>result_object = statement_object->get_result()</mark>
                         </li>
                         <li>
                             <h6>Number of Rows</h6>
@@ -2188,11 +2057,7 @@ statement_object->close()
                                 The <b>num_rows</b> property returns the total number of rows
                                 available in the result object.
                             </p>
-                            <div class="hr"></div>
-                            <mark>
-                                result_object->num_rows
-                            </mark>
-                            <div class="hr"></div>
+                            <mark>result_object->num_rows</mark>
                         </li>
                         <li>
                             <h6>Fetch Associative Array</h6>
@@ -2200,10 +2065,7 @@ statement_object->close()
                                 The <b>fetch_assoc()</b> method fetches one row from the result
                                 as an associative array using column names as keys.
                             </p>
-                            <div class="hr"></div>
-                            <mark>
-                                result_object->fetch_assoc()</mark>
-                            <div class="hr"></div>
+                            <mark>result_object->fetch_assoc()</mark>
                         </li>
                     </ol>
                     </article>
@@ -2308,88 +2170,28 @@ ID : 3 Name : Rahul Status : 0
 
                 </section>
 
-                <section id="">
+                <section id="import">
 
+                    <h1 title="Header Function">Header Function</h1>
 
+                    <p>The <b>header()</b> function is a built-in PHP function used to sendraw HTTP headers from the server to the browser.It gives instructions to the browser about how to handle the response.</p>
+                                        
+                    <ul>
+                        <li>HTTP headers are information sent between server and browser with every request and response.</li>
+                        <li>Headers contain details like content type, redirection, cache rules, authentication, and file information.</li>
+                        <li>PHP uses <b>header()</b> to modify these response headers.</li>
+                    </ul>
+                    
                     <div class="hr"></div>
-
-<h2 title="Header Function">Header Function</h2>
-
-
-<p>
-    The <b>header()</b> function is a built-in PHP function used to send
-    raw HTTP headers from the server to the browser.
-    It gives instructions to the browser about how to handle the response.
-</p>
-
-
-<div class="hr"></div>
-
-
-<mark>
-header("header-name: value");
-</mark>
-
-
-<div class="hr"></div>
-
-
-<article class="section">
-
-<h4>What is HTTP Header?</h4>
-
-<ul>
-
-    <li>
-        HTTP headers are information sent between server and browser
-        with every request and response.
-    </li>
-
-    <li>
-        Headers contain details like content type, redirection,
-        cache rules, authentication, and file information.
-    </li>
-
-    <li>
-        PHP uses <b>header()</b> to modify these response headers.
-    </li>
-
-</ul>
-
-
-<h4>Header Rules</h4>
-
-<ul>
-
-    <li>
-        The <b>header()</b> function must be used before any output.
-    </li>
-
-    <li>
-        HTML code, echo, print, or whitespace before header() can cause
-        "headers already sent" error.
-    </li>
-
-    <li>
-        Multiple headers can be sent in one PHP file.
-    </li>
-
-    <li>
-        After sending a redirect header, use <b>exit</b> or <b>die</b>
-        to stop further execution.
-    </li>
-
-</ul>
-
-</article>
-
+                    <mark>header("header-name: value");</mark>
+                    <div class="hr"></div>                    
 
 <pre class="terminal">
 &#60;?php
 
 // redirect page
 
-header("Location: dashboard.php");
+header("Location: dashboard.php"); 
 
 exit;
 
@@ -2408,8 +2210,8 @@ header("Content-Type: text/plain");
 header("Content-Disposition: attachment; filename=a.pdf");
 echo "Download File";
 
-
 header("Cache-Control: no-cache");
+
 echo json_encode([
 "name" => "Mayank",
 "role" => "Developer"
@@ -2429,7 +2231,7 @@ header("Cache-Control: no-cache, no-store");
 
 ?&#62;
 </pre>
-
+                    <div class="br"></div>
 <pre class="console">
 User moved to dashboard.php
 {
@@ -2437,65 +2239,194 @@ User moved to dashboard.php
     "role":"Developer"
 }
 </pre>
+                    <div class="hr"></div>
+                    <h2 title="Import File"> Import File </h2>
 
+                    <p>The <b>include</b> and <b>require</b> statements are used to insert the content of one PHP file into another PHP file. They help to reuse code and organize large applications.</p>
 
-<div class="hr"></div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> Statement </th>
+                                <th> IF ERROR </th>
+                                <th> USE IN SINGLE FILE </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> include </td>
+                                <td> continue </td>
+                                <td> many </td>
+                            </tr>
+                            <tr>
+                                <td> require </td>
+                                <td> exit </td>
+                                <td> many </td>
+                            </tr>
+                            <tr>
+                                <td> include_once </td>
+                                <td> continue </td>
+                                <td> once </td>
+                            </tr>
+                            <tr>
+                                <td>require_once</td>
+                                <td> exit </td>
+                                <td> once </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-<h2 title="Include and Require">Include and Require</h2>
+                    <div class="hr"></div>
+                    <mark>include "location/file"</mark>
+                    <h6>OR</h6>
+                    <mark>require "location/file"</mark>
+                    <h6>OR</h6>
+                    <mark>include_once "location/file"</mark>
+                    <h6>OR</h6>
+                    <mark>require_once "location/file"</mark>
+                    <div class="hr"></div>
 
+<pre class="terminal">
 
-<p>
-    The <b>include</b> and <b>require</b> statements are used to insert the
-    content of one PHP file into another PHP file.
-    They help to reuse code and organize large applications.
-</p>
+include "layout/hader.php";    // if not exist error OR continue
 
+required "db/connection.php";   // if not exist error OR exit
 
-<div class="hr"></div>
+</pre>
+                    <div class="br"></div>
+                    
+<pre class="console">
+NotFound Error : ...
+Database Connection Code
+</pre>
+                </section>
 
+                <section id="file">
 
-<mark>
-include "file.php";
-</mark>
+                    <h1 title="File Handling"> File handling </h1>
 
-<h6>OR</h6>
+                    <p> PHP file handling is the process of working with files in PHP, it involes operations like opening, reading, writing, appeneding and closing files. </p>
 
-<mark>
-require "file.php";
-</mark>
+                    <div class="hr"></div>
+                    <h4> FILE BASIC </h4>
+                    <ol>
+                        <li>
+                            <h6> Open File </h6>
+                            <p> Open a file with different modes they define what is operation performed. </p>
+                            <mark> fopen(file_location, mode) </mark>
+                        </li>
+                        <li>
+                            <h6> Write File </h6>
+                            <p> File write function get first file reference next data that save in file </p>
+                            <mark> fwrite(file_object, data) </mark>
+                        </li>
+                        <li>
+                            <h6> End Of File </h6>
+                            <p> End File function return true if control have end of the line </p>
+                            <mark> feof(file_object) </mark>
+                        </li>
+                        <li>
+                            <h6> Get File String </h6>
+                            <p> Get File data line by line </p>
+                            <mark> fgets(file_object) </mark>
+                        </li>
+                        <li>
+                            <h6> Close File </h6>
+                            <p> Close connection of file by unset file_object </p>
+                            <mark> fclose(file_object) </mark>
+                        </li>
+                    </ol>
+                    <div class="hr"></div>
 
+<pre class="terminal">
+&#60;&#63;php
 
-<div class="hr"></div>
+// Open a file for writing (creates a new file if it doen't exist or truncates an existing file)
 
+$file = fopen("example.txt","w");
 
-<article class="section">
+if ($file) 
+{
+    // Write some content to the file
 
-<h4>Include and Require Rules</h4>
+    fwrite($file,"if you are like follow, me on github.com ");"
 
-<ul>
+    fclose($file);  // Close the file
 
-    <li>
-        <b>include</b> gives a warning if the file is not found,
-        but script execution continues.
-    </li>
+    $file = fopen("example.txt","a");   // Open the file for appending
 
-    <li>
-        <b>require</b> gives a fatal error if the file is not found,
-        and script execution stops.
-    </li>
+    if ($file) 
+    {
+        // Append more content to the file
 
-    <li>
-        Both statements can be used for reusable files like
-        database connection, functions, and classes.
-    </li>
+        fwrite($file," https://github.com/MayankDevil/");
 
-    <li>
-        The file path can be relative or absolute.
-    </li>
+        fclose($file);  // Close the file
 
-</ul>
+        // Open the file for reading
 
-</article>
+        $file = fopen("example.txt","r");
+
+        if ($file) 
+        {
+            while (!feof($file)) 
+            {
+                echo fgets($file);  // Read and display the content of the file
+            }
+        }
+        fclose($file);  // Close the file
+    }
+    else
+    {
+        echo "Failed to open the file for reading.";
+    }
+}
+else
+{
+    echo "Failed to open the file for writing.";
+}
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+if you are like, follow me on github.com  https://github.com/MayankDevil/
+</pre>
+                    <div class="hr"></div>
+                    <h2 title="File Function"> File & Folder Function </h2>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> function </th>
+                                <th> description </th>
+                            </tr>
+                        </thead>
+                            <tr>
+                                <td> existsFile </td>
+                                <td> Get file location if exist return true either false </td>
+                            </tr>
+                    </table>
+
+                    <p> A function get location of file and if exist return true else false </p>
+
+                    <div class="hr"></div>
+                    <mark> existFile('location/file') </mark>
+                    <div class="hr"></div>
+<pre class="terminal">
+&#60;&#63;php
+
+// file code
+
+&#63;&#62;
+</pre>
+                    <div class="br"></div>
+
+<pre class="console">
+
+</pre>
+
                 </section>
 
             </main>
